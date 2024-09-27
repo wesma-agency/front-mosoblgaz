@@ -16,9 +16,9 @@ body {
 	font-size: 15px;
 	font-weight: 400;
 	font-family: 'PFAgoraSansPro', sans-serif;
-	color: $color-black;
+	line-height: 1.3;
+	color: $main-gray;
 	background-color: #fff;
-
 }
 
 .wrapper {
@@ -51,6 +51,41 @@ body {
 
 //==========================================================================================================================================================
 // Общие стили элементов
+.section-title {
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 130%;
+	// Добавить цвет переменной из UI-kit
+	color: #333;
+	margin-bottom: 40px;
+}
+
+//==========================================================================================================================================================
+// Адаптив
+@media (max-width: 1200px) {
+	.container {
+		max-width: 990px;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		max-width: 570px;
+	}
+
+	.section-title {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 576px) {
+	.container {
+		// max-width: 390px
+		// или
+		width: 100%;
+	}
+}
 
 //==========================================================================================================================================================
 // Блоки
@@ -58,6 +93,7 @@ body {
 //
 // Здесь подключаем осатльные страницы
 //
+@import './pages/catalog';
 @import './_footer';
 
 

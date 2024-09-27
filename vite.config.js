@@ -13,6 +13,12 @@ export default defineConfig({
 	},
 
 	build: {
+		// rollupOptions: {
+		// 	input: {
+		// 		index: '/index.html',
+		// 		catalog: '/catalog.html',
+		// 	},
+		// },
 		// Не обязательные опции
 		// minify: true,
 	},
