@@ -1,0 +1,132 @@
+/*------ COLOR ------*/
+/*------ BLOCKS ------*/
+/*------ FONTS ------*/
+h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+h3 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-lg {
+  font-size: 16px;
+}
+
+.text-base {
+  font-size: 14px;
+}
+
+.text-sm {
+  font-size: 15px;
+}
+
+.text-xs {
+  font-size: 12px;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 500;
+}
+
+/*------ UI ELEMENTS ------*/
+.flex-block-tmp {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+.flex-block-tmp .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mog-wrapper {
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+}
+.mog-wrapper .mog-label {
+  background-color: #FFF;
+  position: absolute;
+  top: -8px;
+  left: 15px;
+  font-size: 0.8rem;
+  padding-inline: 2px;
+  z-index: 5;
+  display: none;
+}
+.mog-wrapper .mog-label.error {
+  display: block;
+  top: auto;
+  bottom: -7px;
+  color: #f04e23;
+}
+.mog-wrapper .mog-label.visible {
+  display: block;
+}
+.mog-wrapper .mog-label.placeholder {
+  display: block;
+  top: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #CFCFCF;
+  font-size: 1rem;
+}
+.mog-wrapper .mog-input {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #CFCFCF;
+  border-radius: 5px;
+  color: #CFCFCF;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 400;
+}
+.mog-wrapper .mog-input::-moz-placeholder {
+  color: #CFCFCF;
+}
+.mog-wrapper .mog-input::placeholder {
+  color: #CFCFCF;
+}
+.mog-wrapper .mog-input:focus {
+  color: #6d6e71;
+  border-color: #6d6e71;
+}
+.mog-wrapper .mog-input.error {
+  color: #eb5757;
+  border-color: #eb5757;
+}
+.mog-wrapper .mog-input.mog-input-dropdown {
+  padding-right: 30px;
+  width: calc(100% - 15px);
+}
+.mog-wrapper .mog-input.mog-with-icon {
+  padding-right: 30px;
+  width: calc(100% - 15px);
+}
+.mog-btn-dropdown {
+  position: absolute;
+  right: 18px;
+  top: 8px;
+}/*# sourceMappingURL=ui-kit.css.map */
