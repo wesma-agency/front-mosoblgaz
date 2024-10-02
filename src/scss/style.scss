@@ -10,6 +10,7 @@
 
 *{
 	box-sizing: border-box;
+	transition: all 0.2s;
 }
 // Облочка
 body {
@@ -37,7 +38,7 @@ body {
 }
 
 
-
+.adaptive-display-none-flex,
 .adaptive-display-none{
     display: none;
 }
@@ -57,6 +58,8 @@ body {
 @import './_header';
 //
 // Здесь подключаем осатльные страницы
+//
+@import './pages/main.scss';
 //
 @import './_footer';
 
@@ -79,6 +82,9 @@ body {
 
 	.adaptive-display-none{
 		display: block;
+	}
+	.adaptive-display-none-flex{
+		display: flex;
 	}
 
 	.adaptive-display-768{
