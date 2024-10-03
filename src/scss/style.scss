@@ -43,6 +43,28 @@ body {
 
 //==========================================================================================================================================================
 // Общие стили элементов
+.breadcrumbs {
+	margin-top: 30px; // Лучше сделать отступ от хедера
+	margin-bottom: 10px;
+	// .breadcrumbs__list
+	&__list {
+		display: flex;
+		column-gap: 13px;
+	}
+	// .breadcrumbs__item
+	&__item {
+	}
+	// .breadcrumbs__arrow
+	&__arrow {
+		display: flex;
+		align-items: center;
+	}
+	// .breadcrumbs__item--current
+	&__item--current {
+		opacity: 0.5;
+	}
+}
+
 .section-title {
 	font-weight: 500;
 	font-size: 36px;
@@ -50,6 +72,20 @@ body {
 	// Добавить цвет переменной из UI-kit
 	color: #333;
 	margin-bottom: 40px;
+}
+
+.showmore {
+	display: block;
+	// .catalog-showmore__btn
+	.showmore-btn {
+		border: 1px solid #f47920;
+		border-radius: 25px;
+		padding: 14.5px 50px;
+		font-weight: 500;
+		font-size: 16px;
+		text-align: center;
+		color: #f47920;
+	}
 }
 
 //==========================================================================================================================================================
@@ -86,4 +122,5 @@ body {
 // Здесь подключаем осатльные страницы
 //
 @import './pages/catalog';
+@import './pages/catalog-category';
 @import './_footer';
