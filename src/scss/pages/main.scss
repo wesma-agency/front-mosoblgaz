@@ -3,6 +3,7 @@
     position: relative;
     color: $color-light-white;
     margin-bottom: 80px;
+    
 
     &__arrow {
         position: absolute;
@@ -34,7 +35,9 @@
     }
 
     &__item-1 {
-        background-image: url("../../img/banner.png");
+        background-image: url("../../img/banner.png") ;
+        background-repeat: no-repeat;
+        background-size:cover;
     }
 
     &__block-top {
