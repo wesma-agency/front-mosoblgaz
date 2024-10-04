@@ -19,12 +19,12 @@ $color-light-white: #FFF;
 
 $border-radius: 5px;
 
-
 /*------ FONTS ------*/
 @mixin base-font{
     font-size: 15px;
     font-weight: 400;
 }
+
 
 
 h1{
@@ -91,7 +91,6 @@ a{
         flex-direction: column;
         gap: 30px;
     }
-
 }
 
 .mog-wrapper{
@@ -129,8 +128,8 @@ a{
     .mog-input{
         position: relative;
     
-        background-color: #00000000;
-        border: 1px solid $color-gray;
+        background-color: $color-white;
+        border: 1px solid $color-white;
         border-radius: $border-radius;
         color: $color-gray;
         padding: 10px 15px;
@@ -220,7 +219,6 @@ a{
     };
 
     &-input{
-
         padding: 14.5px 35px;
         position: absolute;
     }
@@ -390,6 +388,7 @@ a{
 }
 
 @media (max-width: 576px) {
+
 }
 
 
