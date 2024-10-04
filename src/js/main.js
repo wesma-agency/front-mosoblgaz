@@ -170,15 +170,12 @@ function openMenu(ui_menu, ui_close){
     })
 }
 
-
-
 document.addEventListener('DOMContentLoaded', ()=>{
     const UI = {
         MENU: document.querySelector(".js-menu"),
         MENU_BUTTON: document.querySelector(".js-open-menu"),
         MENU_CLOSE: document.querySelector(".js-close-menu"),
     }
-
     UI.MENU_BUTTON.addEventListener('click', ()=>{ 
         openMenu(UI.MENU, UI.MENU_CLOSE);
     })
