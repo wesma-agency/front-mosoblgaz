@@ -1,7 +1,7 @@
 'use strict';
 
-import '../scss/style.scss';
 import Swiper from 'swiper/bundle';
+import '../scss/style.scss';
 
 let swiperPopular = new Swiper(".swiper_category", {
     spaceBetween: 30,
@@ -159,15 +159,15 @@ let swiperBanner = new Swiper(".swiper_banner", {
 
 });
 
-function closeMenu(){
 
-}
-
-function openMenu(ui_menu, ui_close){
+function openMenu(ui_menu, ui_close, ui_body){
     ui_menu.classList.add("active-menu");
+    ui_body.classList.add("active-bloor")
     ui_close.addEventListener("click", ()=>{
         ui_menu.classList.remove("active-menu");
+        ui_body.classList.remove("active-bloor")
     })
+    
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -175,8 +175,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
         MENU: document.querySelector(".js-menu"),
         MENU_BUTTON: document.querySelector(".js-open-menu"),
         MENU_CLOSE: document.querySelector(".js-close-menu"),
+        BODY: document.querySelector("body"),
     }
     UI.MENU_BUTTON.addEventListener('click', ()=>{ 
-        openMenu(UI.MENU, UI.MENU_CLOSE);
+        openMenu(UI.MENU, UI.MENU_CLOSE, UI.BODY);
     })
 })

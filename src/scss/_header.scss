@@ -507,3 +507,17 @@ _
     transform: translateY(0px);
     display: block;
 }
+
+.active-bloor::after{
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: $color-dark-gray;
+    opacity: 0.5;
+
+}
