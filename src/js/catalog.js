@@ -15,19 +15,16 @@ function showMoreCategories() {
 	}
 
 	showMoreItemsBtn.addEventListener('click', () => {
-		itemsToShow += 5;
-
 		if (itemsToShow <= catalogItems.length) {
+			itemsToShow += 5;
+
 			for (let i = 0; i < itemsToShow; i++) {
 				catalogItems[i].style.display = 'block';
+				if (itemsToShow >= catalogItems.length) {
+					itemsToShow = catalogItems.length;
+					showMoreItemsBtn.classList.add('btn-disabled');
+				}
 			}
 		}
-
-		if (itemsToShow >= catalogItems.length) {
-			showMoreItemsBtn.classList.add('btn-disabled');
-		}
-
-		console.log(itemsToShow);
-		console.log(catalogItems.length);
 	});
 }

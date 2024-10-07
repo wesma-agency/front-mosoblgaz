@@ -1,0 +1,1233 @@
+//==========================================================================================================================================================
+// Section Top
+.category-top {
+}
+.container {
+}
+.category-breadcrumbs {
+}
+.breadcrumbs {
+	// .breadcrumbs__list
+	&__list {
+	}
+	// .breadcrumbs__item
+	&__item {
+	}
+	// .breadcrumbs__arrow
+	&__arrow {
+	}
+	// .breadcrumbs__item--current
+	&__item--current {
+	}
+}
+.catalog {
+	// .catalog__title
+	&__title {
+	}
+}
+.section-title {
+}
+
+//==========================================================================================================================================================
+// Section Category
+.category {
+	// .category__inner
+	&__inner {
+	}
+	// .category__content
+	&__content {
+		display: flex;
+		column-gap: 20px;
+	}
+}
+.container {
+}
+
+// Category Sidebar
+.category-sidebar {
+	flex: 0 0 305px;
+	overflow: hidden;
+}
+
+// Форма
+.category-sidebar-form {
+}
+.filters-list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	// max-width: 305px;
+	margin-bottom: 40px;
+}
+.filter-item {
+	max-width: 100%;
+	border-radius: 10px;
+	padding: 20px;
+	background-color: #f5f5f5;
+	// .filter-item__title
+	&__title {
+		font-weight: 500;
+		font-size: 18px;
+		color: #333;
+		cursor: pointer;
+		span {
+			display: flex;
+			&::after {
+				content: '';
+				background: url('/icons/arrow-down.svg');
+				width: 24px;
+				height: 24px;
+				margin-left: auto;
+				transition: 0.3s ease;
+			}
+		}
+	}
+	// .filter-item__main
+	&__main {
+	}
+
+	&:nth-child(2) {
+		display: none;
+	}
+}
+.filter-item--open {
+	.filter-item__title {
+		span {
+			&::after {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+}
+
+//==========================================================================================================================================================
+// Фильтр Сортировка
+.filters-title {
+	display: none;
+	font-weight: 500;
+	font-size: 20px;
+	color: #333;
+	margin-bottom: 30px;
+	// .filters-title__text
+	&__text {
+	}
+	svg {
+		// fill: #333;
+		fill: #f47920;
+		&:hover {
+			// fill: #f47920;
+		}
+	}
+}
+
+.filter-item {
+	// .filter-item__title
+	&__title {
+	}
+	// .filter-item__main
+	&__main {
+	}
+}
+.filter-item--open {
+}
+.sorting-filter {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	font-size: 15px;
+	color: #000;
+	// .sorting-filter__item
+	&__item {
+		display: flex;
+		align-items: center;
+		&:hover:not(.sorting-filter__item--active) {
+			.sorting-filter__switch {
+				border: 2px solid #333;
+			}
+		}
+	}
+	// .sorting-filter__item--active
+	&__item--active {
+	}
+	// .sorting-filter__input
+	&__input {
+		display: none;
+	}
+	// .sorting-filter__switch
+	&__switch {
+		display: flex;
+		border-radius: 50%;
+		border: 1px solid #cfcfcf;
+		width: 20px;
+		height: 20px;
+		margin-right: 8px;
+	}
+	// .sorting-filter__text
+	&__text {
+	}
+}
+.sorting-filter__item--active {
+	.sorting-filter__switch {
+		display: flex;
+		border-radius: 50%;
+		border: 6px solid #f47920;
+		width: 20px;
+		height: 20px;
+		margin-right: 10px;
+	}
+}
+
+//==========================================================================================================================================================
+// Фильтр Категория
+.tabs-filter {
+	// .tabs-filter__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+	// .tabs-filter__item
+	&__item {
+		display: flex;
+		align-items: center;
+		border-radius: 25px;
+		padding: 10px 20px;
+		width: fit-content;
+		font-size: 15px;
+		color: #333;
+		text-align: center;
+		background-color: #fff;
+	}
+	// .tabs-filter__item--active
+	&__item--active {
+		background-color: #333;
+		color: #fff;
+		.tabs-filter__close-btn {
+			display: flex;
+			margin-left: 10px;
+			&::after {
+				content: '';
+				width: 24px;
+				height: 24px;
+				mask-image: url('/icons/category-filter-catalog-close.svg');
+				mask-position: center;
+				mask-size: contain;
+				mask-repeat: no-repeat;
+				background-color: #fff;
+			}
+		}
+	}
+	// .tabs-filter__text
+	&__text {
+		// display: flex;
+	}
+	// .tabs-filter__count
+	&__count {
+		// display: flex;
+		margin-left: 5px;
+	}
+	// .tabs-filter__close-btn
+	&__close-btn {
+		display: none;
+	}
+}
+.filter-item--open {
+	.filter-item__title {
+		margin-bottom: 20px;
+	}
+}
+
+//==========================================================================================================================================================
+// Фильтр Цена
+.price-filter {
+	// .price-filter__top
+	&__top {
+	}
+	// .price-filter__range
+	&__range {
+	}
+	// .price-filter__bottom
+	&__bottom {
+	}
+}
+.price-range {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	// .price-range__item
+	&__item {
+		position: relative;
+		max-width: 100px;
+		border: 1px solid #cfcfcf;
+		border-radius: 5px;
+		padding: 8px 15px;
+		opacity: 0.8;
+	}
+	// .price-range__text
+	&__border-text {
+		position: absolute;
+		display: block;
+		top: -8px;
+		left: 12px;
+		padding: 0px 3px;
+		width: 18px;
+		font-size: 12px;
+		color: #333;
+		background: #f5f5f5;
+	}
+	// .price-range__label
+	&__label {
+	}
+	// .price-range__value
+	&__value {
+		color: #000;
+		&::placeholder {
+			color: #000;
+		}
+	}
+	// .price-range__devider
+	&__devider {
+		width: 11px;
+		height: 2px;
+		background-color: #000;
+	}
+	// .price-range__currency
+	&__currency {
+		display: flex;
+		&::after {
+			content: '';
+			background: url('/icons/ru-currency-icon.svg');
+			width: 22px;
+			height: 22px;
+		}
+	}
+}
+.price-bottom {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	font-size: 15px;
+	color: #000;
+	// .price-bottom__item
+	&__item {
+		display: flex;
+		align-items: center;
+		&:hover:not(.price-bottom__item--active) {
+			.price-bottom__switch {
+				border: 2px solid #333;
+			}
+		}
+	}
+	// .price-bottom__input
+	&__input {
+		display: none;
+	}
+	// .price-bottom__switch
+	&__switch {
+		display: flex;
+		border-radius: 50%;
+		border: 1px solid #cfcfcf;
+		width: 20px;
+		height: 20px;
+		margin-right: 8px;
+	}
+	// .price-bottom__text
+	&__text {
+		padding-top: 2px;
+	}
+	// .price-bottom__currency
+	&__currency {
+		padding-top: 2px;
+		font-size: 16px;
+		font-weight: 500;
+		margin-left: 6px;
+	}
+}
+.price-bottom__item--active {
+	.price-bottom__switch {
+		display: flex;
+		border-radius: 50%;
+		border: 6px solid #f47920;
+		width: 20px;
+		height: 20px;
+		margin-right: 10px;
+	}
+}
+
+//==========================================================================================================================================================
+// Фильтр Габариты
+.size-filter {
+	// .size-filter__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+		row-gap: 20px;
+	}
+	// .size-filter__item
+	&__item {
+	}
+	// .size-filter__name
+	&__name {
+		font-size: 15px;
+		margin-bottom: 13px;
+	}
+	// .size-filter__item-row
+	&__item-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .size-filter__item-range
+	&__item-range {
+	}
+}
+.size-range {
+	position: relative;
+	max-width: 100px;
+	border: 1px solid #cfcfcf;
+	border-radius: 5px;
+	padding: 8px 15px;
+	opacity: 0.8;
+	// .size-range__border-text
+	&__border-text {
+		position: absolute;
+		display: block;
+		top: -8px;
+		left: 12px;
+		padding: 0px 3px;
+		width: 18px;
+		font-size: 12px;
+		color: #333;
+		background: #f5f5f5;
+	}
+	// .size-range__label
+	&__label {
+	}
+	// .size-range__value
+	&__value {
+		color: #000;
+		&::placeholder {
+			color: #000;
+		}
+	}
+	// .size-range__devider
+	&__devider {
+		width: 11px;
+		height: 2px;
+		background-color: #000;
+	}
+	// .size-range__text
+	&__text {
+		font-size: 15px;
+		margin-left: -5px;
+	}
+}
+.lenght-range {
+}
+.width-range {
+}
+.height-range {
+}
+
+//==========================================================================================================================================================
+// Фильтр Производитель
+.brand-filter {
+	// .brand-filter__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+		row-gap: 10px;
+		margin-bottom: 10px;
+	}
+	// .brand-filter__item
+	&__item {
+		display: flex;
+		align-items: center;
+		&:hover:not(.brand-filter__item--active) {
+			.brand-filter__switch {
+				border: 2px solid #333;
+			}
+		}
+	}
+	// .brand-filter__input
+	&__input {
+		display: none;
+	}
+	// .brand-filter__switch
+	&__switch {
+		border-radius: 4px;
+		border: 1px solid #cfcfcf;
+		width: 20px;
+		height: 20px;
+		margin-right: 10px;
+	}
+	// .brand-filter__text
+	&__text {
+		font-size: 15px;
+	}
+	// .brand-filter__count
+	&__count {
+		font-size: 14px;
+		line-height: 1.5;
+		color: #cfcfcf;
+		margin-left: 5px;
+	}
+	// .brand-filter__showmore-btn
+	&__showmore-btn {
+		font-weight: 500;
+		color: #f47920;
+		span {
+			display: flex;
+			transition: 0.3s ease;
+			&::before {
+				content: '';
+				background: url('/icons/all-brands-icon.svg');
+				width: 16px;
+				height: 16px;
+				margin-right: 5px;
+			}
+			&:hover {
+				// color: #de6b20;
+			}
+		}
+	}
+}
+.brand-filter__item--active {
+	.brand-filter__switch {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 4px;
+		border: none;
+		width: 20px;
+		height: 20px;
+		background-color: #f47920;
+		margin-right: 10px;
+		&::after {
+			content: '';
+			background: url('/icons/checked-icon.svg');
+			width: 16px;
+			height: 16px;
+		}
+	}
+}
+
+//==========================================================================================================================================================
+// Фильтры подвал
+.filters-footer {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	// .filters-footer__reset-btn
+	&__reset-btn {
+		font-weight: 500;
+		text-align: center;
+		color: #333;
+		border: 1px solid #333;
+		border-radius: 25px;
+		padding: 8px 20px;
+		transition: 0.3s ease;
+		&:hover {
+			background-color: #333;
+			color: #f5f5f5;
+		}
+	}
+	// .filters-footer__tabs
+	&__tabs {
+		display: flex;
+		column-gap: 10px;
+		// overflow: hidden;
+	}
+	// .filters-footer__tab
+	&__tab {
+	}
+	// .filters-footer__allfilters-btn
+	&__allfilters-btn {
+		border-radius: 25px;
+		padding: 15px 35px;
+		background-color: #f47920;
+		font-weight: 500;
+		font-size: 16px;
+		text-align: center;
+		color: #fff;
+		transition: 0.3s ease;
+		&:hover {
+			border: 1px solid #f47920;
+			background-color: #fff;
+			color: #f47920;
+		}
+	}
+}
+.footer-tab {
+	// position: absolute;
+	display: flex;
+	align-items: center;
+	width: fit-content;
+	border-radius: 25px;
+	padding: 8px 20px;
+	background-color: #f5f5f5;
+
+	// .footer-tab__text
+	&__text {
+		text-wrap: nowrap;
+		font-size: 15px;
+		// text-align: center;
+		color: #333;
+	}
+	// .footer-tab__count
+	&__count {
+		margin-left: 5px;
+	}
+	// .footer-tab__close-btn
+	&__close-btn {
+	}
+}
+.footer-tab--active {
+	background-color: #333;
+	.footer-tab__text {
+		color: #f5f5f5;
+	}
+	.footer-tab__count {
+		color: #f5f5f5;
+	}
+	.footer-tab__close-btn {
+		display: flex;
+		margin-left: 10px;
+		&::after {
+			content: '';
+			width: 22px;
+			height: 22px;
+			mask-image: url('/icons/category-filter-catalog-close.svg');
+			mask-position: center;
+			mask-size: contain;
+			mask-repeat: no-repeat;
+			background-color: #fff;
+		}
+	}
+}
+
+//==========================================================================================================================================================
+// Category main
+.category-main {
+	flex: 1 1 auto;
+}
+.category-sort {
+	display: flex;
+	// justify-content: flex-end;
+	// position: relative;
+	margin-bottom: 20px;
+	// &::after {
+	// 	content: '';
+	// 	display: block;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	right: 0;
+	// 	width: 24px;
+	// 	height: 24px;
+	// 	background: url('/icons/select-dropdown-icon.svg');
+	// 	background-repeat: no-repeat;
+	// 	background-position: center;
+	// 	z-index: 1;
+	// }
+}
+
+.sort-select {
+	position: relative;
+	min-width: 220px;
+	color: #6d6e71;
+	margin-left: auto;
+	&::after {
+		content: '';
+		position: absolute;
+		top: 6px;
+		right: 6px;
+		background: url('/icons/arrow-down.svg');
+		width: 24px;
+		height: 24px;
+		z-index: -1;
+	}
+	select {
+		appearance: none;
+		width: 100%;
+		padding: 9px 15px;
+		border: 1px solid #6d6e71;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+}
+
+//==========================================================================================================================================================
+// Список товаров
+.category-products {
+	// .category-products__list
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		margin-bottom: 40px;
+	}
+}
+.category-product {
+	position: relative;
+	border: 1px solid #f5f5f5;
+	border-radius: 10px;
+	max-width: 305px;
+	padding: 20px 0px;
+	background-color: #fff;
+	transition: 0.3s ease;
+	&:hover {
+		box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.25);
+	}
+	// .category-product__img-link
+	&__img-link {
+		display: block;
+		margin-bottom: 20px;
+	}
+	// .category-product__content
+	&__content {
+		padding: 0px 20px;
+	}
+}
+
+.swiper {
+}
+.product-slider {
+	// .product-slider__pagination
+	&__pagination {
+	}
+}
+.swiper-wrapper {
+	margin-bottom: 10px;
+}
+.swiper-slide {
+}
+.product-slide {
+}
+.swiper-pagination {
+	position: static;
+	display: flex;
+	justify-content: center;
+	column-gap: 5px;
+	.swiper-pagination-bullet {
+		width: 20px;
+		height: 2px;
+		background-color: #cfcfcf;
+	}
+	.swiper-pagination-bullet-active {
+		background-color: #f47920;
+	}
+}
+.product {
+	// .product__article
+	&__article {
+		margin-bottom: 5px;
+	}
+	// .product__article-text
+	&__article-text {
+		color: #6d6e71;
+	}
+	// .product__title
+	&__title {
+		display: block;
+		margin-bottom: 5px;
+	}
+	// .product__title-text
+	&__title-text {
+		display: block;
+		font-weight: 500;
+		font-size: 18px;
+		color: #333;
+	}
+	// .product__rating
+	&__rating {
+		display: flex;
+		column-gap: 10px;
+		margin-bottom: 20px;
+		.product__rating-score {
+			font-weight: 700;
+			font-size: 14px;
+			color: #f47920;
+		}
+		.product__rating-comment {
+			color: #6d6e71;
+		}
+		.product__rating-link {
+		}
+	}
+	// .product__comment
+	&__comment {
+	}
+	// .product__properties
+	&__properties {
+		display: flex;
+		flex-direction: column;
+		row-gap: 5px;
+		margin-bottom: 20px;
+	}
+	// .product__prop-item
+	&__prop-item {
+		display: flex;
+		column-gap: 10px;
+	}
+	// .product__prop-name
+	&__prop-name {
+		color: #6d6e71;
+	}
+	// .product__prop-value
+	&__prop-value {
+		color: #333;
+	}
+	// .product__price
+	&__price {
+		display: flex;
+		flex-direction: column;
+	}
+	// .product__old-price
+	&__old-price {
+		font-weight: 500;
+		font-size: 16px;
+		color: #6d6e71;
+		text-decoration: line-through;
+	}
+	// .product__new-price
+	&__new-price {
+		font-weight: 500;
+		font-size: 22px;
+		color: #333;
+	}
+	// .product__cart-add
+	&__cart-add {
+		padding: 12px;
+		display: flex;
+		align-items: center;
+		column-gap: 5px;
+		border: 1px solid #f47920;
+		border-radius: 25px;
+		padding: 12px 15px;
+		width: 76px;
+		height: 48px;
+		background-color: #f47920;
+		transition: 0.3s ease;
+		.cart-icon {
+			stroke: #fff;
+		}
+		.cart-icon-added {
+			display: none;
+		}
+		&:hover {
+			background-color: transparent;
+			.cart-icon {
+				stroke: #f47920;
+			}
+		}
+	}
+	// .product__labels
+	&__labels {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		row-gap: 5px;
+		top: 20px;
+		left: 20px;
+		z-index: 10;
+	}
+	// .product__meta
+	&__meta {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		row-gap: 20px;
+		top: 20px;
+		right: 20px;
+		z-index: 10;
+	}
+}
+.product-footer {
+	display: flex;
+	justify-content: space-between;
+}
+.discount-label {
+	display: none;
+	border-radius: 25px;
+	padding: 5px 20px;
+	width: 87px;
+	height: 24px;
+	font-weight: 500;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	background-color: #f04e23;
+}
+.new-label {
+	display: none;
+	border-radius: 25px;
+	padding: 5px 20px;
+	width: 96px;
+	height: 24px;
+	font-weight: 500;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	background-color: #fcaf17;
+}
+.label-text {
+}
+
+//==========================================================================================================================================================
+// Стили для меток продукта
+.discount-product {
+	.discount-label {
+		display: block;
+	}
+}
+.new-product {
+	.new-label {
+		display: block;
+	}
+}
+.discount-first {
+	.discount-label {
+		order: 1;
+	}
+	.new-label {
+		order: 2;
+	}
+}
+.new-first {
+	.discount-label {
+		order: 2;
+	}
+	.new-label {
+		order: 1;
+	}
+}
+
+//==========================================================================================================================================================
+// Кнопки избранное и добавить в сравнение
+.meta-btn {
+	svg {
+		fill: none;
+		stroke-width: 2px;
+		stroke: #cfcfcf;
+		transition: 0.3s ease;
+	}
+	&:hover svg {
+		fill: none;
+		stroke: #f47920;
+	}
+}
+.favour-btn {
+}
+.compare-btn {
+}
+
+// .category-item {
+// 	// .category-item__meta
+// 	&__meta {
+// 	}
+// }
+// .meta-btn {
+// 	// .meta-btn__item
+// 	&__item {
+// 		svg {
+// 			fill: none;
+// 			stroke-width: 2px;
+// 			stroke: #cfcfcf;
+// 			transition: 0.3s ease;
+// 		}
+// 		&:hover svg {
+// 			fill: none;
+// 			stroke: #f47920;
+// 		}
+// 	}
+// }
+// .favour-btn {
+// }
+// .compare-btn {
+// }
+
+//==========================================================================================================================================================
+// Подвал категории
+.category-footer {
+	display: flex;
+	align-items: center;
+	margin-bottom: 100px;
+	// .category-footer__showmore
+	&__showmore {
+		border: 1px solid #f47920;
+		border-radius: 25px;
+		padding: 14px 35px;
+		min-width: 240px;
+		font-weight: 500;
+		font-size: 16px;
+		text-align: center;
+		color: #f47920;
+		transition: 0.3s ease;
+		cursor: pointer;
+		&:hover {
+			background-color: #f47920;
+			color: #fff;
+		}
+	}
+	// .category-footer__pagination
+	&__pagination {
+		display: flex;
+		column-gap: 20px;
+		margin-left: 78px;
+		.pagination__link {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: nowrap;
+			width: 38px;
+			height: 38px;
+			padding: 10px;
+			font-size: 15px;
+			text-align: center;
+			color: #bdbdbd;
+		}
+		.pagination__link--active {
+			border-radius: 50%;
+			color: #fff;
+			background-color: #f47920;
+		}
+		.pagination__link-dots {
+			display: flex;
+
+			gap: 2px;
+			span {
+				width: 2px;
+				height: 2px;
+				background-color: #bdbdbd;
+			}
+		}
+		.pagination__link-next {
+			border: 1px solid #f47920;
+			border-radius: 50%;
+		}
+	}
+	// .category-footer__pages-count
+	&__pages-count {
+		margin-left: auto;
+	}
+	// .category-footer__text
+	&__text {
+	}
+	// .category-footer__current-page
+	&__current-page {
+	}
+	// .category-footer__total-pages
+	&__total-pages {
+	}
+}
+.category-footer {
+	// .category-footer__pages-count
+	&__pages-count {
+		display: flex;
+		align-items: center;
+		column-gap: 15px;
+	}
+}
+.pages-count {
+	font-size: 15px;
+	color: #333;
+	// .pages-count__text
+	&__text {
+	}
+	// .pages-count__current-page
+	&__current-page {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+		border: 1px solid #6d6e71;
+		border-radius: 5px;
+		width: 38px;
+		height: 38px;
+	}
+	// .pages-count__total-pages
+	&__total-pages {
+	}
+}
+
+.showmore-btn {
+}
+.category-showmore {
+	// .category-showmore__btn
+	&__btn {
+	}
+}
+.pagination {
+	// .pagination__link
+	&__link {
+	}
+	// .pagination__link--active
+	&__link--active {
+	}
+	// .pagination__link-dots
+	&__link-dots {
+	}
+	// .pagination__link-next
+	&__link-next {
+	}
+}
+
+.mobile-filters-btn {
+	display: none;
+	border: 1px solid #f47920;
+	border-radius: 25px;
+	padding: 13px 35px;
+	max-width: 320px;
+	margin-bottom: 20px;
+	font-weight: 500;
+	font-size: 16px;
+	text-align: center;
+	color: #f47920;
+	cursor: pointer;
+	transition: 0.3s ease;
+	svg {
+		stroke: #f47920;
+		transition: 0.3s ease;
+	}
+	&:hover {
+		background-color: #f47920;
+		color: #f5f5f5;
+		svg {
+			stroke: #f5f5f5;
+		}
+	}
+}
+
+.mobile-bg {
+	display: none;
+}
+
+//==========================================================================================================================================================
+// Адаптив
+// * {
+// 	outline: 1px solid red !important;
+// }
+
+@media (max-width: 1200px) {
+	.category-products__list {
+		grid-template-columns: repeat((2, 1fr));
+	}
+
+	.category-footer {
+		flex-wrap: wrap;
+		justify-content: center;
+		column-gap: 65px;
+	}
+	.category-footer__showmore {
+		// width: 80%;
+		// max-width: 320px;
+		flex: 1 1 320px;
+		margin-bottom: 20px;
+	}
+	.category-footer__pagination,
+	.category-footer__pages-count {
+		margin-left: unset;
+	}
+}
+
+@media (max-width: 768px) {
+	body {
+		position: relative;
+	}
+
+	.mobile-bg--active {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #333;
+		opacity: 0.5;
+		z-index: 98;
+	}
+
+	.category-sidebar {
+		position: absolute;
+		top: 40px;
+		left: -300%;
+		// left: 0;
+		border-radius: 30px;
+		padding: 20px;
+		background-color: #fff;
+		max-width: 360px;
+		z-index: 99;
+		transition: 0.3s ease;
+		.filters-list {
+			row-gap: 0;
+		}
+		.filter-item {
+			border-bottom: 1px solid #d9d9d9;
+			border-radius: 0;
+			background-color: #fff;
+		}
+	}
+
+	.category-sidebar-mobile {
+		left: 0;
+	}
+
+	.category-sort {
+		display: none;
+	}
+
+	.mobile-filters-btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 16px;
+		margin-left: auto;
+	}
+
+	.category-product {
+		min-width: calc(100% - 20px / 2);
+	}
+}
+
+@media (max-width: 576px) {
+	.filters-title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.filter-item {
+		&:nth-child(2) {
+			display: block;
+		}
+	}
+
+	.category-products__list {
+		grid-template-columns: repeat(1, 1fr);
+		justify-items: center;
+	}
+
+	.category-product {
+		min-width: 320px;
+	}
+
+	.category-footer {
+		flex-direction: column;
+	}
+	.category-footer__showmore {
+		flex: 0 0 100%;
+		min-width: 100%;
+	}
+	.category-footer__pagination {
+		display: none;
+	}
+	.category-footer__pagination-mobile {
+		display: flex;
+	}
+	.category-footer__pages-count {
+		display: none;
+	}
+}
