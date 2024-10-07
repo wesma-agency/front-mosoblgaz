@@ -190,3 +190,33 @@ body {
 		display: none;
 	}
 }
+
+
+
+/*----- JS STYLE -----*/
+.open-accordion{
+	.js-accordion-head{
+		img{
+			transform: rotate(180deg);
+		}
+	}
+	.js-accordion-body{
+		height: 100%;
+		margin-top: 20px;
+		transition: all 0.5s;
+	}
+}
+
+.show-more-activate{
+	.js-show-more-container{
+		height: 100%;
+	}
+
+	.js-show-more-button{
+		display: none;
+	}
+
+	.js-show-more-block{
+
+	}
+}

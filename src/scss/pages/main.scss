@@ -549,10 +549,18 @@
         &__container {
             margin-top: 20px;
             max-height: 100%;
+            flex-wrap: nowrap;
+            overflow: hidden;
         }
     
         &__block {
             max-width:100%;
+            &:last-child{
+                .advantages__description{
+                    margin-bottom: 20px;
+                }
+                height: 100%;
+            }
         }
 
         &__description {

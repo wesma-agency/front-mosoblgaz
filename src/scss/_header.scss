@@ -371,6 +371,10 @@ _
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        a{
+            mix-blend-mode: multiply;
+        }
     }
 }
 .category-contents {
@@ -383,10 +387,10 @@ _
 }
 
 .menu-modal {
-    display: none;
     position: fixed;
     width: 100%;
-    
+    display: none;
+    opacity: 0;
     border-radius: 30px 30px 0 0;
     bottom: 0;
     z-index: 300;
@@ -504,8 +508,10 @@ _
 }
 
 .active-menu{
-    transform: translateY(0px);
+    transform: translateY(0);
+    opacity: 1;
     display: block;
+    transition: all 0.2s;
 }
 
 .active-bloor::after{
