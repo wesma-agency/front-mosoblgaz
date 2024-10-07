@@ -8,6 +8,8 @@
 	<body>
 		<div class="wrapper">
 			<main class="main">
+				<div class="mobile-bg"></div>
+
 				<section class="category-top">
 					<div class="container">
 						<nav class="category-breadcrumbs breadcrumbs">
@@ -67,6 +69,79 @@
 								<aside class="category-sidebar">
 									<form class="category-sidebar-form">
 										<div class="filters-list">
+											<div class="filters-title">
+												<h2 class="filters-title__text">Фильтр</h2>
+												<div class="filters-title__btn">
+													<svg
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect
+															width="15.6883"
+															height="1.01992"
+															rx="0.509959"
+															transform="matrix(0.700204 0.713943 -0.700204 0.713943 7.01465 6)"
+														/>
+														<rect
+															width="15.6883"
+															height="1.01992"
+															rx="0.509959"
+															transform="matrix(0.700204 -0.713943 0.700204 0.713943 6 17.2717)"
+														/>
+													</svg>
+												</div>
+											</div>
+											<div class="filter-item filter-item--open">
+												<div class="filter-item__title" type="button">
+													<span>Сортировка</span>
+												</div>
+												<div class="filter-item__main">
+													<div class="sorting-filter">
+														<label
+															class="sorting-filter__item sorting-filter__item--active"
+														>
+															<input
+																class="sorting-filter__input"
+																type="radio"
+																name="sorting-filter"
+																checked
+															/>
+															<span class="sorting-filter__switch"></span>
+															<span class="sorting-filter__text">Популярное</span>
+														</label>
+														<label class="sorting-filter__item">
+															<input
+																class="sorting-filter__input"
+																type="radio"
+																name="sorting-filter"
+															/>
+															<span class="sorting-filter__switch"></span>
+															<span class="sorting-filter__text">Подешевле</span>
+														</label>
+														<label class="sorting-filter__item">
+															<input
+																class="sorting-filter__input"
+																type="radio"
+																name="sorting-filter"
+															/>
+															<span class="sorting-filter__switch"></span>
+															<span class="sorting-filter__text">Подороже</span>
+														</label>
+														<label class="sorting-filter__item">
+															<input
+																class="sorting-filter__input"
+																type="radio"
+																name="sorting-filter"
+															/>
+															<span class="sorting-filter__switch"></span>
+															<span class="sorting-filter__text">Высокий рейтинг</span>
+														</label>
+													</div>
+												</div>
+											</div>
 											<div class="filter-item filter-item--open">
 												<div class="filter-item__title">
 													<span>Категория</span>
@@ -385,6 +460,19 @@
 								</aside>
 
 								<div class="category-main">
+									<div class="mobile-filters-btn">
+										<span class="mobile-filters-btn__text">Фильтры</span>
+										<svg
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path d="M20 5H4L10.4 12.8833V18.3333L13.6 20V12.8833L20 5Z" />
+										</svg>
+									</div>
+
 									<div class="category-sort">
 										<div class="sort-select">
 											<select>
@@ -400,7 +488,9 @@
 										</div>
 									</div>
 									<div class="category-products__list">
-										<div class="category-product discount-product new-product">
+										<div
+											class="category-product discount-product new-product discount-first"
+										>
 											<a class="category-product__img-link" href="#">
 												<div class="swiper product-slider">
 													<div class="swiper-wrapper">
@@ -561,7 +651,9 @@
 												</div>
 											</div>
 										</div>
-										<div class="category-product new-product discount-product">
+										<div
+											class="category-product new-product discount-product new-first"
+										>
 											<a class="category-product__img-link" href="#">
 												<div class="swiper product-slider">
 													<div class="swiper-wrapper">
@@ -1865,6 +1957,38 @@
 												<span></span>
 												<span></span>
 											</a>
+											<a href="#" class="pagination__link pagination__link-next">
+												<svg
+													width="15"
+													height="14"
+													viewBox="0 0 15 14"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M3 6.95181H1H14M14 6.95181L10.5323 4M14 6.95181L10.5323 10"
+														stroke="#F47920"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+													/>
+												</svg>
+											</a>
+										</div>
+
+										<div
+											class="category-footer__pagination category-footer__pagination-mobile"
+										>
+											<a href="#" class="pagination__link pagination__link--active">
+												1
+											</a>
+											<a href="#" class="pagination__link">2</a>
+											<a href="#" class="pagination__link">3</a>
+											<a href="#" class="pagination__link pagination__link-dots">
+												<span></span>
+												<span></span>
+												<span></span>
+											</a>
+											<a href="#" class="pagination__link">12</a>
 											<a href="#" class="pagination__link pagination__link-next">
 												<svg
 													width="15"

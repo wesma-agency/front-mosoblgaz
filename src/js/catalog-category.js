@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 	addToBasket();
+	showMobileFilters();
 });
 
 function addToBasket() {
@@ -15,5 +16,22 @@ function addToBasket() {
 				addedBtn.style.display = 'block';
 			}
 		});
+	});
+}
+
+function showMobileFilters() {
+	const mobileFiltersBtn = document.querySelector('.mobile-filters-btn');
+	const mobileBg = document.querySelector('.mobile-bg');
+	const sidebar = document.querySelector('.category-sidebar');
+	const filtersCloseBtn = document.querySelector('.filters-title__btn');
+
+	mobileFiltersBtn.addEventListener('click', () => {
+		sidebar.classList.add('category-sidebar-mobile');
+		mobileBg.classList.add('mobile-bg--active');
+	});
+
+	filtersCloseBtn.addEventListener('click', () => {
+		sidebar.classList.remove('category-sidebar-mobile');
+		mobileBg.classList.remove('mobile-bg--active');
 	});
 }
