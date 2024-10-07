@@ -271,8 +271,8 @@
 	}
 }
 
-.category {
-	// position: fixed;
+.header-category {
+	position: fixed;
 	top: 60px;
 	left: 0;
 	z-index: 100;
@@ -354,7 +354,7 @@
 		}
 	}
 }
-.category-contents {
+.header-category-contents {
 	display: none;
 
 	&__list {
