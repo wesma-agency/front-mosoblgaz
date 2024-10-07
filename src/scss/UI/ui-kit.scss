@@ -19,12 +19,12 @@ $color-light-white: #FFF;
 
 $border-radius: 5px;
 
-
 /*------ FONTS ------*/
 @mixin base-font{
     font-size: 15px;
     font-weight: 400;
 }
+
 
 
 h1{
@@ -76,6 +76,9 @@ h5{
     font-weight: 500;
 }
 
+a{
+    cursor: pointer;
+}
 
 /*------ UI ELEMENTS ------*/
 
@@ -88,7 +91,6 @@ h5{
         flex-direction: column;
         gap: 30px;
     }
-
 }
 
 .mog-wrapper{
@@ -126,8 +128,8 @@ h5{
     .mog-input{
         position: relative;
     
-        background-color: #00000000;
-        border: 1px solid $color-gray;
+        background-color: $color-white;
+        border: 1px solid $color-white;
         border-radius: $border-radius;
         color: $color-gray;
         padding: 10px 15px;
@@ -190,20 +192,203 @@ h5{
     .mog-select{
 
     }
-
-    
 }
 
-.mog-btn{
+
+
+@mixin style-text-btn-center{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.mog-button{
     &-dropdown{
         position: absolute;
         right: 18px;
         top: 8px
     };
+
     &-normal{
-    
+        @include style-text-btn-center;
+        padding: 15px 35px ;
+        border-radius: 25px;
+        border: 1px solid $color-black;
+        width: 100%;
     };
+
     &-input{
+        padding: 14.5px 35px;
         position: absolute;
     }
+
+    &-with-icon{
+        @include style-text-btn-center;
+
+        border-radius: 25px;
+        border: 1px solid $color-black;
+        padding: 15px 35px ;
+        width: 100%;
+    }
 }
+
+.mog-color{
+    &__button-orange{
+        color: $color-light-white;
+        background-color:  $color-orange;
+        border: 1px solid $color-orange;
+        &:hover{
+            color: $color-orange;
+            background-color: $color-light-white;
+        }
+        &::after{ 
+            background-color:  $color-light-white;
+        }
+        &:hover::after{ 
+            background-color:  $color-orange;
+        }
+    }
+
+    &__button-white-br-orange{
+        color: $color-orange;
+        background-color: $color-light-white;
+        border: 1px solid $color-orange;
+        &:hover{
+            color: $color-light-white;
+            background-color: $color-orange;
+        }
+        &::after{ 
+            background-color:  $color-orange
+        }
+        &:hover::after{ 
+            background-color:  $color-light-white;
+        }
+    }
+
+    &__button-transparent{
+        color: $color-light-white;
+        background-color: transparent;
+        border: 1px solid $color-light-white;
+        &:hover{
+            color: $color-light-white;
+            background-color: $color-orange;
+            border: 1px solid $color-orange;
+        }
+        &::after{ 
+            background-color: $color-light-white
+        }
+        &:hover::after{ 
+            background-color: $color-light-white;
+        }
+    }
+
+    &__button-blue-br{
+        color: $color-blue;
+        background-color: transparent;
+        border: 1px solid $color-blue;
+        &:hover{
+            color: $color-light-white;
+            background-color: $color-blue;
+        }
+        &::after{ 
+            background-color: $color-blue;
+        }
+        &:hover::after{
+            background-color: $color-light-white;
+        }
+    }
+}
+.mog-content{
+    padding: 80px 100px;
+}
+
+@mixin style-icon-btn{
+    display: inline-block;
+    margin-left: 5px;
+    //top: 13px;
+    width: 24px;
+    height: 24px;
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+}
+
+.icon {
+    &__authorization{
+        position: relative;
+        &::after{
+            content: '';
+            mask-image: url('../../icons/all/profile.svg');
+            background-color: $color-light-white;
+            @include style-icon-btn;
+        }
+    }
+    &__plus{
+        position: relative;
+        &::after{
+            content: '';
+            mask-image: url('../../icons/all/plus.svg');
+            @include style-icon-btn;
+        }
+    }
+    &__left-arrow{
+        position: relative;
+        &::after{
+
+            content: '';
+            mask-image: url('../../icons/arrow/long-arow-right.svg');
+            @include style-icon-btn;
+            width: 21px;
+            height: 11px;
+        }
+    }
+}
+
+.mog__container{
+    margin-top: 40px;
+}
+
+.point{
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    &::before{
+        display: inline-block;
+        content: '';
+        height: 4px;
+        min-width: 4px;
+        border-radius: 10px;
+        background-color: $color-light-white;
+        margin-right: 8px;
+    }
+    
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 768px) {
+    .text-overflow{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: pre;
+    }
+    .mog__container{
+        margin-top: 20px;
+    }
+    .mog-content{
+        padding: 20px 20px;
+    }
+	h2{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    
+}
+
+@media (max-width: 576px) {
+
+}
+
