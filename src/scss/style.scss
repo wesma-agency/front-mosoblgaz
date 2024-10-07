@@ -8,22 +8,18 @@
 //==========================================================================================================================================================
 // Общие параметры
 
-// Переменные для цветов
-$main-gray: #6d6e71;
-
+*{
+	box-sizing: border-box;
+	transition: all 0.2s;
+}
 // Облочка
 body {
-	font-family: 'PFAgoraSansPro', sans-serif;
-	font-size: 14px;
+	font-size: 15px;
 	font-weight: 400;
+	font-family: 'PFAgoraSansPro', sans-serif;
 	line-height: 1.3;
-	color: $main-gray;
+	color: $color-black;
 	background-color: #fff;
-	// overflow-x: hidden;
-	// overflow-y: scroll;
-	// &.lock {
-	// 	overflow: hidden;
-	// }
 }
 
 .wrapper {
@@ -40,6 +36,19 @@ body {
 	margin: 0 auto;
 	padding: 0 15px;
 }
+
+
+.adaptive-display-none-flex,
+.adaptive-display-none{
+    display: none;
+}
+
+.adaptive-display-1200,
+.adaptive-display-768{
+    display: block;
+}
+
+
 
 //==========================================================================================================================================================
 // Общие стили элементов
@@ -123,6 +132,130 @@ body {
 //
 // Здесь подключаем осатльные страницы
 //
+@import './pages/main.scss';
+//
 @import './pages/catalog';
 @import './pages/catalog-category';
 @import './_footer';
+
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+	border-radius: 50px;
+	border: 5px solid $color-light-white;
+	background-color: $color-gray;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	z-index: 10;
+}
+
+.swiper-button-next{
+	right: 20px;
+}
+
+.swiper-button-prev{
+	left: 20px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+	border: 5px solid $color-light-white;
+	background-color: $color-orange;
+	position: absolute;
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after{
+	background-color: $color-light-white;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+	content: '';
+	position: absolute;
+	background-color:$color-light-white;
+	top: 2px;
+	left: 3px;
+	width: 20px;
+	height: 20px;
+}
+
+.swiper-button-next::after{
+	mask-image: url("../icons/all/arrow-right.svg");
+}
+
+.swiper-button-prev::after{
+	mask-image: url("../icons/all/arrow-left.svg");
+}
+
+@media (max-width: 1200px) {
+	.container {
+		max-width: 990px;
+	}
+	.adaptive-display-1200{
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		max-width: 570px;
+	}
+
+	.adaptive-display-none{
+		display: block;
+	}
+	.adaptive-display-none-flex{
+		display: flex;
+	}
+
+	.adaptive-display-768{
+		display: none;
+	}
+}
+
+@media (max-width: 576px) {
+	.container {
+		width: 100%;
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev{
+		display: none;
+	}
+}
+
+
+
+/*----- JS STYLE -----*/
+.open-accordion{
+	.js-accordion-head{
+		img{
+			transform: rotate(180deg);
+		}
+	}
+	.js-accordion-body{
+		height: 100%;
+		margin-top: 20px;
+		transition: all 0.5s;
+	}
+}
+
+.show-more-activate{
+	.js-show-more-container{
+		height: 100%;
+	}
+
+	.js-show-more-button{
+		display: none;
+	}
+
+	.js-show-more-block{
+
+	}
+}
