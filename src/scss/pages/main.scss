@@ -2,7 +2,9 @@
     width: 100%;
     position: relative;
     color: $color-light-white;
-    margin-bottom: 80px;
+    //margin-bottom: 80px;
+    padding-top: 10px;
+    padding-bottom: 0px;
     
 
     &__arrow {
@@ -118,7 +120,8 @@
 
     &__head {
         display: flex;
-        justify-content: space-between;        
+        justify-content: space-between;     
+        font-weight: 500;   
     }
 
     &__title {
@@ -135,8 +138,6 @@
 
     }
 }
-
-
 
 .popular-item {
 	border-radius: 10px;
@@ -183,6 +184,7 @@
 
 .brands {
     h2{
+        font-weight: 500;   
         //padding-inline: 80px;
     }
     &__container {
@@ -214,17 +216,98 @@
    
 }
 
+.main-catalog{
+    background: $color-white;
+    width: 100%;
+    position: relative;
+    padding-bottom: 20px;
+
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+
+        margin-bottom: 40px;
+        h2{
+            font-weight: 500;   
+            position: relative;
+            &::after{
+                display: inline-block;
+                content: '';
+                mask-image: url("../../icons/arrow/long-arow-right.svg");
+                width: 24px;
+                height: 16px;
+                align-self: center;
+                background-color: $color-orange;
+                margin-left: 10px;
+            }
+            &:hover::after{
+                transform:translateX(20px);
+
+            }
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+   
+    }
+
+    &__tab {
+        border-radius: 25px;
+        background-color: $color-light-white;
+        color: $color-black;
+        width: 100%;
+        max-height: 100%;
+        padding: 8px 20px;
+        text-wrap: nowrap;
+       
+        &.active{
+            background-color: $color-black ;
+            color: $color-light-white;
+        }
+    }
+
+    &__container {
+
+        .category-products__list{
+            min-height: 600px;
+      
+        }
+
+    }
+
+    .category-product{
+        max-width: 100%;
+        min-width: 0;
+        max-height: 560px;
+
+    }
+    .main-catalog__pagination{
+        display: none;
+        justify-self: center;
+        align-self:center;
+        margin-top: -60px;
+    }
+    &__button{
+        margin-top: 20px;
+    }
+}
 
 .material {
     background: $color-white;
     width: 100%;
     position: relative;
+    padding-bottom: 40px;
     
    
     &__head {
         display: flex;
         justify-content: space-between;
         h2{
+            font-weight: 500;   
             position: relative;
             &::after{
                 display: inline-block;
@@ -350,9 +433,11 @@
     }
 }
 
-
 .advantages {
     overflow: visible;
+    h2{
+        font-weight: 500;   
+    }
 
     &__container {
         overflow: visible;
@@ -410,8 +495,11 @@
     }
 }
 
-
 .information {
+    padding-bottom: 20px;
+    h2{
+        font-weight: 500;   
+    }
     //margin-bottom: 100px;
 
     &__container {
@@ -492,6 +580,35 @@
         }
 
     }
+
+    .main-catalog{
+        &__head {
+            display: flex;
+            justify-content: left;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+            h2{
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+            
+        }
+        &__tab {
+            flex-wrap: wrap;
+            width: auto;
+            &.active{
+              
+            }
+        }
+        .main-catalog__pagination{
+            display: block;
+            justify-self: center;
+            align-self:center;
+        }
+
+    }
+
     .material {
        
         &__head {

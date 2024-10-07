@@ -51,6 +51,51 @@ let swiperPopular = new Swiper(".swiper_category", {
     }
 });
 
+
+let swiperCatalog = new Swiper(".swiper_main-catalog", {
+    spaceBetween: 30,
+    slidesPerView: 1,
+    loop: true,
+
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false
+    // },
+    pagination: {
+		el: '.main-catalog__pagination',
+        type: 'bullets',
+		clickable: true,
+    },
+    navigation: {
+      nextEl: ".main-catalog-button-next",
+      prevEl: ".main-catalog-button-prev",
+    },
+    
+    mousewheel: true,
+    keyboard: true,
+    breakpoints: {
+        576:{
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768:{
+            spaceBetween: 20,
+            slidesPerView: 2,
+        },
+        1200:{
+
+            spaceBetween: 20,
+            slidesPerView: 4,
+        },
+        1500:{
+            spaceBetween: 20,
+            slidesPerView: 5,
+        }
+    }
+});
+
+
+
 let swiperMaterial = new Swiper(".swiper_material", {
     loop: true,
     autoplay: {
