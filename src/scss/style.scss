@@ -8,7 +8,7 @@
 //==========================================================================================================================================================
 // Общие параметры
 
-*{
+* {
 	box-sizing: border-box;
 	transition: all 0.2s;
 }
@@ -45,16 +45,14 @@ width: 100%;
 }
 
 .adaptive-display-none-flex,
-.adaptive-display-none{
-    display: none;
+.adaptive-display-none {
+	display: none;
 }
 
 .adaptive-display-1200,
-.adaptive-display-768{
-    display: block;
+.adaptive-display-768 {
+	display: block;
 }
-
-
 
 //==========================================================================================================================================================
 // Общие стили элементов
@@ -150,7 +148,7 @@ width: 100%;
 }
 
 .swiper-button-next,
-.swiper-button-prev{
+.swiper-button-prev {
 	border-radius: 50px;
 	border: 5px solid $color-light-white;
 	background-color: $color-gray;
@@ -160,50 +158,50 @@ width: 100%;
 	z-index: 10;
 }
 
-.swiper-button-next{
+.swiper-button-next {
 	right: 20px;
 }
 
-.swiper-button-prev{
+.swiper-button-prev {
 	left: 20px;
 }
 
 .swiper-button-next:hover,
-.swiper-button-prev:hover{
+.swiper-button-prev:hover {
 	border: 5px solid $color-light-white;
 	background-color: $color-orange;
 	position: absolute;
 }
 
 .swiper-button-next:hover::after,
-.swiper-button-prev:hover::after{
+.swiper-button-prev:hover::after {
 	background-color: $color-light-white;
 }
 
 .swiper-button-next::after,
-.swiper-button-prev::after{
+.swiper-button-prev::after {
 	content: '';
 	position: absolute;
-	background-color:$color-light-white;
+	background-color: $color-light-white;
 	top: 2px;
 	left: 3px;
 	width: 20px;
 	height: 20px;
 }
 
-.swiper-button-next::after{
-	mask-image: url("../icons/all/arrow-right.svg");
+.swiper-button-next::after {
+	mask-image: url('../icons/all/arrow-right.svg');
 }
 
-.swiper-button-prev::after{
-	mask-image: url("../icons/all/arrow-left.svg");
+.swiper-button-prev::after {
+	mask-image: url('../icons/all/arrow-left.svg');
 }
 
 @media (max-width: 1200px) {
 	.container {
 		max-width: 990px;
 	}
-	.adaptive-display-1200{
+	.adaptive-display-1200 {
 		display: none;
 	}
 }
@@ -213,14 +211,14 @@ width: 100%;
 		max-width: 570px;
 	}
 
-	.adaptive-display-none{
+	.adaptive-display-none {
 		display: block;
 	}
-	.adaptive-display-none-flex{
+	.adaptive-display-none-flex {
 		display: flex;
 	}
 
-	.adaptive-display-768{
+	.adaptive-display-768 {
 		display: none;
 	}
 }
@@ -231,37 +229,34 @@ width: 100%;
 	}
 
 	.swiper-button-next,
-	.swiper-button-prev{
+	.swiper-button-prev {
 		display: none;
 	}
 }
 
-
-
 /*----- JS STYLE -----*/
-.open-accordion{
-	.js-accordion-head{
-		img{
+.open-accordion {
+	.js-accordion-head {
+		img {
 			transform: rotate(180deg);
 		}
 	}
-	.js-accordion-body{
+	.js-accordion-body {
 		height: 100%;
 		margin-top: 20px;
 		transition: all 0.5s;
 	}
 }
 
-.show-more-activate{
-	.js-show-more-container{
+.show-more-activate {
+	.js-show-more-container {
 		height: 100%;
 	}
 
-	.js-show-more-button{
+	.js-show-more-button {
 		display: none;
 	}
 
-	.js-show-more-block{
-
+	.js-show-more-block {
 	}
 }

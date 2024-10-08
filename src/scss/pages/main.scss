@@ -620,6 +620,7 @@
     }
 
     .material {
+        padding-bottom: 0;
        
         &__head {
             display: flex;
@@ -697,6 +698,12 @@
         &__show-more{
             margin-top: 20px;
         }
+    }
+
+    
+    .popular-category {
+
+        padding-bottom: 20px;
     }
 }
 
