@@ -16,6 +16,26 @@ const categoryProductSlider = new Swiper('.product-slider', {
     
 });
 
+const productCardThumbsSlider = new Swiper('.column-img__thumbs', {
+	spaceBetween: 20,
+	slidesPerView: 4,
+	// direction: 'vertical',
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+});
+const productcardMainSlider = new Swiper('.column-img__slider', {
+	pagination: {
+		el: '.column-img__slider-pagination',
+		clickable: true,
+	},
+	thumbs: {
+		swiper: productCardThumbsSlider,
+	},
+});
+
+
 let swiperPopular = new Swiper(".swiper_category", {
     spaceBetween: 30,
     slidesPerView: 7,
@@ -89,10 +109,6 @@ let swiperCatalog = new Swiper(".swiper_main-catalog", {
             spaceBetween: 20,
             slidesPerView: 4,
         },
-        1500:{
-            spaceBetween: 20,
-            slidesPerView: 5,
-        }
     }
 });
 
