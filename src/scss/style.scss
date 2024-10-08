@@ -25,7 +25,9 @@ body {
 .wrapper {
 	min-height: 100vh; // Возможно лучше указать %
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
+width: 100%;
+
 	.main {
 		flex: 1 1 auto;
 	}
@@ -37,6 +39,10 @@ body {
 	padding: 0 15px;
 }
 
+.container-1440{
+	width: 100%;
+	max-width: 1440px;
+}
 
 .adaptive-display-none-flex,
 .adaptive-display-none{

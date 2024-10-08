@@ -1,7 +1,7 @@
 'use strict';
 
-import '../scss/style.scss';
 import Swiper from 'swiper/bundle';
+import '../scss/style.scss';
 
 
 const categoryProductSlider = new Swiper('.product-slider', {
@@ -13,6 +13,7 @@ const categoryProductSlider = new Swiper('.product-slider', {
 		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
 		// },
 	},
+    
 });
 
 let swiperPopular = new Swiper(".swiper_category", {
@@ -27,10 +28,10 @@ let swiperPopular = new Swiper(".swiper_category", {
       nextEl: ".popular-button-next",
       prevEl: ".popular-button-prev",
     },
-    mousewheel: true,
+    //mousewheel: true,
     keyboard: true,
 
-
+    mousewheelControl: false,
     enabled: false,
     breakpoints: {
         576:{
@@ -71,7 +72,8 @@ let swiperCatalog = new Swiper(".swiper_main-catalog", {
       prevEl: ".main-catalog-button-prev",
     },
     
-    mousewheel: true,
+    //mousewheel: true,
+    mousewheelControl: false,
     keyboard: true,
     breakpoints: {
         576:{
@@ -106,7 +108,8 @@ let swiperMaterial = new Swiper(".swiper_material", {
       nextEl: ".material-button-next",
       prevEl: ".material-button-prev",
     },
-    mousewheel: true,
+    //mousewheel: true,
+    mousewheelControl: false,
     keyboard: true,
 
     pagination: true,
@@ -128,12 +131,6 @@ let swiperMaterial = new Swiper(".swiper_material", {
             spaceBetween: 30,
             slidesPerView: 3,
         },
-        1440:{
-            pagination: false,
-
-            spaceBetween: 30,
-            slidesPerView: 4,
-        }
     }
 });
 
@@ -146,7 +143,7 @@ let swiperBrand1 = new Swiper(".swiper_brand_one", {
         reverseDirection: true,
         waitForTransition: true,
     },
-  
+    mousewheelControl: false,
     speed: 2000,
     slidesPerView: 3,
     spaceBetween: 10,
@@ -176,6 +173,7 @@ let swiperBrand2 = new Swiper(".swiper_brand_two", {
         waitForTransition: true,
     },
     enabled:true,
+    mousewheelControl: false,
     speed: 2000,
     slidesPerView: 3,
     spaceBetween: 10,
@@ -209,7 +207,8 @@ let swiperBanner = new Swiper(".swiper_banner", {
       nextEl: ".banner-button-next",
       prevEl: ".banner-button-prev",
     },
-    mousewheel: true,
+    //mousewheel: true,
+    mousewheelControl: false,
     keyboard: true,
 
 });

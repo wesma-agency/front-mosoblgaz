@@ -1,5 +1,5 @@
 .header {
-    position: sticky;
+    position: relative;
     top: 0;
     left: 0;
     display: flex;
@@ -286,6 +286,16 @@ _
             display: block;
         }
     }
+
+    &__date{
+        position: relative;
+        &:hover .header__modal{
+            display: block;
+            top: 10px;
+            line-height: 1.6;
+        }
+    }
+
 }
 
 
@@ -482,6 +492,8 @@ _
 
 @media (max-width: 768px) {
 	.header{
+
+        position: sticky;
         padding-inline: 20px;
         padding-top: 14px;
         padding-bottom: 14px;

@@ -196,6 +196,16 @@ a{
 
 
 
+.mog-tab{
+    border: 1px solid $color-light-white;
+    &:hover{
+        background-color: transparent;
+        color: $color-orange;
+        border: 1px solid $color-orange;
+    }
+
+}
+
 @mixin style-text-btn-center{
     display: flex;
     flex-wrap: nowrap;
@@ -240,7 +250,7 @@ a{
         border: 1px solid $color-orange;
         &:hover{
             color: $color-orange;
-            background-color: $color-light-white;
+            background-color: transparent;
         }
         &::after{ 
             background-color:  $color-light-white;
@@ -383,6 +393,9 @@ a{
 	h2{
         font-size: 1.5rem;
         line-height: 2.5rem;
+    }
+    .mog-tabs{
+        flex-wrap: wrap;
     }
 
     
