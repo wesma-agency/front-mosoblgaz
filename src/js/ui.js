@@ -89,3 +89,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
     //     openMenu(UI.MENU, UI.MENU_CLOSE);
     // })
 })
+
+//Раскрытие/скрытие текста
+const textContents = document.querySelectorAll('.text-content');
+textContents.forEach((textContent) => {
+    const show = textContent.querySelector('.text-content__show');
+    show?.addEventListener('click', () => {
+        textContent.classList.add('text-content--active');
+    });
+    
+    const hide = textContent.querySelector('.text-content__hide');
+    hide?.addEventListener('click', () => {
+        textContent.classList.remove('text-content--active');
+    });
+});
