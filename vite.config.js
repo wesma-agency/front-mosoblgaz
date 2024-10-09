@@ -3,8 +3,9 @@ import { defineConfig } from 'vite';
 import path from "path";
 import injectHTML from 'vite-plugin-html-inject';
 
+
 export default defineConfig({
-	// base: './',
+	base: './',
 
 	plugins: [injectHTML()],
 
@@ -13,12 +14,14 @@ export default defineConfig({
 	},
 
 	build: {
-		// rollupOptions: {
-		// 	input: {
-		// 		index: '/index.html',
-		// 		catalog: '/catalog.html',
-		// 	},
-		// },
+		rollupOptions: {
+			input: {
+				index: 'index.html',
+				catalog: 'catalog.html',
+				catalog_category: 'catalog-category.html',
+				product_card: 'product-card.html',
+			},
+		},
 		// Не обязательные опции
 		// minify: true,
 	},
