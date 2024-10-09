@@ -20,6 +20,7 @@ export default defineConfig({
 				catalog: 'catalog.html',
 				catalog_category: 'catalog-category.html',
 				product_card: 'product-card.html',
+				trade_in: 'trade-in.html',
 			},
 		},
 		// Не обязательные опции
