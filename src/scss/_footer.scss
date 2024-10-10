@@ -144,6 +144,17 @@
     // .footer__list-links
 
     &__list-links {
+        &.open-accordion {
+            .js-accordion-head {
+                img {
+                    
+                }
+            }
+            .js-accordion-body {
+                margin-top: 20px;
+
+            }
+        }
     }
 
     // .footer__head-block
