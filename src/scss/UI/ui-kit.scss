@@ -276,6 +276,22 @@ a{
         }
     }
 
+    &__button-transparent-br-orange{
+        color: $color-orange;
+        background-color: transparent;
+        border: 1px solid $color-orange;
+        &:hover{
+            color: $color-light-white;
+            background-color: $color-orange;
+        }
+        &::after{ 
+            background-color:  $color-orange
+        }
+        &:hover::after{ 
+            background-color:  $color-light-white;
+        }
+    }
+
     &__button-transparent{
         color: $color-light-white;
         background-color: transparent;

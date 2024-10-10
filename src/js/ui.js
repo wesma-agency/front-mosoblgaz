@@ -102,4 +102,18 @@ textContents.forEach((textContent) => {
     hide?.addEventListener('click', () => {
         textContent.classList.remove('text-content--active');
     });
+
+    const body = textContent.querySelector('.text-content__body');
+    if (body.classList.contains('text-content__body--clamp')) {
+        textContentBodyHandler(body, show, hide);
+        window.addEventListener('resize', () => textContentBodyHandler(body, show, hide));
+    }
 });
+
+function textContentBodyHandler(body, show) {
+    if (body.scrollHeight > body.clientHeight) {
+        show?.classList.remove('text-content__show--inactive');
+    } else {
+        show?.classList.add('text-content__show--inactive');
+    }
+}

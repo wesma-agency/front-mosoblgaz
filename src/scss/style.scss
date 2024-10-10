@@ -10,7 +10,7 @@
 
 * {
 	box-sizing: border-box;
-	// transition: all 0.2s; //dev
+	transition: all 0.2s;
 }
 // Облочка
 body {
@@ -256,6 +256,26 @@ body {
 				margin-top: 20px;
 			}
 		}
+
+		&--clamp {
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			line-clamp: 1;
+			-webkit-box-orient: vertical;
+			word-break: break-word;
+		}
+
+		&--clamp-14 {
+			-webkit-line-clamp: 14;
+			line-clamp: 14;
+		}
+	}
+
+	&--active &__body {
+		&--clamp {
+			display: block;
+		}
 	}
 
 	&__show,
@@ -263,6 +283,10 @@ body {
 		margin-top: 20px;
 
 		&--mobile {
+			display: none;
+		}
+
+		&--inactive {
 			display: none;
 		}
 	}
@@ -323,6 +347,19 @@ body {
 		height: 100%;
 		object-fit: cover;
 	}
+
+	&__btns {
+		margin-top: 20px;
+		display: flex;
+	}
+
+	&__btns-item {
+		width: auto;
+
+		&:not(:first-child) {
+			margin-left: 20px;
+		}
+	}
 }
 
 //==========================================================================================================================================================
@@ -333,6 +370,10 @@ body {
 	}
 	
 	.title {
+		&--2 {
+			font-size: 28px;
+		}
+
 		&--3 {
 			font-size: 22px;
 		}
@@ -371,6 +412,10 @@ body {
 
 
 	.title {
+		&--2 {
+			font-size: 20px;
+		}
+
 		&--3 {
 			font-size: 18px;
 		}
@@ -448,6 +493,18 @@ body {
 			}
 
 			&:last-child {
+				margin-left: 0;
+			}
+		}
+
+		&__btns {
+			margin-top: 30px;
+			flex-direction: column;
+		}
+
+		&__btns-item {
+			&:not(:first-child) {
+				margin-top: 25px;
 				margin-left: 0;
 			}
 		}
