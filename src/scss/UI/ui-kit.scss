@@ -213,6 +213,7 @@ a{
     justify-content: center;
 }
 
+a.mog-button,
 .mog-button{
     &-dropdown{
         position: absolute;
@@ -243,6 +244,7 @@ a{
     }
 }
 
+a.mog-color,
 .mog-color{
     &__button-orange{
         color: $color-light-white;

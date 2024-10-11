@@ -22,6 +22,7 @@ export default defineConfig({
 				product_card: 'product-card.html',
 				trade_in: 'trade-in.html',
 				safe_house: 'safe-house.html',
+				montazh: 'montazh.html',
 			},
 		},
 		// Не обязательные опции
