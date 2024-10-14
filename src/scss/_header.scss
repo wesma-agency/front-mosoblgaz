@@ -39,6 +39,7 @@
 		a {
 			position: relative;
 			text-wrap: nowrap;
+			transition: all 0.2s;
 		}
 
 		a:hover {
@@ -315,7 +316,7 @@
 		color: $color-black;
 		width: 100%;
 		padding: 5px 10px 5px 80px;
-
+		transition: all 0.2s;
 
 		&::after {
 			content: '';
@@ -373,6 +374,7 @@
 			opacity: 0.5;
 			mix-blend-mode: multiply;
 			height: 50px;
+			transition: all 0.2s;
 		
 			img{
 				max-height: 40px;
@@ -472,8 +474,10 @@
 
 	&__nav {
 		padding: 10px 0;
+		display: block;
 		border-top: 1px solid $color-gray;
 		font-weight: 500;
+
 		&:last-child {
 			border-bottom: 1px solid $color-gray;
 		}

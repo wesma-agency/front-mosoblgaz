@@ -133,7 +133,8 @@ a{
         border-radius: $border-radius;
         color: $color-gray;
         padding: 10px 15px;
-    
+        transition: all 0.2s;
+        
         @include base-font;
         &::placeholder{
             color: $color-gray;
@@ -198,6 +199,8 @@ a{
 
 .mog-tab{
     border: 1px solid $color-light-white;
+    transition: all 0.2s;
+
     &:hover{
         background-color: transparent;
         color: $color-orange;
@@ -214,7 +217,7 @@ a{
 }
 
 a.mog-button,
-.mog-button{
+.mog-button{   
     &-dropdown{
         position: absolute;
         right: 18px;
@@ -226,7 +229,7 @@ a.mog-button,
         padding: 15px 35px ;
         border-radius: 25px;
         border: 1px solid $color-black;
-        width: 100%;
+        transition: all 0.2s;
     };
 
     &-input{
@@ -241,6 +244,7 @@ a.mog-button,
         border: 1px solid $color-black;
         padding: 15px 35px ;
         width: 100%;
+        transition: all 0.2s;
     }
 }
 
@@ -250,6 +254,8 @@ a.mog-color,
         color: $color-light-white;
         background-color:  $color-orange;
         border: 1px solid $color-orange;
+        transition: all 0.2s;
+
         &:hover{
             color: $color-orange;
             background-color: transparent;
@@ -266,6 +272,8 @@ a.mog-color,
         color: $color-orange;
         background-color: $color-light-white;
         border: 1px solid $color-orange;
+        transition: all 0.2s;
+
         &:hover{
             color: $color-light-white;
             background-color: $color-orange;
@@ -282,6 +290,8 @@ a.mog-color,
         color: $color-orange;
         background-color: transparent;
         border: 1px solid $color-orange;
+        transition: all 0.2s;
+
         &:hover{
             color: $color-light-white;
             background-color: $color-orange;
@@ -298,6 +308,8 @@ a.mog-color,
         color: $color-light-white;
         background-color: transparent;
         border: 1px solid $color-light-white;
+        transition: all 0.2s;
+
         &:hover{
             color: $color-light-white;
             background-color: $color-orange;
@@ -315,6 +327,8 @@ a.mog-color,
         color: $color-blue;
         background-color: transparent;
         border: 1px solid $color-blue;
+        transition: all 0.2s;
+
         &:hover{
             color: $color-light-white;
             background-color: $color-blue;
@@ -390,6 +404,47 @@ a.mog-color,
         margin-right: 8px;
     }
     
+}
+
+.input {
+	&__main {
+		position: relative;
+	}
+
+	&__field {
+		padding: 11px 15px;
+		width: 100%;
+		border-radius: 5px;
+		border: 1px solid $color-dark-gray;
+
+		&::placeholder {
+			color: $color-gray;
+		}
+
+		&:placeholder-shown {
+			border-color: $color-gray;
+		}
+
+		&--white {
+			background-color: $color-white;
+			border-color: transparent;
+
+			&:placeholder-shown {
+				border-color: transparent;
+			}
+
+			&:focus {
+				border-color: $color-dark-gray;
+			}
+		}
+	}
+
+	&__btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 8px;
+	}
 }
 
 @media (max-width: 1200px) {

@@ -23,6 +23,7 @@ export default defineConfig({
 				trade_in: 'trade-in.html',
 				safe_house: 'safe-house.html',
 				montazh: 'montazh.html',
+				contacts: 'contacts.html',
 			},
 		},
 		// Не обязательные опции
