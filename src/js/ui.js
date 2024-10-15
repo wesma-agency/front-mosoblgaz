@@ -92,14 +92,37 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 //Раскрытие/скрытие текста
 const textContents = document.querySelectorAll('.text-content');
-textContents.forEach((textContent) => {
+textContents.forEach((textContent, index) => {
+    const body = textContent.querySelector('.text-content__body');
     const show = textContent.querySelector('.text-content__show');
+
     show?.addEventListener('click', () => {
         textContent.classList.add('text-content--active');
+        textContentBodyHandler(body, show);
     });
     
     const hide = textContent.querySelector('.text-content__hide');
     hide?.addEventListener('click', () => {
         textContent.classList.remove('text-content--active');
+        textContentBodyHandler(body, show, index);
+    });
+
+    let resizeTimeout;
+    setTimeout(() => textContentBodyHandler(body, show), 500);
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => textContentBodyHandler(body, show), 100);
     });
 });
+
+function textContentBodyHandler(body, show) {
+    if (!body.classList.contains('text-content__body--clamp')) {
+        return;
+    }
+
+    if (body.scrollHeight > body.clientHeight) {
+        show?.classList.remove('text-content__show--inactive');
+    } else {
+        show?.classList.add('text-content__show--inactive');
+    }
+}
