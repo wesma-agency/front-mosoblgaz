@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина | Компания Мособлгаз</title>
+
+    <link rel="stylesheet" href="./pgs-panel/css/main.css">
+    <link rel="stylesheet" href="./pgs-panel/css/jquery.mCustomScrollbar.css">
+    
+    <script type="text/javascript" src="./pgs-panel/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./pgs-panel/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="./pgs-panel/js/main.js"></script>
+</head>
+<body>
+    <load src="pages.html" />
+		<div class="wrapper">
+
+				<load src="./_header.html" />
+
+				<main class="main">
+					<div class="mobile-bg"></div>
+
+					<section class="cart-top">
+						<div class="container">
+							<nav class="cart-breadcrumbs breadcrumbs">
+								<ul class="breadcrumbs__list">
+									<li class="breadcrumbs__item">
+										<a href="#">Главная</a>
+									</li>
+									<li class="breadcrumbs__arrow">
+										<svg
+											width="15"
+											height="14"
+											viewBox="0 0 15 14"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M3 6.95181H1H14M14 6.95181L10.5323 4M14 6.95181L10.5323 10"
+												stroke="#333333"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
+									</li>
+									<li class="breadcrumbs__item breadcrumbs__item--current">
+										<span>Корзина</span>
+									</li>
+								</ul>
+							</nav>
+
+							<h1 class="cart-top__title section-title">Корзина</h1>
+                            <div class="cart-top__count-products">
+                                3 товара
+                            </div>
+						</div>
+					</section>
+
+					<section class="cart">
+						<div class="container">
+                            <div class="cart__wrapper">
+                                <div class="cart__list-products">
+                                    <div class="cart-product">
+                                        <div class="cart-product__img">
+                                            <img src="/img/catalog-page/catalog-item-1.png" alt="">
+                                        </div>
+                                        <div class="cart-product__info">
+                                            <div class="cart-product__article cart-product__name-column">
+                                                Арт. 67845
+                                            </div>
+                                            <div class="cart-product__name">
+                                                Газовый настенный котел Warm AUROS (Универсальный)
+                                            </div>
+
+                                            <div class="cart-product__addition">
+                                                <label class="mog-label__checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="price-in-ruble">Добавить монтаж от 20 000</span>
+                                                </label>
+                                                <button class="cart-product__help mog-btn__help">
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="cart-product__counter">
+                                            <div class="cart-product__name-column">Количество</div>
+                                            <div class="mog-counter">
+                                                <button class="mog-plus"></button>
+                                                <input type="number" value="1" disabled>
+                                                <button class="mog-btn__minus"></button>
+                                            </div> 
+                                        </div>
+                                        <div class="cart-product__price">
+                                            <div class="cart-product__name-column">Стоимость</div>
+                                            <div class="cart-product__with-discount">59 900</div>
+                                            <div class="cart-product__without-discount">89 900</div>
+                                        </div>
+
+                                        <div class="cart-product__delete">
+                                            <div class="cart-product__name-column">Удалить</div>
+                                            <button class="mog-btn__delete"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__total">
+                                    <div class="cart-total__name">
+                                        <div class="cart-total__product">
+                                            <span class="cart-row__product">3 товара</span>
+
+                                            152 900
+                                        </div>
+                                        <div class="cart-total__discount">
+                                            Скидка
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </section>
+                </main>
+
+                <load src="./_footer.html"/>
+        </div>
+    </body>
+
+<script type="module" src="/src/js/main.js"></script>
+<script type="module" src="/src/js/ui.js"></script>
+</html>
