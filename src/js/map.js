@@ -1,3 +1,5 @@
+import iconSrc from '/icons/all/location-logo.svg';
+
 const $locationsMap = document.querySelector(".js-map-locations");
 if (typeof ymaps !== "undefined") {
   ymaps.ready(initLocations);
@@ -15,7 +17,7 @@ function initLocations() {
 
   const customIcon = {
     iconLayout: "default#image",
-    iconImageHref: "icons/all/location-logo.svg",
+    iconImageHref: iconSrc,
     iconImageSize: [42, 52],
     iconImageOffset: [-26, -42],
   };
