@@ -1,0 +1,44 @@
+.stocks{
+    .category-products{
+        &__list {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    .category-footer{
+        justify-content: space-between;
+        &__pagination{
+            margin-left: 0;
+        }
+        &__pages-count{
+            margin-left: 20px;
+        }
+        
+    }
+
+}
+
+@media (max-width: 1200px) {
+	.stocks{
+        .category-products__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media (max-width: 968px) {
+    .stocks{
+        .category-products__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+}
+
+@media (max-width: 576px) {
+    .stocks{
+        .category-products__list {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+}

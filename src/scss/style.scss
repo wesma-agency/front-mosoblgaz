@@ -614,8 +614,15 @@ body {
 @import './pages/catalog';
 @import './pages/catalog-category';
 @import './pages/product-card';
+
+@import './pages/stocks';
+@import './pages/boilers-selection.scss';
+@import './pages/boilers-result.scss';
+@import './pages/cart.scss';
+
 @import './pages/montazh';
 @import './pages/contacts';
+
 @import './_footer';
 
 .swiper {
@@ -712,15 +719,22 @@ body {
 }
 
 /*----- JS STYLE -----*/
+.js-accordion-body,
+.js-accordion-head {
+	//transition: all 0.5s;
+}
+
 .open-accordion {
+	
 	.js-accordion-head {
 		img {
-			transform: rotate(180deg);
+			transition: all 0.5s;
+			transform: rotate(-180deg);
 		}
 	}
 	.js-accordion-body {
 		height: 100%;
-		margin-top: 20px;
+		//margin-top: 20px;
 		transition: all 0.5s;
 	}
 }
