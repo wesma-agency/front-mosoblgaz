@@ -12,7 +12,7 @@ export default defineConfig({
 	server: {
 		// open: true,
 	},
-
+	root: './',
 	build: {
 		rollupOptions: {
 			input: {
@@ -21,6 +21,9 @@ export default defineConfig({
 				catalog_category: 'catalog-category.html',
 				product_card: 'product-card.html',
 				trade_in: 'trade-in.html',
+				stocks: 'stocks.html',
+				boilers_result: 'boilers-result.html',
+				boilers_selection: 'boilers-selection.html',
 				safe_house: 'safe-house.html',
 				montazh: 'montazh.html',
 				contacts: 'contacts.html',
