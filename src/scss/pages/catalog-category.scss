@@ -727,14 +727,14 @@
 		}
 	}
 
-	@keyframes showBuyOneClickBtn {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
+	// @keyframes showBuyOneClickBtn {
+	// 	0% {
+	// 		opacity: 0;
+	// 	}
+	// 	100% {
+	// 		opacity: 1;
+	// 	}
+	// }
 
 	// .category-product__img-link
 	&__img-link {
@@ -746,8 +746,7 @@
 		// Правки для слайдера на главной
 		display: flex;
 		flex-direction: column;
-		height: 100%;
-		//
+		// height: 100%;
 		padding: 0px 20px;
 	}
 }
@@ -810,6 +809,18 @@
 			font-weight: 700;
 			font-size: 14px;
 			color: $color-orange;
+			span {
+				display: flex;
+				// align-items: center;
+				&::before {
+					content: '';
+					background: url('/icons/rating-star-icon.svg');
+					display: block;
+					width: 16px;
+					height: 16px;
+					margin-right: 5px;
+				}
+			}
 		}
 		.product__rating-comment {
 			color: $color-dark-gray;

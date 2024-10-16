@@ -17,7 +17,7 @@ const categoryProductSlider = new Swiper('.product-slider', {
 const productCardThumbsSlider = new Swiper('.column-img__thumbs', {
 	spaceBetween: 20,
 	slidesPerView: 4,
-	// direction: 'vertical',
+	direction: 'vertical',
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
@@ -30,6 +30,21 @@ const productcardMainSlider = new Swiper('.column-img__slider', {
 	},
 	thumbs: {
 		swiper: productCardThumbsSlider,
+	},
+});
+
+const productCardSimilarSlider = new Swiper('.product-card-similar-slider', {
+	spaceBetween: 20,
+	slidesPerView: 4,
+	loop: true,
+	autoplay: {
+		delay: 4000,
+		disableOnInteraction: false,
+		pauseOnMouseEnter: true,
+	},
+	navigation: {
+		nextEl: '.product-card-similar-slider .swiper-button-next',
+		prevEl: '.product-card-similar-slider .swiper-button-prev',
 	},
 });
 
