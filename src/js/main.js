@@ -20,7 +20,7 @@ const categoryProductSlider = new Swiper('.product-slider', {
 const productCardThumbsSlider = new Swiper('.column-img__thumbs', {
 	spaceBetween: 20,
 	slidesPerView: 4,
-	// direction: 'vertical',
+	direction: 'vertical',
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
@@ -37,40 +37,54 @@ const productcardMainSlider = new Swiper('.column-img__slider', {
 });
 
 
-let swiperPopular = new Swiper(".swiper_category", {
-    spaceBetween: 30,
-    slidesPerView: 7,
-    loop: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: ".popular-button-next",
-      prevEl: ".popular-button-prev",
-    },
-    //mousewheel: true,
-    keyboard: true,
+const productCardSimilarSlider = new Swiper('.product-card-similar-slider', {
+	spaceBetween: 20,
+	slidesPerView: 4,
+	loop: true,
+	autoplay: {
+		delay: 4000,
+		disableOnInteraction: false,
+		pauseOnMouseEnter: true,
+	},
+	navigation: {
+		nextEl: '.product-card-similar-slider .swiper-button-next',
+		prevEl: '.product-card-similar-slider .swiper-button-prev',
+	},
+});
 
-    mousewheelControl: false,
-    enabled: false,
-    breakpoints: {
-        576:{
-            enabled: true,
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-        768:{
-            enabled: true,
-            spaceBetween: 20,
-            slidesPerView: 4,
-        },
-        1200:{
-            enabled: true,
-            spaceBetween: 30,
-            slidesPerView: 6,
-        }
-    }
+let swiperPopular = new Swiper('.swiper_category', {
+	spaceBetween: 30,
+	slidesPerView: 7,
+	loop: true,
+	autoplay: {
+		delay: 2500,
+		disableOnInteraction: false,
+	},
+	navigation: {
+		nextEl: '.popular-button-next',
+		prevEl: '.popular-button-prev',
+	},
+	mousewheel: true,
+	keyboard: true,
+
+	enabled: false,
+	breakpoints: {
+		576: {
+			enabled: true,
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+		768: {
+			enabled: true,
+			spaceBetween: 20,
+			slidesPerView: 4,
+		},
+		1200: {
+			enabled: true,
+			spaceBetween: 30,
+			slidesPerView: 6,
+		},
+	},
 });
 
 
