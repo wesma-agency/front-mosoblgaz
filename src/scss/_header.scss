@@ -13,6 +13,7 @@
     align-content: center;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
     &__logo {
+		cursor: pointer;
         padding-bottom: 10px;
     }
     // .header__img-link
@@ -93,6 +94,7 @@
 	}
 
 	&__btn-likes {
+		cursor: pointer;
 		position: relative;
 	}
 
@@ -130,16 +132,19 @@
 	// .header__btn-account
 
 	&__btn-account {
+		cursor: pointer;
 	}
 
 	// .header__btn-cart
 
 	&__btn-cart {
+		cursor: pointer;
 	}
 
 	// .header__btn-compare
 
 	&__btn-compare {
+		cursor: pointer;
 	}
 
 	&__btn-icons {

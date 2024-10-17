@@ -142,12 +142,13 @@ let swiperMaterial = new Swiper(".swiper_material", {
     //mousewheel: true,
     mousewheelControl: false,
     keyboard: true,
-
+    spaceBetween: 20,
+    slidesPerView: 1.125,
     pagination: true,
     breakpoints: {
         576:{
       
-            slidesPerView: 1,
+            slidesPerView: 1.5,
             spaceBetween: 20,
         },
         768:{
@@ -244,6 +245,46 @@ let swiperBanner = new Swiper(".swiper_banner", {
 
 });
 
+
+
+let swiperPopularProduct = new Swiper(".swiper_popular-product", {
+    spaceBetween: 30,
+    slidesPerView: 1,
+    loop: true,
+
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false
+    // },
+    pagination: {
+		el: '.popular-product__pagination',
+        type: 'bullets',
+		clickable: true,
+    },
+    navigation: {
+      nextEl: ".popular-product-button-next",
+      prevEl: ".popular-product-button-prev",
+    },
+    
+    //mousewheel: true,
+    mousewheelControl: false,
+    keyboard: true,
+    breakpoints: {
+        576:{
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768:{
+            spaceBetween: 20,
+            slidesPerView: 2,
+        },
+        1200:{
+
+            spaceBetween: 20,
+            slidesPerView: 4,
+        },
+    }
+});
 
 function openMenu(ui_menu, ui_close, ui_body){
     ui_menu.classList.add("active-menu");

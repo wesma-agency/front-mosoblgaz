@@ -92,7 +92,7 @@
 .footer {
     display: flex;
     width: 100%;
-    background-color: $color-light-white;
+    background-color: $color-white;
     flex-wrap: wrap;
     padding: 60px 80px;
     font-size: 0.875rem;
@@ -332,13 +332,8 @@
     // .footer__developed
 
     &__developed {
+        cursor: pointer;
     }
-}
-.js-accordion {
-}
-.js-accordion-head {
-}
-.js-accordion-body {
 }
 
 }
