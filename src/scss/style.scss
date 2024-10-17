@@ -685,6 +685,12 @@ body {
 	mask-image: url('../icons/all/arrow-left.svg');
 }
 
+.text-hidden-768
+{
+
+}
+
+
 @media (max-width: 1200px) {
 	.container {
 		max-width: 990px;
@@ -707,6 +713,11 @@ body {
 	}
 
 	.adaptive-display-768 {
+		display: none;
+	}
+
+	.text-hidden-768
+	{
 		display: none;
 	}
 }

@@ -27,6 +27,7 @@ export default defineConfig({
 				safe_house: 'safe-house.html',
 				montazh: 'montazh.html',
 				contacts: 'contacts.html',
+				cart: 'cart.html',
 			},
 		},
 		// Не обязательные опции
