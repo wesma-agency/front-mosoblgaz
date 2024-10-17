@@ -77,6 +77,10 @@
         margin-bottom: 10px;
     }
 
+    &__name-mobile {
+        display: none;
+    }
+
     &__addition {
         display: flex;
         align-items:center;
@@ -88,9 +92,13 @@
         }
     }
 
-    &__help {
+    &__addition-price {
+        height: 20px;
+    }
 
+    &__help {
         margin-left: 10px;
+        flex: 0 0 auto;
         width: 18px;
         height: 18px;
         &::after{
@@ -159,6 +167,10 @@
             }
         }
        
+    }
+    
+    &--order {
+        grid-template-columns: repeat(4, auto);
     }
 }
 
@@ -268,6 +280,10 @@
         }
 
     }
+
+    &__privacy {
+        margin-top: 25px;
+    }
 }
 
 
@@ -327,6 +343,10 @@
 
             max-width: 100%;
             margin-bottom: 30px;
+
+            &--order {
+                margin-bottom: 0;
+            }
         }
         
     }
@@ -342,6 +362,10 @@
     .cart-total{
         &__result {
             margin-bottom: 20px;
+        }
+
+        &__privacy {
+            margin-top: 20px;
         }
     }
 
@@ -412,8 +436,14 @@
             margin-right: 0;
             margin-top: 10px;
         }
+
+        &__counter-value {
+            font-size: 15px;
+            font-weight: 400;
+        }
     
         &__price {
+            padding-top: 10px;
             order: 3;
             display: flex;
             grid-row-start: 2;
@@ -454,6 +484,34 @@
                 }
             }
            
+        }
+
+        &--order {
+            gap: 0;
+        }
+
+        &--order &__img {
+            margin-right: 20px;
+        }
+
+        &--order &__price {
+            padding-top: 20px;
+        }
+
+        &--order &__counter {
+            padding-top: 10px;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        &--order &__name-mobile {
+            margin-right: 5px;
+            display: block;
+        }
+
+        &--order &__addition {
+            padding-top: 10px;
         }
     }
     .cart-top__count-products{

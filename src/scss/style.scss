@@ -69,6 +69,10 @@ body {
 	&__section {
 		margin-top: 100px;
 	}
+
+	&__bottom {
+		margin-bottom: 100px;
+	}
 }
 
 //==========================================================================================================================================================
@@ -245,6 +249,10 @@ body {
 		color: $color-dark-blue;
 	}
 
+	&--red-default {
+		color: $color-red-default;
+	}
+
 	&--link-line {
 		a {
 			text-decoration: underline;
@@ -253,6 +261,10 @@ body {
 				text-decoration: none;
 			}
 		}
+	}
+
+	&--center {
+		text-align: center;
 	}
 }
 
@@ -462,6 +474,10 @@ body {
 		&__section {
 			margin-top: 80px;
 		}
+
+		&__bottom {
+			margin-bottom: 80px;
+		}
 	}
 }
 
@@ -553,6 +569,10 @@ body {
 		&__section {
 			margin-top: 60px;
 		}
+
+		&__bottom {
+			margin-bottom: 40px;
+		}
 	}
 
 	.info {
@@ -626,6 +646,7 @@ body {
 
 @import './pages/montazh';
 @import './pages/contacts';
+@import './pages/order';
 
 @import './_footer';
 
