@@ -3,22 +3,32 @@ import { defineConfig } from 'vite';
 import path from "path";
 import injectHTML from 'vite-plugin-html-inject';
 
+
 export default defineConfig({
-	// base: './',
+	base: './',
 
 	plugins: [injectHTML()],
 
 	server: {
 		// open: true,
 	},
-
+	root: './',
 	build: {
-		// rollupOptions: {
-		// 	input: {
-		// 		index: '/index.html',
-		// 		catalog: '/catalog.html',
-		// 	},
-		// },
+		rollupOptions: {
+			input: {
+				index: 'index.html',
+				catalog: 'catalog.html',
+				catalog_category: 'catalog-category.html',
+				product_card: 'product-card.html',
+				trade_in: 'trade-in.html',
+				stocks: 'stocks.html',
+				boilers_result: 'boilers-result.html',
+				boilers_selection: 'boilers-selection.html',
+				safe_house: 'safe-house.html',
+				montazh: 'montazh.html',
+				contacts: 'contacts.html',
+			},
+		},
 		// Не обязательные опции
 		// minify: true,
 	},

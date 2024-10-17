@@ -25,12 +25,12 @@ function showMobileFilters() {
 	const sidebar = document.querySelector('.category-sidebar');
 	const filtersCloseBtn = document.querySelector('.filters-title__btn');
 
-	mobileFiltersBtn.addEventListener('click', () => {
+	mobileFiltersBtn?.addEventListener('click', () => {
 		sidebar.classList.add('category-sidebar-mobile');
 		mobileBg.classList.add('mobile-bg--active');
 	});
 
-	filtersCloseBtn.addEventListener('click', () => {
+	filtersCloseBtn?.addEventListener('click', () => {
 		sidebar.classList.remove('category-sidebar-mobile');
 		mobileBg.classList.remove('mobile-bg--active');
 	});

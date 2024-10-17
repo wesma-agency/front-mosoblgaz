@@ -144,6 +144,17 @@
     // .footer__list-links
 
     &__list-links {
+        &.open-accordion {
+            .js-accordion-head {
+                img {
+                    
+                }
+            }
+            .js-accordion-body {
+                margin-top: 20px;
+
+            }
+        }
     }
 
     // .footer__head-block
@@ -201,6 +212,7 @@
         color: $color-black;
         line-height: 1.3;
         margin-top: 8px;
+        transition: all 0.2s;
     }
 
     &__phone {
