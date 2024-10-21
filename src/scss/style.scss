@@ -213,6 +213,14 @@ body {
 		color: $color-light-white;
 	}
 
+	&--blue {
+		color: $color-blue;
+	}
+
+	&--upper {
+		text-transform: uppercase;
+	}
+
 	&--link-orange {
 		a {
 			color: $color-orange;
@@ -263,8 +271,26 @@ body {
 		}
 	}
 
+	&--link-blue {
+		a {
+			color: $color-blue;
+		}
+	}
+
+	&--link-bold {
+		a {
+			font-weight: 700;
+		}
+	}
+
 	&--center {
 		text-align: center;
+	}
+
+	&--strong-blue {
+		strong {
+			color: $color-blue;
+		}
 	}
 }
 
@@ -350,6 +376,11 @@ body {
 		&--clamp-7 {
 			-webkit-line-clamp: 7;
 			line-clamp: 7;
+		}
+
+		&--clamp-19 {
+			-webkit-line-clamp: 19;
+			line-clamp: 19;
 		}
 	}
 
@@ -572,6 +603,10 @@ body {
 
 		&__bottom {
 			margin-bottom: 40px;
+
+			&--mobile-lg {
+				margin-bottom: 60px;
+			}
 		}
 	}
 
@@ -647,6 +682,7 @@ body {
 @import './pages/montazh';
 @import './pages/contacts';
 @import './pages/order';
+@import './pages/about';
 
 @import './_footer';
 
