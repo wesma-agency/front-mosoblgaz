@@ -301,7 +301,13 @@
         margin-top: -60px;
     }
     &__button{
+        display: flex;
         margin-top: 20px;
+        button{
+            width: 100%;
+            max-width: 100%;
+        }
+  
     }
 }
 
