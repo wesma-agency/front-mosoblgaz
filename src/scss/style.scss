@@ -52,15 +52,6 @@ body {
 	max-width: 1440px;
 }
 
-.adaptive-display-none-flex,
-.adaptive-display-none {
-	display: none;
-}
-
-.adaptive-display-1200,
-.adaptive-display-768 {
-	display: block;
-}
 
 .main {
 	width: 100%;
@@ -627,6 +618,14 @@ body {
 @import './pages/montazh';
 @import './pages/contacts';
 
+@import './pages/refund';
+@import './pages/quality-assurance';
+@import './pages/personal-data';
+@import './pages/payment-refund';
+@import './pages/delivery.scss';
+@import './pages/404.scss';
+
+
 @import './_footer';
 
 .swiper {
@@ -688,6 +687,17 @@ body {
 .text-hidden-768
 {
 
+}
+
+
+.adaptive-display-none-flex,
+.adaptive-display-none {
+	display: none;
+}
+
+.adaptive-display-1200,
+.adaptive-display-768 {
+	display: block;
 }
 
 
