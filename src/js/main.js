@@ -8,6 +8,8 @@ import './form';
 import './imask';
 import './checkbox';
 import './textarea';
+import './dropdown';
+import './materials';
 
 const categoryProductSlider = new Swiper('.product-slider', {
 	loop: true,

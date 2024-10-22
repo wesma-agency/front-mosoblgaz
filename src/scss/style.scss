@@ -122,7 +122,8 @@ body {
 	}
 }
 
-.link {
+.link,
+a.link {
 	font-size: 15px;
 	transition: color 0.3s;
 
@@ -247,6 +248,10 @@ body {
 
 	&--light-white {
 		color: $color-light-white;
+	}
+
+	&--gray {
+		color: $color-gray;
 	}
 
 	&--dark-gray {
@@ -484,6 +489,150 @@ body {
 	}
 }
 
+.dropdown {
+  position: relative;
+	display: inline-flex;
+
+	&__btn {
+		width: 100%;
+	}
+
+	&__main {
+		position: absolute;
+		top: calc(100% + 4px);
+		left: 0;
+		width: max(100%, 220px);
+		z-index: 5;
+		display: none;
+	}
+
+	&__filter-menu {
+		max-height: 358px;
+	}
+
+	&--active &__main {
+		display: block;
+	}
+}
+
+.filter-menu {
+	display: flex;
+	flex-direction: column;
+	background: $color-light-white;
+	border: 1px solid $color-gray;
+	box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	overflow: hidden;
+
+	&__main {
+		padding: 12px 10px;
+		min-height: 0;
+	}
+
+	&__btn {
+		padding: 10px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		border-radius: 5px;
+		text-align: left;
+		transition: background 0.2s;
+
+		&:hover {
+			background-color: $color-white;
+		}
+
+		&:not(:first-child) {
+			margin-top: 4px;
+		}
+
+		&--active {
+			background-color: $color-white;
+			cursor: default;
+		}
+	}
+
+	&__btn-icon {
+		margin-right: 5px;
+		width: 24px;
+		height: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__btn-addition {
+		margin-left: 4px;
+	}
+}
+
+.list-btn {
+	padding: 6px 6px 6px 15px;
+	display: flex;
+	align-items: center;
+	border: 1px solid $color-dark-gray;
+	border-radius: 5px;
+	font-size: 14px;
+
+	&:after {
+		content: '';
+		margin-left: auto;
+		display: inline-block;
+		background: url('/icons/all/arrow-down-dark-gray.svg') center / 12px 8px no-repeat;
+		width: 24px;
+		height: 24px;
+	}
+
+	&__text {
+		&:last-child {
+			margin-right: 10px;
+		}
+	}
+
+	&__addition {
+		margin-left: 4px;
+
+		&:last-child {
+			margin-right: 10px;
+		}
+	}
+}
+
+.tag-btn {
+	padding: 8px 20px;
+	border-radius: 25px;
+	background: $color-white;
+	font-size: 14px;
+	font-weight: 500;
+
+	&:hover {
+		background: $color-white;
+	}
+
+	&--active,
+	&.js-filter-blog-active {
+		background-color: $color-black;
+		color: $color-light-white;
+		cursor: default;
+
+		&:hover {
+			background-color: $color-black;
+			color: $color-light-white;
+		}
+	}
+}
+
+.label {
+	padding: 5px 20px;
+	background-color: $color-black;
+	border-radius: 25px;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 1.2;
+	text-transform: uppercase;
+	color: $color-light-white;
+}
+
 //==========================================================================================================================================================
 // Адаптив
 @media (max-width: 1200px) {
@@ -683,6 +832,7 @@ body {
 @import './pages/contacts';
 @import './pages/order';
 @import './pages/about';
+@import './pages/materials';
 
 @import './_footer';
 

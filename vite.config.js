@@ -29,6 +29,8 @@ export default defineConfig({
 				contacts: 'contacts.html',
 				cart: 'cart.html',
 				order: 'order.html',
+				about: 'about.html',
+				materials: 'materials.html',
 			},
 		},
 		// Не обязательные опции

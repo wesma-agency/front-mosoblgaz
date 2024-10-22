@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Материалы | Компания Мособлгаз</title>
+
+    <link rel="stylesheet" href="./pgs-panel/css/main.css" />
+    <link rel="stylesheet" href="./pgs-panel/css/jquery.mCustomScrollbar.css" />
+
+    <script type="text/javascript" src="./pgs-panel/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./pgs-panel/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="./pgs-panel/js/main.js"></script>
+  </head>
+  <body>
+    <load src="pages.html" />
+    <div class="wrapper">
+      <load src="./_header.html" />
+
+      <main class="main">
+        <div class="mobile-bg"></div>
+
+        <section class="category-top">
+          <div class="container">
+            <nav class="category-breadcrumbs breadcrumbs">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a href="#">Главная</a>
+                </li>
+                <li class="breadcrumbs__arrow">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M3 6.95181H1H14M14 6.95181L10.5323 4M14 6.95181L10.5323 10"
+                      stroke="#333333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </li>
+                <li class="breadcrumbs__item breadcrumbs__item--current">
+                  <span>Материалы</span>
+                </li>
+              </ul>
+            </nav>
+
+            <h1 class="catalog__title section-title">Материалы</h1>
+          </div>
+        </section>
+
+        <section class="blog">
+          <div class="container">
+            <div class="blog__content">
+              <div class="blog-header blog__header">
+                <div class="blog-header__tags">
+                  <a class="tag-btn blog-header__tags-btn js-filter-blog js-filter-blog-active" data-filter-name="all">Все</a>
+                  <a class="tag-btn blog-header__tags-btn js-filter-blog" data-filter-name="news">Новости</a>
+                  <a class="tag-btn blog-header__tags-btn js-filter-blog" data-filter-name="article">Статьи</a>
+                </div>
+                <div class="blog-header__filter">
+                  <div class="title title--5 title--medium blog-header__filter-label">Категория:</div>
+                  <div class="dropdown blog-header__filter-item">
+                    <button class="list-btn dropdown__btn">
+                      <span class="list-btn__text">Все</span>
+                      <span class="text text--sm text--gray list-btn__addition">125</span>
+                    </button>
+                    <div class="dropdown__main">
+                      <div class="filter-menu dropdown__filter-menu">
+                        <div class="filter-menu__main js-simplebar">
+                          <button class="filter-menu__btn filter-menu__btn--active">
+                            <span class="text text--sm">
+                              Все&nbsp;<span class="text text--sm text--gray filter-menu__btn-addition">125</span>
+                            </span>
+                          </button>
+                          <button class="filter-menu__btn">
+                            <span class="text text--sm">
+                              Отопление&nbsp;<span class="text text--sm text--gray filter-menu__btn-addition">12</span>
+                            </span>
+                          </button>
+                          <button class="filter-menu__btn">
+                            <span class="text text--sm">
+                              Водонагреватели и бойлеры&nbsp;<span class="text text--sm text--gray filter-menu__btn-addition">15</span>
+                            </span>
+                          </button>
+                          <button class="filter-menu__btn">
+                            <span class="text text--sm">
+                              Плиты и варочные панели&nbsp;<span class="text text--sm text--gray filter-menu__btn-addition">8</span>
+                            </span>
+                          </button>
+                          <button class="filter-menu__btn">
+                            <span class="text text--sm">
+                              Пакетные предложения&nbsp;<span class="text text--sm text--gray filter-menu__btn-addition">4</span>
+                            </span>
+                          </button>
+                          <button class="filter-menu__btn">
+                            <span class="text text--sm">
+                              Газовая безопасность&nbsp;<span class="text text--sm text--gray filter-menu__btn-addition">10</span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown blog-header__filter-item">
+                    <button class="list-btn dropdown__btn">
+                      <span class="list-btn__text">Сортировка</span>
+                      <span class="text text--sm text--gray list-btn__addition"></span>
+                    </button>
+                    <div class="dropdown__main">
+                      <div class="filter-menu dropdown__filter-menu">
+                        <div class="filter-menu__main js-simplebar">
+                          <button class="filter-menu__btn">
+                            <div class="filter-menu__btn-icon">
+                              <img src="./icons/all/filter-up.svg" alt="" />
+                            </div>
+                            <span class="text text--sm">По алфавиту</span>
+                          </button>
+                          <button class="filter-menu__btn">
+                            <div class="filter-menu__btn-icon">
+                              <img src="./icons/all/filter-down.svg" alt="" />
+                            </div>
+                            <span class="text text--sm">По алфавиту</span>
+                          </button>
+                          <button class="filter-menu__btn">
+                            <div class="filter-menu__btn-icon">
+                              <img src="./icons/all/filter-up.svg" alt="" />
+                            </div>
+                            <span class="text text--sm">По популярности</span>
+                          </button>
+                          <button class="filter-menu__btn">
+                            <div class="filter-menu__btn-icon">
+                              <img src="./icons/all/filter-down.svg" alt="" />
+                            </div>
+                            <span class="text text--sm">По популярности</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="blog__list">
+                <a class="blog-item blog-item--news blog__item" href="#">
+									<div class="blog-item__img-box">
+										<img class="blog-item__img" src="./img/materials/1.jpg" alt="">
+										<span class="label blog-item__label">Новость</span>
+									</div>
+                  <div class="blog-item__main">
+                    <div class="text text--sm text--dark-gray blog-item__date">25 августа 2024</div>
+                    <div class="title title--4 title--medium">Статья про газовое оборудование</div>
+                    <div class="text blog-item__text">
+                      Газовое оборудование всех известных производителей вы можете выбрать в нашем интернет-магазине
+                    </div>
+                  </div>
+                </a>
+                <a class="blog-item blog-item--news blog__item" href="#">
+									<div class="blog-item__img-box">
+										<img class="blog-item__img" src="./img/materials/2.jpg" alt="">
+										<span class="label blog-item__label">Новость</span>
+									</div>
+                  <div class="blog-item__main">
+                    <div class="text text--sm text--dark-gray blog-item__date">21 августа 2024</div>
+                    <div class="title title--4 title--medium">Статья про газовое оборудование</div>
+                    <div class="text blog-item__text">
+                      Газовое оборудование всех известных производителей вы можете выбрать в нашем интернет-магазине
+                    </div>
+                  </div>
+                </a>
+                <a class="blog-item blog-item--article blog__item" href="#">
+									<div class="blog-item__img-box">
+										<img class="blog-item__img" src="./img/materials/3.jpg" alt="">
+										<span class="label blog-item__label">Статья</span>
+									</div>
+                  <div class="blog-item__main">
+                    <div class="text text--sm text--dark-gray blog-item__date">19 августа 2024</div>
+                    <div class="title title--4 title--medium">Статья про газовое оборудование</div>
+                    <div class="text blog-item__text">
+                      Газовое оборудование всех известных производителей вы можете выбрать в нашем интернет-магазине
+                    </div>
+                  </div>
+                </a>
+                <a class="blog-item blog-item--article blog__item" href="#">
+									<div class="blog-item__img-box">
+										<img class="blog-item__img" src="./img/materials/4.jpg" alt="">
+										<span class="label blog-item__label">Статья</span>
+									</div>
+                  <div class="blog-item__main">
+                    <div class="text text--sm text--dark-gray blog-item__date">25 августа 2024</div>
+                    <div class="title title--4 title--medium">Статья про газовое оборудование</div>
+                    <div class="text blog-item__text">
+                      Газовое оборудование всех известных производителей вы можете выбрать в нашем интернет-магазине
+                    </div>
+                  </div>
+                </a>
+                <a class="blog-item blog-item--article blog__item" href="#">
+									<div class="blog-item__img-box">
+										<img class="blog-item__img" src="./img/materials/5.jpg" alt="">
+										<span class="label blog-item__label">Статья</span>
+									</div>
+                  <div class="blog-item__main">
+                    <div class="text text--sm text--dark-gray blog-item__date">25 августа 2024</div>
+                    <div class="title title--4 title--medium">Статья про газовое оборудование</div>
+                    <div class="text blog-item__text">
+                      Газовое оборудование всех известных производителей вы можете выбрать в нашем интернет-магазине
+                    </div>
+                  </div>
+                </a>
+                <a class="blog-item blog-item--news blog__item" href="#">
+									<div class="blog-item__img-box">
+										<img class="blog-item__img" src="./img/materials/6.jpg" alt="">
+										<span class="label blog-item__label">Новость</span>
+									</div>
+                  <div class="blog-item__main">
+                    <div class="text text--sm text--dark-gray blog-item__date">25 августа 2024</div>
+                    <div class="title title--4 title--medium">Статья про газовое оборудование</div>
+                    <div class="text blog-item__text">
+                      Газовое оборудование всех известных производителей вы можете выбрать в нашем интернет-магазине
+                    </div>
+                  </div>
+                </a>
+								<a class="blog-item blog-item--news blog__item" href="#">
+									<div class="blog-item__img-box">
+										<img class="blog-item__img" src="./img/materials/1.jpg" alt="">
+										<span class="label blog-item__label">Новость</span>
+									</div>
+                  <div class="blog-item__main">
+                    <div class="text text--sm text--dark-gray blog-item__date">25 августа 2024</div>
+                    <div class="title title--4 title--medium">Статья про газовое оборудование</div>
+                    <div class="text blog-item__text">
+                      Газовое оборудование всех известных производителей вы можете выбрать в нашем интернет-магазине
+                    </div>
+                  </div>
+                </a>
+								<a class="blog-item blog-item--article blog__item" href="#">
+									<div class="blog-item__img-box">
+										<img class="blog-item__img" src="./img/materials/4.jpg" alt="">
+										<span class="label blog-item__label">Статья</span>
+									</div>
+                  <div class="blog-item__main">
+                    <div class="text text--sm text--dark-gray blog-item__date">25 августа 2024</div>
+                    <div class="title title--4 title--medium">Статья про газовое оборудование</div>
+                    <div class="text blog-item__text">
+                      Газовое оборудование всех известных производителей вы можете выбрать в нашем интернет-магазине
+                    </div>
+                  </div>
+                </a>
+								<a class="blog-item blog-item--article blog__item" href="#">
+									<div class="blog-item__img-box">
+										<img class="blog-item__img" src="./img/materials/3.jpg" alt="">
+										<span class="label blog-item__label">Статья</span>
+									</div>
+                  <div class="blog-item__main">
+                    <div class="text text--sm text--dark-gray blog-item__date">19 августа 2024</div>
+                    <div class="title title--4 title--medium">Статья про газовое оборудование</div>
+                    <div class="text blog-item__text">
+                      Газовое оборудование всех известных производителей вы можете выбрать в нашем интернет-магазине
+                    </div>
+                  </div>
+                </a>
+								<a class="blog-item blog-item--article blog__item" href="#">
+									<div class="blog-item__img-box">
+										<img class="blog-item__img" src="./img/materials/4.jpg" alt="">
+										<span class="label blog-item__label">Статья</span>
+									</div>
+                  <div class="blog-item__main">
+                    <div class="text text--sm text--dark-gray blog-item__date">25 августа 2024</div>
+                    <div class="title title--4 title--medium">Статья про газовое оборудование</div>
+                    <div class="text blog-item__text">
+                      Газовое оборудование всех известных производителей вы можете выбрать в нашем интернет-магазине
+                    </div>
+                  </div>
+                </a>
+								<a class="blog-item blog-item--news blog__item" href="#">
+									<div class="blog-item__img-box">
+										<img class="blog-item__img" src="./img/materials/6.jpg" alt="">
+										<span class="label blog-item__label">Новость</span>
+									</div>
+                  <div class="blog-item__main">
+                    <div class="text text--sm text--dark-gray blog-item__date">25 августа 2024</div>
+                    <div class="title title--4 title--medium">Статья про газовое оборудование</div>
+                    <div class="text blog-item__text">
+                      Газовое оборудование всех известных производителей вы можете выбрать в нашем интернет-магазине
+                    </div>
+                  </div>
+                </a>
+                <a class="blog-item blog-item--article blog__item" href="#">
+									<div class="blog-item__img-box">
+										<img class="blog-item__img" src="./img/materials/5.jpg" alt="">
+										<span class="label blog-item__label">Статья</span>
+									</div>
+                  <div class="blog-item__main">
+                    <div class="text text--sm text--dark-gray blog-item__date">25 августа 2024</div>
+                    <div class="title title--4 title--medium">Статья про газовое оборудование</div>
+                    <div class="text blog-item__text">
+                      Газовое оборудование всех известных производителей вы можете выбрать в нашем интернет-магазине
+                    </div>
+                  </div>
+                </a>
+              </div>
+							<div class="category-footer blog__footer">
+								<div class="category-footer__showmore showmore-btn">
+									<button class="category-showmore__btn showmore-btn" type="button">
+										Показать ещё товары
+									</button>
+								</div>
+								<div class="category-footer__pagination category-footer__pagination--ml-auto">
+									<a href="#" class="pagination__link pagination__link--active">
+										1
+									</a>
+									<a href="#" class="pagination__link">2</a>
+									<a href="#" class="pagination__link">3</a>
+									<a href="#" class="pagination__link pagination__link-dots">
+										<span></span>
+										<span></span>
+										<span></span>
+									</a>
+									<a href="#" class="pagination__link pagination__link-next">
+										<svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3 6.95181H1H14M14 6.95181L10.5323 4M14 6.95181L10.5323 10" stroke="#F47920" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</a>
+								</div>
+
+								<div class="category-footer__pagination category-footer__pagination-mobile">
+									<a href="#" class="pagination__link pagination__link--active">
+										1
+									</a>
+									<a href="#" class="pagination__link">2</a>
+									<a href="#" class="pagination__link">3</a>
+									<a href="#" class="pagination__link pagination__link-dots">
+										<span></span>
+										<span></span>
+										<span></span>
+									</a>
+									<a href="#" class="pagination__link">12</a>
+									<a href="#" class="pagination__link pagination__link-next">
+										<svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3 6.95181H1H14M14 6.95181L10.5323 4M14 6.95181L10.5323 10" stroke="#F47920" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</a>
+								</div>
+								<div class="category-footer__pages-count">
+									<span class="pages-count__text">Страница</span>
+									<span class="pages-count__current-page">1</span>
+									<span class="pages-count__text">из</span>
+									<span class="pages-count__total-pages">15</span>
+								</div>
+							</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="catalog-info">
+          <div class="container">
+            <div class="catalog-info__inner">
+              <div class="catalog-info__col">
+                <h3 class="catalog-info__title">
+                  Позволяет управлять температурным режимом в зависимости от погодных условий, температуры наружного воздуха, настроенных
+                  сценариев и расписаний
+                </h3>
+                <div class="catalog-info__text">
+                  <p>
+                    OpenTherm - это стандартный открытый протокол связи, используемый в устройствах (котлах) систем отопления для связи
+                    между котлом отопления и контроллером.
+                  </p>
+                  <p> Как стандарт, OpenTherm не зависит от какого-либо одного производителя. </p>
+                  <p>
+                    Контроллер с шиной OpenTherm предназначен для управления простыми системами отопления в квартирах с индивидуальным
+                    отоплением и небольших частных домовладениях.
+                  </p>
+                  <p>
+                    Управление котлом по шине OpenTherm осуществляет и управление бойлером косвенного нагрева, позволяя регулировать
+                    температурный режим.
+                  </p>
+                  <p>
+                    Обеспечивает удаленный контроль всех параметров системы отопления, а также SMS и Push оповещение, в случае возникновения
+                    ошибок.
+                  </p>
+                </div>
+                <a class="link link--iflex link--orange link--lg link--medium" href="#">
+                  <span>Читать полностью</span>
+                  <img class="link__icon link__icon--mx-xl" src="/icons/arrow/long-arow-right.svg" alt="" />
+                </a>
+              </div>
+              <div class="catalog-info__col">
+                <div class="catalog-info__img">
+                  <img src="/img/catalog-page/descr-image-1.png" alt="Описание товаров" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <load src="./_footer.html" />
+    </div>
+
+    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/catalog-category.js"></script>
+    <script type="module" src="/src/js/ui.js"></script>
+  </body>
+</html>

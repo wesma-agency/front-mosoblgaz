@@ -1419,6 +1419,10 @@
 	.category-product {
 		min-width: calc(100% - 20px / 2);
 	}
+
+	.category-footer {
+		margin-bottom: 60px;
+	}
 }
 
 @media (max-width: 576px) {
