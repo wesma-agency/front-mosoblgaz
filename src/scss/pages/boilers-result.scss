@@ -1,0 +1,166 @@
+
+.boilers-result {
+	// .category__inner
+	&__inner {
+	}
+	// .category__header
+	&__header {
+		margin-bottom: 40px;
+	}
+	// .category__content
+	&__content {
+		display: flex;
+		column-gap: 20px;
+	}
+}
+.container {
+}
+
+//Category header
+.category-header {
+	display: flex;
+	align-items: center;
+}
+
+// Category Sidebar
+.category-sidebar {
+	flex: 0 0 305px;
+	overflow: hidden;
+}
+
+// Форма
+.category-sidebar-form {
+}
+
+
+.boilers-result {
+
+    // .boilers-result__requirement
+
+    &__requirement {
+        display: flex;
+        justify-content: space-between;
+        background-color: $color-white;
+        border-radius: 30px; 
+        gap: 40px;     
+        margin-bottom: 60px;  
+    }
+    &__img{
+        img{
+            max-width: 320px;
+            border-radius: 0 30px 30px 0;
+            height: 100%;
+        }
+    }
+    &__title{
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+ 
+}
+.boilers-requirement {
+    padding: 30px 0 30px 40px;
+    width: 100%;
+    max-width: 710px;
+    // .boilers-requirement__title
+
+    &__title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.3;
+        text-align: left;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $color-gray;
+    }
+
+    // .boilers-requirement__parameters
+
+    &__parameters {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
+
+    // .boilers-requirement__item-parameter
+
+    &__item-parameter {
+        display: flex;
+        flex-direction: column;
+        
+        .text {
+            margin-bottom: 2px;
+        }
+        
+        .title--4 {
+            font-weight: 500;
+        }
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 768px) {
+    .boilers-result{
+
+        // .boilers-result__requirement
+    
+        &__requirement {
+            flex-direction: column;
+            gap: 12px;
+            background-color: $color-white;
+            gap: 0;     
+            margin-bottom: 40px;  
+        }
+
+        &__img{
+            display: none;
+        }
+
+        &__title{
+            font-size: 20px;
+        }
+     
+    }
+
+    .boilers-requirement {
+        padding: 30px;
+        width: 100%;
+        max-width: 100%;
+      
+        &__title {
+            font-weight: 500;
+            font-size: 20px;
+        }
+   
+        &__parameters {
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            gap: 12px;
+        }
+    
+        // .boilers-requirement__item-parameter
+    
+        &__item-parameter {
+            display: flex;
+            flex-direction: column;
+            
+            .text {
+                margin-bottom: 2px;
+            }
+            
+            .title--4 {
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+    } 
+}
+
+@media (max-width: 576px) {
+
+}

@@ -2,7 +2,9 @@
     width: 100%;
     position: relative;
     color: $color-light-white;
-    margin-bottom: 80px;
+    //margin-bottom: 80px;
+    padding-top: 10px;
+    padding-bottom: 0px;
     
 
     &__arrow {
@@ -15,9 +17,15 @@
         }
     }
 
+    &__list{
+        max-height: 599px;
+        border-radius: 30px;
+        //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
     &__item {
         position: relative;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 30px;
         width: 100%;
         height: 599px; /*mobile 500*/
@@ -71,17 +79,17 @@
         display: flex;
         flex-wrap: wrap;
         z-index: 3;
-        border-radius: 0 50px 0 30px;
+        border-radius: 0 50px 0 50px;
         max-width: 573px;
         padding: 35px 30px 39px;
         width: 100%;
-        //border: 20px solid  $color-light-white;
-        border-top: 20px solid $color-light-white;
-        border-right: 20px solid  $color-light-white;
+        border: 20px solid  $color-light-white;
+        //border-top: 20px solid $color-light-white;
+        //border-right: 20px solid  $color-light-white;
         background-color: $color-blue;
         
-        bottom: 0px;
-        left: 0px;
+        bottom: -20px;
+        left: 80px;
 
         button{
             max-width: 210px;
@@ -113,12 +121,13 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-
     position: relative;
+    padding-bottom: 0px;
 
     &__head {
         display: flex;
-        justify-content: space-between;        
+        justify-content: space-between;
+        font-weight: 500;
     }
 
     &__title {
@@ -129,14 +138,10 @@
 
     &__list {
         min-height: 350px;
-        align-items:center;
-        align-content:center;
         height: 100%;
-
     }
+
 }
-
-
 
 .popular-item {
 	border-radius: 10px;
@@ -164,6 +169,7 @@
 		line-height: 130%;
 		color: $color-black;
 		margin-bottom: 10px;
+        transition: all 0.2s;
 	}
 
 	// .popular-item__img
@@ -174,7 +180,6 @@
         display: flex;
         justify-content: center;
         
-
         img{
             max-height: 125px;
         }
@@ -182,8 +187,11 @@
 }
 
 .brands {
+    padding-inline:0 ;
     h2{
-        //padding-inline: 80px;
+        padding-inline: 80px;
+        font-size: 2.25rem;
+        font-weight: 500;   
     }
     &__container {
         margin-top: 30px;
@@ -197,12 +205,13 @@
             align-items:center;
             transition-timing-function: linear;
         }
-        // gap: 10px;
     }
 
     &__item { 
         opacity: 0.5;
         filter: grayscale(100%);
+        transition: all 0.2s;
+
         &:hover{
             opacity: 1;
             filter: grayscale(0%);
@@ -214,17 +223,20 @@
    
 }
 
-
-.material {
+.main-catalog{
     background: $color-white;
     width: 100%;
     position: relative;
-    
-   
+    padding-bottom: 20px;
+
+
     &__head {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 40px;
+
         h2{
+            font-weight: 500;   
             position: relative;
             &::after{
                 display: inline-block;
@@ -247,6 +259,7 @@
         display: flex;
         gap: 5px;
         align-items: center;
+   
     }
 
     &__tab {
@@ -256,8 +269,85 @@
         width: 100%;
         max-height: 100%;
         padding: 8px 20px;
+        text-wrap: nowrap;
        
         &.active{
+            border: 1px solid $color-black;
+            background-color: $color-black ;
+            color: $color-light-white;
+        }
+    }
+
+    &__container {
+
+        .category-products__list{
+            min-height: 600px;
+      
+        }
+
+    }
+
+    .category-product{
+        max-width: 100%;
+        min-width: 0;
+        max-height: 560px;
+
+    }
+    .main-catalog__pagination{
+        display: none;
+        justify-self: center;
+        align-self:center;
+        margin-top: -60px;
+    }
+    &__button{
+        margin-top: 20px;
+    }
+}
+
+.material {
+    background: $color-white;
+    width: 100%;
+    position: relative;
+    padding-bottom: 40px;
+    
+   
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        h2{
+            font-weight: 500;   
+            position: relative;
+            &::after{
+                display: inline-block;
+                content: '';
+                mask-image: url("../../icons/arrow/long-arow-right.svg");
+                width: 24px;
+                height: 16px;
+                align-self: center;
+                background-color: $color-orange;
+                margin-left: 10px;
+            }
+            &:hover::after{
+                transform:translateX(20px);
+            }
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+
+    &__tab {
+        border-radius: 25px;
+        background-color: $color-light-white;
+        color: $color-black;
+        width: 100%;
+        max-height: 100%;
+        padding: 8px 20px;
+        &.active{
+            border: 1px solid $color-black;
             background-color: $color-black ;
             color: $color-light-white;
         }
@@ -265,8 +355,6 @@
 
     &__container {
         min-height: 500px
-        
-
     }
 
     &__list {
@@ -280,7 +368,7 @@
         height: 420px;
         width: 30%;
         border-radius: 10px;
-       
+        transition: all 0.2s;
         
         &:hover{
             box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
@@ -299,6 +387,7 @@
             bottom: 15px;
             right: 20px;
             opacity: 0;
+            transition: all 0.2s;
         }
         &:hover::after{
             opacity: 1;
@@ -350,9 +439,11 @@
     }
 }
 
-
 .advantages {
     overflow: visible;
+    h2{
+        font-weight: 500;   
+    }
 
     &__container {
         overflow: visible;
@@ -375,6 +466,8 @@
         width: 25%;
         border-radius: 30px;
         padding: 30px;
+        transition: all 0.2s;
+
         &:hover{
             box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
         }
@@ -410,8 +503,11 @@
     }
 }
 
-
 .information {
+    padding-bottom: 20px;
+    h2{
+        font-weight: 500;   
+    }
     //margin-bottom: 100px;
 
     &__container {
@@ -423,14 +519,14 @@
         color: $color-light-white;
         padding: 40px;
         overflow: hidden;
+        font-size: 1rem;
         line-height: 1.5;
     }
 
     &__block {
         max-width: 890px;
-        width: 70%;
-     
-        max-height: 230px;
+        width: 80%;
+        max-height: 240px;
         overflow: hidden;
         text-overflow: ellipsis;
     }
@@ -469,6 +565,25 @@
             width: 100%;
         }
     }
+
+    .information {
+        
+         
+    
+        
+        &__container {
+            
+        }
+    
+        &__block {
+            max-width: 890px;
+            width: 70%;
+         
+            max-height: 340px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -492,7 +607,34 @@
         }
 
     }
+
+    .main-catalog{
+        &__head {
+            display: flex;
+            justify-content: left;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+            h2{
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+            
+        }
+        &__tab {
+            flex-wrap: wrap;
+            width: auto;
+        }
+        .main-catalog__pagination{
+            display: block;
+            justify-self: center;
+            align-self:center;
+        }
+
+    }
+
     .material {
+        padding-bottom: 0;
        
         &__head {
             display: flex;
@@ -500,23 +642,31 @@
             flex-direction: column;
             gap: 10px;
             h2{
-                font-size: 2rem;
+                font-size: 1.5rem;
                
             }
         }
         &__tab {
             
             width: auto;
-            &.active{
-              
-            }
+    
         }
 
         &__text{
             padding: 20px;
         }
+
         &__description{
 
+        }
+    }
+    
+    .brands {
+        padding-inline: 20px;
+        h2{
+            padding-inline: 0;
+            font-size: 1.5rem;
+            font-weight: 500;   
         }
     }
 
@@ -526,9 +676,11 @@
             flex-direction: column;
             height: 420px;
             padding: 30px;
+            font-size: 0.875rem;
         }
     
         &__block {
+            max-height: 230px;
             width: 100%;
         }
     
@@ -570,6 +722,12 @@
         &__show-more{
             margin-top: 20px;
         }
+    }
+
+    
+    .popular-category {
+
+        padding-bottom: 20px;
     }
 }
 
@@ -621,5 +779,5 @@
 
 .popular-button-prev,
 .popular-button-next{
-    top: 330px
+    top: 260px
 }
