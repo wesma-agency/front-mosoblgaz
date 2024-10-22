@@ -60,6 +60,10 @@ body {
 	&__section {
 		margin-top: 100px;
 	}
+
+	&__bottom {
+		margin-bottom: 100px;
+	}
 }
 
 //==========================================================================================================================================================
@@ -200,6 +204,14 @@ body {
 		color: $color-light-white;
 	}
 
+	&--blue {
+		color: $color-blue;
+	}
+
+	&--upper {
+		text-transform: uppercase;
+	}
+
 	&--link-orange {
 		a {
 			color: $color-orange;
@@ -236,6 +248,10 @@ body {
 		color: $color-dark-blue;
 	}
 
+	&--red-default {
+		color: $color-red-default;
+	}
+
 	&--link-line {
 		a {
 			text-decoration: underline;
@@ -243,6 +259,28 @@ body {
 			&:hover {
 				text-decoration: none;
 			}
+		}
+	}
+
+	&--link-blue {
+		a {
+			color: $color-blue;
+		}
+	}
+
+	&--link-bold {
+		a {
+			font-weight: 700;
+		}
+	}
+
+	&--center {
+		text-align: center;
+	}
+
+	&--strong-blue {
+		strong {
+			color: $color-blue;
 		}
 	}
 }
@@ -329,6 +367,11 @@ body {
 		&--clamp-7 {
 			-webkit-line-clamp: 7;
 			line-clamp: 7;
+		}
+
+		&--clamp-19 {
+			-webkit-line-clamp: 19;
+			line-clamp: 19;
 		}
 	}
 
@@ -453,6 +496,10 @@ body {
 		&__section {
 			margin-top: 80px;
 		}
+
+		&__bottom {
+			margin-bottom: 80px;
+		}
 	}
 }
 
@@ -544,6 +591,14 @@ body {
 		&__section {
 			margin-top: 60px;
 		}
+
+		&__bottom {
+			margin-bottom: 40px;
+
+			&--mobile-lg {
+				margin-bottom: 60px;
+			}
+		}
 	}
 
 	.info {
@@ -617,6 +672,8 @@ body {
 
 @import './pages/montazh';
 @import './pages/contacts';
+@import './pages/order';
+@import './pages/about';
 
 @import './pages/refund';
 @import './pages/quality-assurance';

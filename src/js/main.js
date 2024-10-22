@@ -4,6 +4,10 @@ import Swiper from 'swiper/bundle';
 import '../scss/style.scss';
 import './simplebar';
 import './map';
+import './form';
+import './imask';
+import './checkbox';
+import './textarea';
 
 const categoryProductSlider = new Swiper('.product-slider', {
 	loop: true,

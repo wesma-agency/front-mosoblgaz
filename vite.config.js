@@ -28,6 +28,7 @@ export default defineConfig({
 				montazh: 'montazh.html',
 				contacts: 'contacts.html',
 				cart: 'cart.html',
+				order: 'order.html',
 			},
 		},
 		// Не обязательные опции
