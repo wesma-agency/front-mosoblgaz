@@ -19,8 +19,8 @@ const productCardThumbsSlider = new Swiper('.column-img__thumbs', {
 	slidesPerView: 4,
 	direction: 'vertical',
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+		nextEl: '.column-img-thumbs-controls .swiper-button-next',
+		prevEl: '.column-img-thumbs-controls .swiper-button-prev',
 	},
 });
 const productcardMainSlider = new Swiper('.column-img__slider', {
@@ -33,7 +33,7 @@ const productcardMainSlider = new Swiper('.column-img__slider', {
 	},
 });
 
-const productCardSimilarSlider = new Swiper('.product-card-similar-slider', {
+const productCardSimilarSlider = new Swiper('.similar-slider', {
 	spaceBetween: 20,
 	slidesPerView: 4,
 	loop: true,
@@ -42,9 +42,23 @@ const productCardSimilarSlider = new Swiper('.product-card-similar-slider', {
 		disableOnInteraction: false,
 		pauseOnMouseEnter: true,
 	},
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+		},
+		576: {
+			slidesPerView: 2,
+		},
+		768: {
+			slidesPerView: 3,
+		},
+		1200: {
+			slidesPerView: 4,
+		},
+	},
 	navigation: {
-		nextEl: '.product-card-similar-slider .swiper-button-next',
-		prevEl: '.product-card-similar-slider .swiper-button-prev',
+		nextEl: '.similar-slider-controls .swiper-button-next',
+		prevEl: '.similar-slider-controls .swiper-button-prev',
 	},
 });
 

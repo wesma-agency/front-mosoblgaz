@@ -231,11 +231,6 @@
 		display: none;
 	}
 }
-.filter-item--open {
-	.filter-item__title {
-		margin-bottom: 20px;
-	}
-}
 
 //==========================================================================================================================================================
 // Фильтр Цена
@@ -313,7 +308,7 @@
 	&__item {
 		display: flex;
 		align-items: center;
-		&:hover:not(.price-bottom__item--active) {
+		&:hover {
 			.price-bottom__switch {
 				border: 2px solid $color-black;
 			}
@@ -330,7 +325,7 @@
 		border: 1px solid $color-gray;
 		width: 20px;
 		height: 20px;
-		margin-right: 8px;
+		margin-right: 10px;
 	}
 	// .price-bottom__text
 	&__text {
@@ -344,14 +339,11 @@
 		margin-left: 6px;
 	}
 }
-.price-bottom__item--active {
-	.price-bottom__switch {
+
+.price-bottom__item {
+	.price-bottom__input:checked ~ .price-bottom__switch {
 		display: flex;
-		border-radius: 50%;
 		border: 6px solid $color-orange;
-		width: 20px;
-		height: 20px;
-		margin-right: 10px;
 	}
 }
 
@@ -444,7 +436,7 @@
 	&__item {
 		display: flex;
 		align-items: center;
-		&:hover:not(.brand-filter__item--active) {
+		&:hover {
 			.brand-filter__switch {
 				border: 2px solid $color-black;
 			}
@@ -493,17 +485,15 @@
 		}
 	}
 }
-.brand-filter__item--active {
-	.brand-filter__switch {
+
+.brand-filter__item {
+	.brand-filter__input:checked ~ .brand-filter__switch {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		border-radius: 4px;
 		border: none;
-		width: 20px;
-		height: 20px;
 		background-color: $color-orange;
-		margin-right: 10px;
 		&::after {
 			content: '';
 			background: url('/icons/checked-icon.svg');
@@ -604,6 +594,26 @@
 			mask-repeat: no-repeat;
 			background-color: $color-light-white;
 		}
+	}
+}
+
+//==========================================================================================================================================================
+// Фильтры - общие стили
+.filter-item {
+	.filter-item__main {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease;
+	}
+	.filter-item__content {
+		// padding-top: 20px;
+		margin-top: 20px;
+	}
+}
+
+.filter-item--open {
+	.filter-item__main {
+		// max-height: 100%;
 	}
 }
 

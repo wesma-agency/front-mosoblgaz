@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 	addToBasket();
 	showMobileFilters();
+	toggleAccordion();
 });
 
 function addToBasket() {
@@ -33,5 +34,28 @@ function showMobileFilters() {
 	filtersCloseBtn.addEventListener('click', () => {
 		sidebar.classList.remove('category-sidebar-mobile');
 		mobileBg.classList.remove('mobile-bg--active');
+	});
+}
+
+function toggleAccordion() {
+	const filters = document.querySelectorAll('.filter-item');
+
+	filters.forEach((filter) => {
+		const accordionBtn = filter.querySelector('.filter-item__title');
+		const accordionBody = filter.querySelector('.filter-item__main');
+
+		if (filter.classList.contains('filter-item--open')) {
+			accordionBody.style.maxHeight = accordionBody.scrollHeight + 'px';
+		}
+
+		accordionBtn.addEventListener('click', () => {
+			filter.classList.toggle('filter-item--open');
+
+			if (accordionBody.style.maxHeight) {
+				accordionBody.style.maxHeight = null;
+			} else {
+				accordionBody.style.maxHeight = accordionBody.scrollHeight + 'px';
+			}
+		});
 	});
 }
