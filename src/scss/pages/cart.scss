@@ -291,6 +291,7 @@
 .popular-product{
     width: 100%;
     position: relative;
+    padding-top: 60px;
     padding-bottom: 20px;
 
 
@@ -522,6 +523,8 @@
 
     .popular-product{    
         &__head {
+            margin-bottom: 20px;
+
             h2{
             }
         }

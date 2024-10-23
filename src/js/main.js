@@ -10,6 +10,8 @@ import './checkbox';
 import './textarea';
 import './dropdown';
 import './materials';
+import './article';
+import './smooth-scroll';
 
 const categoryProductSlider = new Swiper('.product-slider', {
 	loop: true,
@@ -150,7 +152,11 @@ let swiperMaterial = new Swiper(".swiper_material", {
     keyboard: true,
     spaceBetween: 20,
     slidesPerView: 1.125,
-    pagination: true,
+    pagination: {
+		el: '.material-pagination',
+        type: 'bullets',
+		clickable: true,
+    },
     breakpoints: {
         576:{
       

@@ -31,6 +31,7 @@ export default defineConfig({
 				order: 'order.html',
 				about: 'about.html',
 				materials: 'materials.html',
+				article: 'article.html',
 			},
 		},
 		// Не обязательные опции
