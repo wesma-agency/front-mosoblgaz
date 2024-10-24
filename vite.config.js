@@ -32,6 +32,7 @@ export default defineConfig({
 				about: 'about.html',
 				materials: 'materials.html',
 				article: 'article.html',
+				brands: 'brands.html',
 			},
 		},
 		// Не обязательные опции
