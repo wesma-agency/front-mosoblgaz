@@ -4,7 +4,7 @@ function activationAccordion(ACCORDIONS){
         const ACCORDION_HEAD = accordion.querySelector('.js-accordion-head');
         const ACCORDION_BODY = accordion.querySelector('.js-accordion-body');
         ACCORDION_HEAD.addEventListener('click', ()=>{
-            //ACCORDION_HEAD.classList.toggle('open-accordion-head')
+
             accordion.classList.toggle('open-accordion');
         })
     })
@@ -76,18 +76,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const SHOW_MORE = document.querySelectorAll('.js-show-more');
     
     activationShowMore(SHOW_MORE);
-    //.js-show-more-container
-    //.js-show-more-block
-    //.js-show-more-button
-    // const UI = {
-    //     ACCORDION: document.querySelector(".js-menu"),
-        // MENU_BUTTON: document.querySelector(".js-open-menu"),
-        // MENU_CLOSE: document.querySelector(".js-close-menu"),
-    // }
-
-    // UI.MENU_BUTTON.addEventListener('click', ()=>{ 
-    //     openMenu(UI.MENU, UI.MENU_CLOSE);
-    // })
 })
 
 //Раскрытие/скрытие текста
@@ -126,3 +114,30 @@ function textContentBodyHandler(body, show) {
         show?.classList.add('text-content__show--inactive');
     }
 }
+function changeTabList(tab, tabs, tab_list){
+    tabs?.querySelector('.active').classList.remove('active');
+    console.log(tab_list);
+    let tab_item = tab_list?.querySelectorAll('.js-tab-item');
+    tab_item?.forEach( item => {  
+        item.classList.remove('active');
+        if(item.getAttribute('data-tabs-item') === tab.getAttribute('data-tabs-item'))
+        {
+            tab.classList.add('active');
+            item.classList.add('active');
+        }
+    })
+
+}
+
+const TAB_CONTAINER = document.querySelectorAll(".js-tab-сontainer");
+
+TAB_CONTAINER?.forEach(item => {
+    const TABS = item.querySelector('.js-tabs');
+    const LIST = item.querySelector('.js-tab-list');
+    TABS?.querySelectorAll('.js-tab').forEach(item => {
+        item.addEventListener('click', ()=>{
+            changeTabList(item, TABS, LIST);
+        })
+    });
+})
+
