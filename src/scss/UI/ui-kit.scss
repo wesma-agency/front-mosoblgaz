@@ -200,20 +200,44 @@ a{
 }
 
 
-
-.mog-tab{
-    transition: all 0.2s;
-    border: 1px solid $color-light-white;
-    transition: all 0.2s;
-    cursor: pointer;
-
-    &:hover{
-        background-color: transparent;
-        color: $color-orange;
-        border: 1px solid $color-orange;
+.mog-tabs{
+    display: flex;
+    .mog-tab{
+        transition: all 0.2s;
+        border: 1px solid $color-light-white;
+        transition: all 0.2s;
+        cursor: pointer;
+        border-radius: 25px;
+        color: #333333;
+        width: 100%;
+        max-height: 100%;
+        padding: 8px 20px;
+        text-wrap: nowrap;
+        text-align: center;
+    
+        &:hover{
+            background-color: transparent;
+            color: $color-orange;
+            border: 1px solid $color-orange;
+        }
+        &.active{
+            border: 1px solid #333333;
+            background-color: #333333;
+            color: #FFF;
+        }
+    
     }
-
 }
+
+.mog-tab-list{
+    .mog-tab-item{
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
+}
+
 
 @mixin style-text-btn-center{
     display: flex;
@@ -635,12 +659,37 @@ a.mog-color,
         }
     }
 
+    &__rigth-arrow{
+        position: relative;
+        &::after{
+
+            content: '';
+            mask-image: url('../../icons/arrow/long-arow-left.svg');
+            @include style-icon-btn;
+            width: 21px;
+            height: 11px;
+        }
+    }
+
     &__left-arrow-big{
         position: relative;
         &::after{
 
             content: '';
             mask-image: url('../../icons/all/arrow-right.svg');
+            @include style-icon-btn;
+            mask-size: 80%;
+            mask-position: center;
+
+        }
+    }
+
+    &__right-arrow-big{
+        position: relative;
+        &::after{
+
+            content: '';
+            mask-image: url('../../icons/all/arrow-left.svg');
             @include style-icon-btn;
             mask-size: 80%;
             mask-position: center;
@@ -1101,4 +1150,27 @@ a.mog-color,
         background-color: $color-black;
       
     }
+}
+
+
+ol {
+	list-style-type: none; 
+	counter-reset: num;
+	margin: 0 0 0 20px;
+}
+
+ol li {
+	position: relative;	
+	margin: 0 0 0 18px;
+}
+ol li:before {
+	content: counter(num) '.'; 
+	counter-increment: num;
+	display: inline-block;	
+	position: absolute;
+	top: 0px;
+	left: -24px;
+	width: 20px;    
+	color: $color-black;
+	text-align: right;
 }
