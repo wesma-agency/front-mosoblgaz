@@ -1,8 +1,104 @@
+.personal-data {
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 100px;
+
+    // .personal-data__block
+
+    &__block {
+        width: 100%;
+        max-width: 850px;
+        &:not(:last-child){
+            margin-bottom: 40px;
+        }
+    }
+
+    // .personal-data__title
+
+    &__title {
+        font-weight: 500;
+        font-size: 24px;
+    }
+
+    // .personal-data__text
+
+    &__text {
+
+    }
+
+    // .personal-data__paragraph
+
+    &__paragraph {
+        display: block;
+        margin-top: 20px;
+    }
+
+    // .personal-data__tab
+
+    &__tab {
+        display: block;
+        margin-left: 40px;
+    }
+
+    // .personal-data__bold
+
+    &__bold {
+        font-weight: 700;
+        font-size: 15px;
+    }
+}
+
+
+
 @media (max-width: 1200px) {
 
 }
 
 @media (max-width: 768px) {
+    .personal-data {
+        margin-bottom: 60px;
+    
+        // .personal-data__block
+    
+        &__block {
+         
+            &:not(:last-child){
+               
+            }
+        }
+    
+        // .personal-data__title
+    
+        &__title {
+            font-weight: 500;
+            font-size: 20px;
+            
+        }
+    
+        // .personal-data__text
+    
+        &__text {
+    
+        }
+    
+        // .personal-data__paragraph
+    
+        &__paragraph {
+            
+        }
+    
+        // .personal-data__tab
+    
+        &__tab {
+            margin-left: 20px;
+        }
+    
+        // .personal-data__bold
+    
+        &__bold {
+        
+        }
+    }
 }
 
 @media (max-width: 576px) {

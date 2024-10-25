@@ -141,3 +141,61 @@ TAB_CONTAINER?.forEach(item => {
     });
 })
 
+//================ CUSTOM SELECT =================//
+document.addEventListener('DOMContentLoaded', ()=>{
+const selectSingle = document.querySelectorAll('.mog-select');
+selectSingle.forEach(item => {
+    const selectSingle_title = item.querySelector('.mog-select__title');
+    const selectSingle_labels = item.querySelectorAll('.mog-select__label');
+
+
+    selectSingle_title.addEventListener('click', () => {
+    if ('active' === item.getAttribute('data-state')) {
+        item.setAttribute('data-state', '');
+    } else {
+        item.setAttribute('data-state', 'active');
+    }
+    });
+
+    for (let i = 0; i < selectSingle_labels.length; i++) {
+    selectSingle_labels[i].addEventListener('click', (evt) => {
+        selectSingle_title.innerHTML = `<span class="overflow-hidden-90">${evt.target.textContent}</span>`;
+        item.setAttribute('data-state', '');
+    });
+    }
+
+    const reset = document.querySelector('.mog-select-reset');
+    reset?.addEventListener('click', () => {
+    selectSingle_title.textContent = selectSingle_title.getAttribute('data-default');
+    });
+    })
+
+})
+
+
+
+
+
+function changeSelectItem(option, items) {
+    items.forEach(item => {
+        item.classList.remove('active');
+        if(item.getAttribute('data-selected-item') == option.getAttribute('data-selected-item'))
+        {
+            item.classList.add('active');
+        }
+    })
+}
+
+const SELECTS = document.querySelectorAll(".js-select");
+SELECTS?.forEach(select => {
+    const OPTIONS_BLOCK = select.querySelector(".js-select-options");
+    const OPTIONS = select.querySelectorAll(".js-select-option");
+    const LIST = select.querySelector(".js-select-list");
+    const LIST_ITEMS = select.querySelectorAll(".js-select-item");
+    
+    OPTIONS?.forEach(item => {
+        item.addEventListener('click', ()=>{
+            changeSelectItem(item, LIST_ITEMS);
+        })
+    })
+})

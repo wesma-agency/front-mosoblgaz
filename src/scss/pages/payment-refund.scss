@@ -97,6 +97,19 @@
                 font-size: 15px;
                 margin-top: 20px;
             }
+            a{
+                position: relative;
+                &::after{
+                    content:"";
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $color-black;
+                    left: 0;
+                    bottom: 0;
+
+                }
+            }
 		}
 
 		// .payment-info__contact
