@@ -12,6 +12,8 @@ import './dropdown';
 import './materials';
 import './article';
 import './smooth-scroll';
+import './popup';
+import './auth';
 
 const categoryProductSlider = new Swiper('.product-slider', {
 	loop: true,

@@ -86,6 +86,13 @@ document.addEventListener("formSuccess", (e) => {
 
     clearForm($form);
   }
+
+  if ($form.classList.contains("js-form-callback-install")) {
+    console.log("Callback install form success");
+    // const formData = new FormData($form);
+
+    clearForm($form);
+  }
 });
 
 function validateItem({ $item, fieldClass }) {
@@ -132,20 +139,24 @@ function validateEmail(text) {
   return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(text);
 }
 
-function clearForm($form) {
+export function clearForm($form) {
   const $inputs = $form.querySelectorAll(".input");
   $inputs.forEach(($input) => {
-    const $field = $input.querySelector('.input__field');
+    const $field = $input.querySelector(".input__field");
     $field.value = "";
-    
-    $input.classList.remove("input--error")
+
+    $input.classList.remove("input--error");
   });
 
   const $selects = $form.querySelectorAll(".select");
   $selects.forEach(($select) => {
-    const $field = $select.querySelector('.select__field');
+    const $field = $select.querySelector(".select__field");
     $field.value = "";
 
     $select.classList.remove("select--error");
   });
 }
+
+export default {
+  clearForm,
+};

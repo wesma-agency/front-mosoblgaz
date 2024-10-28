@@ -1,0 +1,294 @@
+<div class="popup" data-popup-name="login">
+  <div class="popup__body">
+    <div class="popup__dialog">
+      <div class="popup-content popup__content">
+        <div class="popup-content__header">
+          <div class="title title--medium popup-content__title">Вход</div>
+          <button class="icon-btn popup-content__close js-close-popup">
+            <img class="icon-btn__img" src="./icons/all/close-orange.svg" alt="" />
+          </button>
+        </div>
+        <form class="form popup-content__form js-form js-form-login" autocomplete="off">
+          <div class="form__main">
+            <div class="input form__item form__item--mt-sm">
+              <div class="input__main">
+                <input class="input__field" type="text" data-validate="empty" data-error-text="Введите логин" placeholder="Логин" />
+                <span class="text text--xs input__name input__name--bg-light-white">Логин</span>
+                <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
+              </div>
+            </div>
+            <div class="input form__item form__item--mt-sm">
+              <div class="input__main">
+                <input class="input__field" type="password" data-validate="empty" data-error-text="Введите пароль" placeholder="Пароль" />
+                <span class="text text--xs input__name input__name--bg-light-white">Пароль</span>
+                <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
+              </div>
+            </div>
+            <div class="form__actions">
+              <div class="checkbox">
+                <label class="checkbox__main">
+                  <input class="checkbox__input" type="checkbox" />
+                  <span class="checkbox__switch"></span>
+                </label>
+                <span class="text checkbox__text">Запомнить меня</span>
+              </div>
+              <button
+                class="link link--orange form__actions-forgot js-close-popup js-open-popup"
+                type="button"
+                data-popup-name="password-forgot">
+                Забыли пароль?
+              </button>
+            </div>
+            <button class="mog-color__button-orange mog-button-normal form__btn form__btn--mt-lg form__btn--full"> Войти </button>
+            <div class="text text--dark-gray form__label">или</div>
+            <button
+              class="mog-button-normal mog-color__button-transparent-br-orange form__btn form__btn--mt-sm form__btn--full js-close-popup js-open-popup"
+              type="button"
+              data-popup-name="register">
+              Зарегистрироваться
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="popup__backdrop"></div>
+</div>
+
+<div class="popup" data-popup-name="register">
+  <div class="popup__body">
+    <div class="popup__dialog">
+      <div class="popup-content popup__content">
+        <div class="popup-content__header">
+          <div class="title title--medium popup-content__title">Регистрация</div>
+          <button class="icon-btn popup-content__close js-close-popup">
+            <img class="icon-btn__img" src="./icons/all/close-orange.svg" alt="" />
+          </button>
+        </div>
+        <form class="form popup-content__form js-form js-form-register" autocomplete="off">
+          <div class="form__main">
+            <div class="input form__item form__item--mt-sm">
+              <div class="input__main">
+                <input class="input__field" type="text" data-validate="empty" data-error-text="Введите логин" placeholder="Логин*" />
+                <span class="text text--xs input__name input__name--bg-light-white">Логин*</span>
+                <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
+              </div>
+            </div>
+            <div class="form__group form__group--mt-sm">
+              <div class="form__group-list">
+                <div class="input form__group-item">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" data-error-text="Введите имя" placeholder="Имя*" />
+                    <span class="text text--xs input__name input__name--bg-light-white">Имя*</span>
+                    <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
+                  </div>
+                </div>
+                <div class="input form__group-item">
+                  <div class="input__main">
+                    <input
+                      class="input__field"
+                      type="text"
+                      data-validate="empty"
+                      data-error-text="Введите фамилию"
+                      placeholder="Фамилия*" />
+                    <span class="text text--xs input__name input__name--bg-light-white">Фамилия*</span>
+                    <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="input form__item form__item--mt-sm">
+              <div class="input__main">
+                <input
+                  class="input__field"
+                  type="text"
+                  data-validate="email"
+                  data-error-text="Введите адрес электронной почты*"
+                  placeholder="Адрес электронной почты*" />
+                <span class="text text--xs input__name input__name--bg-light-white">Адрес электронной почты*</span>
+                <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
+              </div>
+            </div>
+            <div class="input form__item form__item--mt-sm">
+              <div class="input__main">
+                <input
+                  class="input__field js-imask"
+                  type="text"
+                  data-validate="phone"
+                  data-error-text="Введите номер телефона"
+                  placeholder="+7 ( 999 ) 999 - 99 - 99*"
+                  data-mask="+{7} (000) 000-00-00" />
+                <span class="text text--xs input__name input__name--bg-light-white">Номер телефона</span>
+                <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
+              </div>
+            </div>
+            <div class="input form__item form__item--mt-sm">
+              <div class="input__main">
+                <input class="input__field" type="password" data-validate="empty" data-error-text="Введите пароль" placeholder="Пароль*" />
+                <span class="text text--xs input__name input__name--bg-light-white">Пароль*</span>
+                <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
+              </div>
+            </div>
+            <div class="input form__item form__item--mt-sm">
+              <div class="input__main">
+                <input
+                  class="input__field"
+                  type="password"
+                  data-validate="empty"
+                  data-error-text="Подтвердите пароль"
+                  placeholder="Подтвердите пароль*" />
+                <span class="text text--xs input__name input__name--bg-light-white">Подтвердите пароль*</span>
+                <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
+              </div>
+            </div>
+            <div class="switch form__option">
+              <label class="switch__main">
+                <input type="checkbox" class="switch__field" />
+                <span class="switch__label"></span>
+              </label>
+              <span class="text switch__text">Являюсь монтажником</span>
+            </div>
+            <button class="mog-color__button-orange mog-button-normal form__btn form__btn--mt-lg form__btn--full">
+              Зарегистрироваться
+            </button>
+            <div class="checkbox form__privacy">
+              <label class="checkbox__main">
+                <input class="checkbox__input" type="checkbox" />
+                <span class="checkbox__switch"></span>
+              </label>
+              <span class="text text--link-orange checkbox__text checkbox__text--desktop-nowrap">
+                Даю согласие на обработку <a href="#">персональных&nbsp;данных</a>
+              </span>
+            </div>
+            <div class="text text--dark-gray form__label">или</div>
+            <button
+              class="mog-button-normal mog-color__button-transparent-br-orange form__btn form__btn--mt-sm form__btn--full js-close-popup js-open-popup"
+              type="button"
+              data-popup-name="login">
+              Войти
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="popup__backdrop"></div>
+</div>
+
+<div class="popup" data-popup-name="password-forgot">
+  <div class="popup__body">
+    <div class="popup__dialog">
+      <div class="popup-content popup__content">
+        <div class="popup-content__header">
+          <div class="title title--medium popup-content__title">Восстановление пароля</div>
+          <button class="icon-btn popup-content__close js-close-popup">
+            <img class="icon-btn__img" src="./icons/all/close-orange.svg" alt="" />
+          </button>
+        </div>
+        <p class="text popup-content__text">
+          Заполните форму, чтобы восстановить пароль, или зарегистрируйтесь, если вы еще не зарегистрированы
+        </p>
+        <form class="form popup-content__form js-form js-form-forgot" autocomplete="off">
+          <div class="form__main">
+            <div class="input form__item form__item--mt-sm">
+              <div class="input__main">
+                <input
+                  class="input__field"
+                  type="text"
+                  data-validate="email"
+                  data-error-text="Введите адрес электронной почты"
+                  placeholder="Адрес электронной почты*" />
+                <span class="text text--xs input__name input__name--bg-light-white">Адрес электронной почты*</span>
+                <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
+              </div>
+            </div>
+            <button class="mog-color__button-orange mog-button-normal form__btn form__btn--mt-lg form__btn--full"> Сбросить пароль </button>
+            <div class="text text--dark-gray form__label">или</div>
+            <button
+              class="mog-button-normal mog-color__button-transparent-br-orange form__btn form__btn--mt-sm form__btn--full js-close-popup js-open-popup"
+              type="button"
+              data-popup-name="login">
+              Войти
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="popup__backdrop"></div>
+</div>
+
+<div class="popup" data-popup-name="password-reset">
+  <div class="popup__body">
+    <div class="popup__dialog">
+      <div class="popup-content popup__content">
+        <div class="popup-content__header">
+          <div class="title title--medium popup-content__title">Письмо отправлено</div>
+          <button class="icon-btn popup-content__close js-close-popup">
+            <img class="icon-btn__img" src="./icons/all/close-orange.svg" alt="" />
+          </button>
+        </div>
+        <p class="text popup-content__text"> На e-mail test****.com отправлено письмо с инструкцией по восстановлению пароля. </p>
+        <button
+          class="mog-button-normal mog-color__button-transparent-br-orange popup-content__btn popup-content__btn--full js-close-popup js-open-popup"
+          type="button"
+          data-popup-name="login">
+          Вернуться ко входу
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="popup__backdrop"></div>
+</div>
+
+<div class="popup" data-popup-name="callback-install">
+  <div class="popup__body">
+    <div class="popup__dialog">
+      <div class="popup-content popup__content">
+        <div class="popup-content__header">
+          <div class="title title--medium popup-content__title">Отправить заявку на монтаж</div>
+          <button class="icon-btn popup-content__close js-close-popup">
+            <img class="icon-btn__img" src="./icons/all/close-orange.svg" alt="" />
+          </button>
+        </div>
+        <form class="form popup-content__form js-form js-form-callback-install" autocomplete="off">
+          <div class="form__main">
+            <div class="input form__item form__item--mt-sm">
+              <div class="input__main">
+                <input class="input__field" type="text" data-validate="empty" data-error-text="Введите имя" placeholder="Ваше имя" />
+                <span class="text text--xs input__name input__name--bg-light-white">Ваше имя</span>
+                <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
+              </div>
+            </div>
+            <div class="input form__item form__item--mt-sm">
+              <div class="input__main">
+                <input
+                  class="input__field js-imask"
+                  type="text"
+                  data-validate="phone"
+                  data-error-text="Введите номер телефона"
+                  placeholder="+7 ( 999 ) 999 - 99 - 99*"
+                  data-mask="+{7} (000) 000-00-00" />
+                <span class="text text--xs input__name input__name--bg-light-white">Номер телефона</span>
+                <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
+              </div>
+            </div>
+            <button class="mog-color__button-orange mog-button-normal form__btn form__btn--mt-lg form__btn--full">
+                Отправить
+            </button>
+            <div class="checkbox form__privacy">
+              <label class="checkbox__main">
+                <input class="checkbox__input" type="checkbox" />
+                <span class="checkbox__switch"></span>
+              </label>
+              <span class="text text--link-orange checkbox__text checkbox__text--desktop-nowrap">
+                Даю согласие на обработку <a href="#">персональных&nbsp;данных</a>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="popup__backdrop"></div>
+</div>
