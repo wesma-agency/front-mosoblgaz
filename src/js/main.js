@@ -64,6 +64,11 @@ const productCardSimilarSlider = new Swiper(".similar-slider", {
   },
 });
 
+const filtersFooterTabsSlider = new Swiper(".filters-footer__tabs-slider", {
+  spaceBetween: 10,
+  // loop: true,
+});
+
 let swiperPopular = new Swiper(".swiper_category", {
   spaceBetween: 30,
   slidesPerView: 7,
