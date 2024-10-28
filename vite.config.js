@@ -32,10 +32,13 @@ export default defineConfig({
 				about: 'about.html',
 				materials: 'materials.html',
 				article: 'article.html',
+				brands: 'brands.html',
 				payment_refund: 'payment-refund.html',
+				refund: 'payment-refund.html',
 				quality_assurance: 'quality-assurance.html',
 				delivery: 'delivery.html',
 				page404: '404.html',
+				personal_data: "personal-data.html",
 			},
 		},
 		// Не обязательные опции
