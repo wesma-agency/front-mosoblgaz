@@ -314,7 +314,11 @@
                       <div class="title title--2 title--medium cooperate-start__title">Начните сотрудничество сейчас</div>
                       <p class="text cooperate-start__text">Добавьте компанию зарегистрировавшись на нашем сайте в личном кабинете</p>
                     </div>
-                    <a class="mog-button-normal mog-color__button-orange cooperate-start__btn" href="#">Зарегистрироваться</a>
+                    <button
+                      class="mog-button-normal mog-color__button-orange cooperate-start__btn js-open-popup"
+                      data-popup-name="register">
+                      Зарегистрироваться
+                    </button>
                   </div>
                   <div class="cooperate-start__img-box">
                     <img class="cooperate-start__img" src="img/montazh/cooperate-start.svg" alt="" />
@@ -326,7 +330,7 @@
                   </div>
                   <p class="text text--light-white text--link-line cooperate-start__footer-text">
                     Наш менеджер поможет. <br />
-                    Также вы можете оставить <a href="#">заявку для обратного звонка</a>
+                    Также вы можете оставить <a class="js-open-popup" href="#" data-popup-name="callback-install">заявку для обратного звонка</a>
                   </p>
                 </div>
               </div>

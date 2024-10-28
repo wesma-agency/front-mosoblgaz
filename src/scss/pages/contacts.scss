@@ -111,6 +111,7 @@
       visibility: visible;
       opacity: 1;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+      pointer-events: none;
       transition: visibility 0.3s, opacity 0.3s;
     }
 
@@ -155,6 +156,7 @@
 .location-item {
   padding: 14px 0;
   display: flex;
+  cursor: pointer;
 
   &__contact {
     &:first-child {
@@ -313,12 +315,29 @@
     &__item {
       margin-right: 0;
       flex-direction: column;
+      display: none;
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        display: flex;
+      }
     }
 
     &__more {
       &--mobile {
         display: flex;
       }
+    }
+
+    &--active &__item {
+      display: flex;
+    }
+
+    &--active &__more {
+      display: none;
     }
   }
 

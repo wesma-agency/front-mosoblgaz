@@ -65,6 +65,10 @@ body {
 
 	&__section {
 		margin-top: 100px;
+
+		&--mt-xs {
+			margin-top: 40px;
+		}
 	}
 
 	&__bottom {
@@ -111,6 +115,10 @@ body {
 	// Добавить цвет переменной из UI-kit
 	color: #333;
 	margin-bottom: 40px;
+
+	&--mb-sm {
+		margin-bottom: 25px;
+	}
 }
 
 .showmore {
@@ -245,6 +253,14 @@ a.link {
 		}
 	}
 
+	&--my-xs {
+		p {
+			&:not(:first-child) {
+				margin-top: 8px;
+			}
+		}
+	}
+
 	&--lg {
 		font-size: 16px;
 	}
@@ -345,6 +361,14 @@ a.link {
 
 		h3 {
 			font-size: 24px;
+		}
+
+		h4 {
+			font-size: 18px;
+
+			&:not(:first-child) {
+				margin-top: 20px;
+			}
 		}
 
 		p {
@@ -907,6 +931,10 @@ a.link {
 	.main {
 		&__section {
 			margin-top: 80px;
+
+			&--mt-xs {
+				margin-top: 30px;
+			}
 		}
 
 		&__bottom {
@@ -957,6 +985,10 @@ a.link {
 	.section-title {
 		font-size: 24px;
 		margin-bottom: 30px;
+
+		&--mb-sm {
+			margin-bottom: 25px;
+		}
 	}
 
 
@@ -986,6 +1018,10 @@ a.link {
 
 			h3 {
 				font-size: 18px;
+			}
+
+			h4 {
+				font-size: 14px;
 			}
 
 			ol,
@@ -1054,6 +1090,10 @@ a.link {
 	.main {
 		&__section {
 			margin-top: 60px;
+
+			&--mt-xs {
+				margin-top: 20px;
+			}
 		}
 
 		&__bottom {
@@ -1149,6 +1189,7 @@ a.link {
 @import './pages/materials';
 @import './pages/article';
 @import './pages/brands';
+@import './pages/auto-gasification';
 
 @import './pages/refund';
 @import './pages/quality-assurance';

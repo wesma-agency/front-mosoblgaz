@@ -39,6 +39,7 @@ export default defineConfig({
 				delivery: 'delivery.html',
 				page404: '404.html',
 				personal_data: "personal-data.html",
+				auto_gasification: "auto-gasification.html",
 			},
 		},
 		// Не обязательные опции

@@ -42,24 +42,41 @@ function initLocations(customIcon) {
   });
 
   const locations = [
-    { coords: [55.54562302531325, 37.07630859325407], name: "ул. Островского, д.3" },
-    { coords: [55.80057456894279, 37.97508399999998], name: "пр-т Ленина, д. 77" },
-    { coords: [55.723034069011796, 37.2858154999999], name: "посёлок Барвиха, д. 40" },
+    { coords: [55.54562302531325, 37.07630859325407], name: "ул. Островского, д.3", id: 1 },
+    { coords: [55.80057456894279, 37.97508399999998], name: "пр-т Ленина, д. 77", id: 2 },
+    { coords: [55.723034069011796, 37.2858154999999], name: "посёлок Барвиха, д. 40", id: 3 },
   ];
 
-  const placemarks = locations.map(function (location) {
-    return new ymaps.Placemark(
+  const placemarks = locations.map((location) => {
+    const placemark = new ymaps.Placemark(
       location.coords,
-      {
-        balloonContent: location.name,
-      },
+      {},
       customIcon
     );
+
+    placemark.locationId = location.id;
+
+    return placemark;
   });
 
   clusterer.add(placemarks);
 
   map.geoObjects.add(clusterer);
+
+  const $locationMapBtns = document.querySelectorAll('.js-location-btn[data-map="locations"]');
+  $locationMapBtns.forEach(($locationMapBtn) => {
+    const id = parseInt($locationMapBtn.dataset.locationId);
+    $locationMapBtn.addEventListener("click", () => {
+      placemarks.forEach((placemark) => {
+        if (placemark.locationId === id) {
+          placemark.events.fire("click");
+
+          const coords = placemark.geometry.getCoordinates();
+          map.setCenter(coords, map.getZoom(), { duration: 350 });
+        }
+      });
+    });
+  });
 }
 
 function initDelivery() {
