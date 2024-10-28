@@ -1,9 +1,17 @@
 "use strict";
 
-import Swiper from "swiper/bundle";
-import "../scss/style.scss";
-import "./simplebar";
-import "./map";
+import Swiper from 'swiper/bundle';
+import '../scss/style.scss';
+import './simplebar';
+import './map';
+import './form';
+import './imask';
+import './checkbox';
+import './textarea';
+import './dropdown';
+import './materials';
+import './article';
+import './smooth-scroll';
 
 const categoryProductSlider = new Swiper(".product-slider", {
   loop: true,
@@ -143,27 +151,33 @@ let swiperCatalog = new Swiper(".swiper_main-catalog", {
 });
 
 let swiperMaterial = new Swiper(".swiper_material", {
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: ".material-button-next",
-    prevEl: ".material-button-prev",
-  },
-  //mousewheel: true,
-  mousewheelControl: false,
-  keyboard: true,
-
-  pagination: true,
-  breakpoints: {
-    576: {
-      slidesPerView: 1,
-      spaceBetween: 20,
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
     },
-    768: {
-      pagination: false,
+    navigation: {
+      nextEl: ".material-button-next",
+      prevEl: ".material-button-prev",
+    },
+    //mousewheel: true,
+    mousewheelControl: false,
+    keyboard: true,
+    spaceBetween: 20,
+    slidesPerView: 1.125,
+    pagination: {
+		el: '.material-pagination',
+        type: 'bullets',
+		clickable: true,
+    },
+    breakpoints: {
+        576:{
+      
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+        },
+        768:{
+            pagination: false,
 
       spaceBetween: 20,
       slidesPerView: 2,
@@ -250,13 +264,55 @@ let swiperBanner = new Swiper(".swiper_banner", {
   keyboard: true,
 });
 
-function openMenu(ui_menu, ui_close, ui_body) {
-  ui_menu.classList.add("active-menu");
-  ui_body.classList.add("active-bloor");
-  ui_close.addEventListener("click", () => {
-    ui_menu.classList.remove("active-menu");
-    ui_body.classList.remove("active-bloor");
-  });
+
+
+let swiperPopularProduct = new Swiper(".swiper_popular-product", {
+    spaceBetween: 30,
+    slidesPerView: 1,
+    loop: true,
+
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false
+    // },
+    pagination: {
+		el: '.popular-product__pagination',
+        type: 'bullets',
+		clickable: true,
+    },
+    navigation: {
+      nextEl: ".popular-product-button-next",
+      prevEl: ".popular-product-button-prev",
+    },
+    
+    //mousewheel: true,
+    mousewheelControl: false,
+    keyboard: true,
+    breakpoints: {
+        576:{
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768:{
+            spaceBetween: 20,
+            slidesPerView: 2,
+        },
+        1200:{
+
+            spaceBetween: 20,
+            slidesPerView: 4,
+        },
+    }
+});
+
+function openMenu(ui_menu, ui_close, ui_body){
+    ui_menu.classList.add("active-menu");
+    ui_body.classList.add("active-bloor")
+    ui_close.addEventListener("click", ()=>{
+        ui_menu.classList.remove("active-menu");
+        ui_body.classList.remove("active-bloor")
+    })
+    
 }
 
 document.addEventListener("DOMContentLoaded", () => {

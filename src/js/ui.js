@@ -4,7 +4,7 @@ function activationAccordion(ACCORDIONS){
         const ACCORDION_HEAD = accordion.querySelector('.js-accordion-head');
         const ACCORDION_BODY = accordion.querySelector('.js-accordion-body');
         ACCORDION_HEAD.addEventListener('click', ()=>{
-            //ACCORDION_HEAD.classList.toggle('open-accordion-head')
+
             accordion.classList.toggle('open-accordion');
         })
     })
@@ -76,18 +76,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const SHOW_MORE = document.querySelectorAll('.js-show-more');
     
     activationShowMore(SHOW_MORE);
-    //.js-show-more-container
-    //.js-show-more-block
-    //.js-show-more-button
-    // const UI = {
-    //     ACCORDION: document.querySelector(".js-menu"),
-        // MENU_BUTTON: document.querySelector(".js-open-menu"),
-        // MENU_CLOSE: document.querySelector(".js-close-menu"),
-    // }
-
-    // UI.MENU_BUTTON.addEventListener('click', ()=>{ 
-    //     openMenu(UI.MENU, UI.MENU_CLOSE);
-    // })
 })
 
 //Раскрытие/скрытие текста
@@ -126,3 +114,88 @@ function textContentBodyHandler(body, show) {
         show?.classList.add('text-content__show--inactive');
     }
 }
+function changeTabList(tab, tabs, tab_list){
+    tabs?.querySelector('.active').classList.remove('active');
+    console.log(tab_list);
+    let tab_item = tab_list?.querySelectorAll('.js-tab-item');
+    tab_item?.forEach( item => {  
+        item.classList.remove('active');
+        if(item.getAttribute('data-tabs-item') === tab.getAttribute('data-tabs-item'))
+        {
+            tab.classList.add('active');
+            item.classList.add('active');
+        }
+    })
+
+}
+
+const TAB_CONTAINER = document.querySelectorAll(".js-tab-сontainer");
+
+TAB_CONTAINER?.forEach(item => {
+    const TABS = item.querySelector('.js-tabs');
+    const LIST = item.querySelector('.js-tab-list');
+    TABS?.querySelectorAll('.js-tab').forEach(item => {
+        item.addEventListener('click', ()=>{
+            changeTabList(item, TABS, LIST);
+        })
+    });
+})
+
+//================ CUSTOM SELECT =================//
+document.addEventListener('DOMContentLoaded', ()=>{
+const selectSingle = document.querySelectorAll('.mog-select');
+selectSingle.forEach(item => {
+    const selectSingle_title = item.querySelector('.mog-select__title');
+    const selectSingle_labels = item.querySelectorAll('.mog-select__label');
+
+
+    selectSingle_title.addEventListener('click', () => {
+    if ('active' === item.getAttribute('data-state')) {
+        item.setAttribute('data-state', '');
+    } else {
+        item.setAttribute('data-state', 'active');
+    }
+    });
+
+    for (let i = 0; i < selectSingle_labels.length; i++) {
+    selectSingle_labels[i].addEventListener('click', (evt) => {
+        selectSingle_title.innerHTML = `<span class="overflow-hidden-90">${evt.target.textContent}</span>`;
+        item.setAttribute('data-state', '');
+    });
+    }
+
+    const reset = document.querySelector('.mog-select-reset');
+    reset?.addEventListener('click', () => {
+    selectSingle_title.textContent = selectSingle_title.getAttribute('data-default');
+    });
+    })
+
+})
+
+
+
+
+
+function changeSelectItem(option, items) {
+    items.forEach(item => {
+        item.classList.remove('active');
+        if(item.getAttribute('data-selected-item') == option.getAttribute('data-selected-item'))
+        {
+            item.classList.add('active');
+        }
+    })
+}
+
+const SELECTS = document.querySelectorAll(".js-select");
+SELECTS?.forEach(select => {
+    const OPTIONS_BLOCK = select.querySelector(".js-select-options");
+    const OPTIONS = select.querySelectorAll(".js-select-option");
+    const LIST = select.querySelector(".js-select-list");
+    const LIST_ITEMS = select.querySelectorAll(".js-select-item");
+    
+    OPTIONS?.forEach(item => {
+        item.addEventListener('click', ()=>{
+            changeSelectItem(item, LIST_ITEMS);
+        })
+    })
+})
