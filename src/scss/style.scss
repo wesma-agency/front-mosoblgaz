@@ -1396,3 +1396,22 @@ a.link {
 		height: 100%;
 	}
 }
+
+.overflow-hidden-90{
+	display: block;
+	width: 100%;
+	z-index: 0;
+	position: relative;
+	overflow: hidden;
+	&::after{
+	z-index: 1;
+		position: absolute;
+		display: block;
+		right: 0;
+		top: 0;
+		content: '';
+		background: linear-gradient(90deg, transparent, $color-white);
+		width: 20px;
+		height: 100%;
+	}
+}
