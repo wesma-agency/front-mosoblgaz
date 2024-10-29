@@ -15,6 +15,7 @@ import './smooth-scroll';
 import './popup';
 import './auth';
 import './contacts';
+import './accordion';
 
 const categoryProductSlider = new Swiper('.product-slider', {
 	loop: true,
