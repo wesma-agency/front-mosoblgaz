@@ -94,10 +94,15 @@
     width: 100%;
     background-color: $color-white;
     flex-wrap: wrap;
-    padding: 60px 80px;
+    padding: 60px 0;
     font-size: 0.875rem;
     color: $color-dark-gray;
     // .footer__logo
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
 
     &__logo {
@@ -137,6 +142,7 @@
         margin-top: 30px;
         margin-bottom: 40px;
         padding: 40px 0;
+        gap: 15px;
         display: flex;
         justify-content: space-between;
     }
