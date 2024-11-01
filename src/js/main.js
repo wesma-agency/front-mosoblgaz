@@ -16,18 +16,26 @@ import './popup';
 import './auth';
 import './contacts';
 import './accordion';
+import './filters';
+import './select-menu';
+import './catalog-category';
 
-const categoryProductSlider = new Swiper('.product-slider', {
-	loop: true,
-	pagination: {
-		el: '.product-slider__pagination',
-		clickable: true,
-		// renderBullet: function (index, className) {
-		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-		// },
-	},
-    
-});
+const productSliders = document.querySelectorAll('.product-slider');
+productSliders.forEach(productSlider => {
+    const swiper = new Swiper(productSlider, {
+        loop: true,
+        pagination: {
+            el: '.product-slider__pagination',
+            clickable: true,
+        },
+    });
+
+    const pagination = productSlider.querySelector('.product-slider__pagination');
+    const bullets = pagination.querySelectorAll('.swiper-pagination-bullet');
+    bullets.forEach((bullet, index) => {
+        bullet.addEventListener('mouseenter', () => swiper.slideTo(index));
+    });
+})
 
 const productCardThumbsSlider = new Swiper('.column-img__thumbs', {
 	spaceBetween: 20,

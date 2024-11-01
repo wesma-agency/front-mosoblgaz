@@ -293,6 +293,24 @@ a.link {
 		color: $color-red-default;
 	}
 
+	&--medium {
+		font-weight: 500;
+	}
+
+	&--semibold {
+		font-weight: 600;
+	}
+
+	&--bold {
+		font-weight: 700;
+	}
+
+	&--iflex {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+	}
+
 	&--link-line {
 		a {
 			text-decoration: underline;
@@ -328,6 +346,12 @@ a.link {
 	&--strong-blue {
 		strong {
 			color: $color-blue;
+		}
+	}
+
+	&__row-item {
+		&:not(:first-child) {
+			margin-left: 5px;
 		}
 	}
 }
@@ -635,7 +659,7 @@ a.link {
 		top: calc(100% + 4px);
 		left: 0;
 		width: max(100%, 220px);
-		z-index: 5;
+		z-index: 12;
 		display: none;
 	}
 
@@ -706,6 +730,7 @@ a.link {
 	border: 1px solid $color-dark-gray;
 	border-radius: 5px;
 	font-size: 14px;
+	text-align: left;
 
 	&:after {
 		content: '';
@@ -718,7 +743,7 @@ a.link {
 
 	&__text {
 		&:last-child {
-			margin-right: 10px;
+			margin-right: 8px;
 		}
 	}
 

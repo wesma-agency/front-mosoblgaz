@@ -99,7 +99,7 @@
 				width: 24px;
 				height: 24px;
 				margin-left: auto;
-				transition: 0.3s ease;
+				transition: 0.35s;
 			}
 		}
 
@@ -112,10 +112,19 @@
 				}
 			}
 		}
+
+		&.accordion__btn--active {
+			span {
+				&:after {
+					transform: rotate(-180deg);
+				}
+			}
+		}
 	}
 
 	// .filter-item__main
 	&__main {
+		padding-top: 20px;
 	}
 
 	&:nth-child(2) {
@@ -286,7 +295,7 @@
 		display: flex;
 		align-items: center;
 		border-radius: 25px;
-		padding: 10px 20px;
+		padding: 7px 21px;
 		width: fit-content;
 		font-size: 15px;
 		color: $color-black;
@@ -314,11 +323,12 @@
 	}
 	// .tabs-filter__text
 	&__text {
-		// display: flex;
+		display: flex;
+		align-items: center;
+		min-height: 24px;
 	}
 	// .tabs-filter__count
 	&__count {
-		// display: flex;
 		margin-left: 5px;
 	}
 	// .tabs-filter__close-btn
@@ -326,15 +336,13 @@
 		display: none;
 	}
 }
-.filter-item--open {
-	.filter-item__title {
-		margin-bottom: 20px;
-	}
-}
 
 //==========================================================================================================================================================
 // Фильтр Цена
 .price-filter {
+	&__name {
+		margin-bottom: 13px;
+	}
 	// .price-filter__top
 	&__top {
 	}
@@ -343,13 +351,14 @@
 	}
 	// .price-filter__bottom
 	&__bottom {
+		&:not(:first-child) {
+			margin-top: 20px;
+		}
 	}
 }
 .price-range {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 20px;
 	// .price-range__item
 	&__item {
 		position: relative;
@@ -376,19 +385,22 @@
 	}
 	// .price-range__value
 	&__value {
+		max-width: 100%;
 		color: #000;
 		&::placeholder {
-			color: #000;
+			color: $color-dark-gray;
 		}
 	}
 	// .price-range__devider
 	&__devider {
+		margin: 0 8px;
 		width: 11px;
 		height: 2px;
 		background-color: #000;
 	}
 	// .price-range__currency
 	&__currency {
+		margin-left: 10px;
 		display: flex;
 		&::after {
 			content: '';
@@ -396,6 +408,10 @@
 			width: 22px;
 			height: 22px;
 		}
+	}
+
+	&__text {
+		margin-left: 6px;
 	}
 }
 .price-bottom {
@@ -501,9 +517,10 @@
 	}
 	// .size-range__value
 	&__value {
+		max-width: 100%;
 		color: #000;
 		&::placeholder {
-			color: #000;
+			color: $color-dark-gray;
 		}
 	}
 	// .size-range__devider
@@ -518,7 +535,7 @@
 		margin-left: -5px;
 	}
 }
-.lenght-range {
+.length-range {
 }
 .width-range {
 }
@@ -527,29 +544,42 @@
 
 //==========================================================================================================================================================
 // Фильтр Производитель
-.brand-filter {
-	// .brand-filter__list
+.checkbox-filter {
+	// .checkbox-filter__list
 	&__list {
 		display: flex;
 		flex-direction: column;
 		row-gap: 10px;
-		margin-bottom: 10px;
+		
+		&:not(:last-child) {
+			padding-bottom: 10px;
+		}
 	}
-	// .brand-filter__item
+	// .checkbox-filter__item
 	&__item {
 		display: flex;
 		align-items: center;
-		&:hover:not(.brand-filter__item--active) {
-			.brand-filter__switch {
+		&:hover:not(.checkbox-filter__item--active) {
+			.checkbox-filter__switch {
 				border: 2px solid $color-black;
 			}
 		}
+
+		&--hidden {
+			display: none;
+		}
 	}
-	// .brand-filter__input
+
+	&--active &__item {
+		&--hidden {
+			display: flex;
+		}
+	}
+	// .checkbox-filter__input
 	&__input {
 		display: none;
 	}
-	// .brand-filter__switch
+	// .checkbox-filter__switch
 	&__switch {
 		border-radius: 4px;
 		border: 1px solid $color-gray;
@@ -557,18 +587,18 @@
 		height: 20px;
 		margin-right: 10px;
 	}
-	// .brand-filter__text
+	// .checkbox-filter__text
 	&__text {
 		font-size: 15px;
 	}
-	// .brand-filter__count
+	// .checkbox-filter__count
 	&__count {
 		font-size: 14px;
 		line-height: 1.5;
 		color: $color-gray;
 		margin-left: 5px;
 	}
-	// .brand-filter__showmore-btn
+	// .checkbox-filter__showmore-btn
 	&__showmore-btn {
 		font-weight: 500;
 		color: $color-orange;
@@ -587,9 +617,21 @@
 			}
 		}
 	}
+
+	&--active &__showmore-btn {
+		display: none;
+	}
+
+	&__hidemore-btn {
+		display: none;
+	}
+
+	&--active &__hidemore-btn {
+		display: flex;
+	}
 }
-.brand-filter__item--active {
-	.brand-filter__switch {
+.checkbox-filter__item--active {
+	.checkbox-filter__switch {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -615,6 +657,13 @@
 	flex-direction: column;
 	row-gap: 10px;
 	margin-top: 40px;
+
+	&__section {
+		&.simplebar-scrollable-x {
+			padding-bottom: 4px;
+		}
+	}
+
 	// .filters-footer__reset-btn
 	&__reset-btn {
 		font-weight: 500;
@@ -710,22 +759,12 @@
 }
 .category-sort {
 	display: flex;
-	// justify-content: flex-end;
-	// position: relative;
+	justify-content: flex-end;
 	margin-bottom: 20px;
-	// &::after {
-	// 	content: '';
-	// 	display: block;
-	// 	position: absolute;
-	// 	top: 0;
-	// 	right: 0;
-	// 	width: 24px;
-	// 	height: 24px;
-	// 	background: url('/icons/select-dropdown-icon.svg');
-	// 	background-repeat: no-repeat;
-	// 	background-position: center;
-	// 	z-index: 1;
-	// }
+
+	&__item {
+		width: 220px;
+	}
 }
 
 .sort-select {
@@ -785,7 +824,7 @@
 	// animation: showBuyOneClickBtn 0.6s ease;
 	// animation-fill-mode: both;
 	opacity: 0;
-	z-index: 99;
+	z-index: 11;
 	transition: 0.3s ease;
 
 	&__btn {
@@ -842,7 +881,7 @@
 	// .category-product__img-link
 	&__img-link {
 		display: block;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 	}
 	// .category-product__content
 	&__content {
@@ -863,13 +902,22 @@
 .swiper {
 }
 .product-slider {
+	padding-bottom: 20px;
 	// .product-slider__pagination
 	&__pagination {
+		&.swiper-pagination {
+			position: absolute;
+			bottom: 8px;
+			
+			.swiper-pagination-bullet {
+				margin: 0 3px;
+				border-radius: 0;
+			}
+		}
+
 	}
 }
-.swiper-wrapper {
-	margin-bottom: 10px;
-}
+
 .swiper-slide {
 }
 .product-slide {
@@ -892,6 +940,10 @@
 .product-slide {
 	display: flex;
 	justify-content: center;
+
+	img {
+		object-fit: contain;
+	}
 }
 
 .product {
@@ -913,6 +965,7 @@
 		display: block;
 		font-weight: 500;
 		font-size: 18px;
+		line-height: 1.3;
 		color: $color-black;
 	}
 	// .product__rating
@@ -1105,7 +1158,9 @@
 		stroke: $color-gray;
 		transition: 0.3s ease;
 	}
-	&:hover svg {
+	
+	&:hover svg,
+	&--active svg {
 		fill: none;
 		stroke: $color-orange;
 	}
@@ -1380,11 +1435,10 @@
 		height: calc(100vh - 40px - 68px);
 		height: calc(100dvh - 40px - 68px);
 		overflow-y: auto;
-		// left: 0;
 		border-radius: 30px 30px 0 0;
 		padding: 20px;
 		background-color: #fff;
-		max-width: 360px;
+		max-width: 100%;
 		z-index: 100;
 		transition: 0.3s ease;
 
@@ -1423,6 +1477,13 @@
 
 	.category-footer {
 		margin-bottom: 60px;
+	}
+
+	.filters-title {
+		&__text {
+			font-size: 20px;
+			line-height: 1.3;
+		}
 	}
 }
 

@@ -6,7 +6,9 @@ window.ResizeObserver = ResizeObserver;
 
 const $simplebars = document.querySelectorAll(".js-simplebar");
 $simplebars.forEach(($simplebar) => {
-  const simplebar = new SimpleBar($simplebar);
+  const simplebar = new SimpleBar($simplebar, {
+    autoHide: false
+  });
   const scrollContentEl = simplebar.getScrollElement();
 
   updateScrollEndClass(scrollContentEl, $simplebar);

@@ -3,6 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	showMobileFilters();
 });
 
+const categoryProducts = document.querySelectorAll('.category-product');
+categoryProducts.forEach(categoryProduct => {
+	const favourBtn = categoryProduct.querySelector('.meta-btn.favour-btn');
+	favourBtn.addEventListener('click', () => favourBtn.classList.toggle('meta-btn--active'));
+
+	const compareBtn = categoryProduct.querySelector('.meta-btn.compare-btn');
+	compareBtn.addEventListener('click', () => compareBtn.classList.toggle('meta-btn--active'));
+});
+
 function addToBasket() {
 	const addBtn = document.querySelectorAll('.product__cart-add');
 

@@ -932,6 +932,11 @@ a.mog-color,
 	align-items: flex-start;
 	user-select: none;
 
+    &__main {
+        display: flex;
+        align-items: flex-start;
+    }
+
 	&__input {
 		display: none;
 	}
@@ -945,7 +950,7 @@ a.mog-color,
 		align-items: center;
 		justify-content: center;
 		border: 1px solid #d4d4d4;
-		border-radius: 2px;
+		border-radius: 4px;
 		cursor: pointer;
 
 		&:before {
@@ -981,7 +986,7 @@ a.mog-color,
 			background-color: #fff;
 
 			&:before {
-					display: none;
+                display: none;
 			}
 		}
 	}

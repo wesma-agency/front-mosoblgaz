@@ -12,14 +12,14 @@
           <div class="form__main">
             <div class="input form__item form__item--mt-sm">
               <div class="input__main">
-                <input class="input__field" type="text" data-validate="empty" data-error-text="Введите логин" placeholder="Логин" />
+                <input class="input__field" type="text" name="login" data-validate="empty" data-error-text="Введите логин" placeholder="Логин" />
                 <span class="text text--xs input__name input__name--bg-light-white">Логин</span>
                 <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
               </div>
             </div>
             <div class="input form__item form__item--mt-sm">
               <div class="input__main">
-                <input class="input__field" type="password" data-validate="empty" data-error-text="Введите пароль" placeholder="Пароль" />
+                <input class="input__field" type="password" name="password" data-validate="empty" data-error-text="Введите пароль" placeholder="Пароль" />
                 <span class="text text--xs input__name input__name--bg-light-white">Пароль</span>
                 <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
               </div>
@@ -69,7 +69,7 @@
           <div class="form__main">
             <div class="input form__item form__item--mt-sm">
               <div class="input__main">
-                <input class="input__field" type="text" data-validate="empty" data-error-text="Введите логин" placeholder="Логин*" />
+                <input class="input__field" type="text" name="login" data-validate="empty" data-error-text="Введите логин" placeholder="Логин*" />
                 <span class="text text--xs input__name input__name--bg-light-white">Логин*</span>
                 <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
               </div>
@@ -78,7 +78,7 @@
               <div class="form__group-list">
                 <div class="input form__group-item">
                   <div class="input__main">
-                    <input class="input__field" type="text" data-validate="empty" data-error-text="Введите имя" placeholder="Имя*" />
+                    <input class="input__field" type="text" name="firstname" data-validate="empty" data-error-text="Введите имя" placeholder="Имя*" />
                     <span class="text text--xs input__name input__name--bg-light-white">Имя*</span>
                     <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
                   </div>
@@ -88,6 +88,7 @@
                     <input
                       class="input__field"
                       type="text"
+                      name="lastname"
                       data-validate="empty"
                       data-error-text="Введите фамилию"
                       placeholder="Фамилия*" />
@@ -102,6 +103,7 @@
                 <input
                   class="input__field"
                   type="text"
+                  name="email"
                   data-validate="email"
                   data-error-text="Введите адрес электронной почты*"
                   placeholder="Адрес электронной почты*" />
@@ -114,6 +116,7 @@
                 <input
                   class="input__field js-imask"
                   type="text"
+                  name="phone"
                   data-validate="phone"
                   data-error-text="Введите номер телефона"
                   placeholder="+7 ( 999 ) 999 - 99 - 99*"
@@ -124,7 +127,7 @@
             </div>
             <div class="input form__item form__item--mt-sm">
               <div class="input__main">
-                <input class="input__field" type="password" data-validate="empty" data-error-text="Введите пароль" placeholder="Пароль*" />
+                <input class="input__field" type="password" name="password" data-validate="empty" data-error-text="Введите пароль" placeholder="Пароль*" />
                 <span class="text text--xs input__name input__name--bg-light-white">Пароль*</span>
                 <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
               </div>
@@ -134,6 +137,7 @@
                 <input
                   class="input__field"
                   type="password"
+                  name="password-repeat"
                   data-validate="empty"
                   data-error-text="Подтвердите пароль"
                   placeholder="Подтвердите пароль*" />
@@ -195,6 +199,7 @@
                 <input
                   class="input__field"
                   type="text"
+                  name="email"
                   data-validate="email"
                   data-error-text="Введите адрес электронной почты"
                   placeholder="Адрес электронной почты*" />
@@ -255,7 +260,7 @@
           <div class="form__main">
             <div class="input form__item form__item--mt-sm">
               <div class="input__main">
-                <input class="input__field" type="text" data-validate="empty" data-error-text="Введите имя" placeholder="Ваше имя" />
+                <input class="input__field" type="text" name="name" data-validate="empty" data-error-text="Введите имя" placeholder="Ваше имя" />
                 <span class="text text--xs input__name input__name--bg-light-white">Ваше имя</span>
                 <span class="text text--xs text--red-default input__error input__error--bg-light-white"></span>
               </div>
@@ -265,6 +270,7 @@
                 <input
                   class="input__field js-imask"
                   type="text"
+                  name="phone"
                   data-validate="phone"
                   data-error-text="Введите номер телефона"
                   placeholder="+7 ( 999 ) 999 - 99 - 99*"
