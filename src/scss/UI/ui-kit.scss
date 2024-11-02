@@ -659,7 +659,7 @@ a.mog-color,
         &::after{
 
             content: '';
-            mask-image: url('../../icons/arrow/long-arow-right.svg');
+            mask-image: url('../../icons/arrow/long-arrow-right.svg');
             @include style-icon-btn;
             width: 21px;
             height: 11px;
@@ -671,7 +671,7 @@ a.mog-color,
         &::after{
 
             content: '';
-            mask-image: url('../../icons/arrow/long-arow-left.svg');
+            mask-image: url('../../icons/arrow/long-arrow-left.svg');
             @include style-icon-btn;
             width: 21px;
             height: 11px;
@@ -1329,7 +1329,7 @@ a.mog-color,
         line-height: 2.5rem;
     }
     .mog-tabs{
-        flex-wrap: wrap;
+        overflow-x: auto;
     }
 
     .form {

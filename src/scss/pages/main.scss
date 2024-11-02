@@ -242,7 +242,7 @@
             &::after{
                 display: inline-block;
                 content: '';
-                mask-image: url("../../icons/arrow/long-arow-right.svg");
+                mask-image: url("../../icons/arrow/long-arrow-right.svg");
                 width: 24px;
                 height: 16px;
                 align-self: center;
@@ -294,12 +294,14 @@
         max-height: 560px;
 
     }
-    .main-catalog__pagination{
+
+    &__pagination{
         display: none;
         justify-self: center;
         align-self:center;
         margin-top: -60px;
     }
+    
     &__button{
         display: flex;
         margin-top: 20px;
@@ -328,7 +330,7 @@
             &::after{
                 display: inline-block;
                 content: '';
-                mask-image: url("../../icons/arrow/long-arow-right.svg");
+                mask-image: url("../../icons/arrow/long-arrow-right.svg");
                 width: 24px;
                 height: 16px;
                 align-self: center;
@@ -401,7 +403,7 @@
             position: absolute;
             display: block;
             content: '';
-            mask-image: url("../../icons/arrow/long-arow-right.svg");
+            mask-image: url("../../icons/arrow/long-arrow-right.svg");
             width: 24px;
             height: 16px;
             background-color: $color-orange;
@@ -663,15 +665,16 @@
             flex-wrap: wrap;
             width: auto;
         }
-        .main-catalog__pagination{
+
+        &__pagination{
+            position: relative;
             display: block;
             justify-self: center;
             align-self:center;
         }
 
         &__tabs {
-           
-       
+           gap: 10px;
         }
 
     }
@@ -694,10 +697,17 @@
                 }
             }
         }
+
         &__tab {
-            
             width: auto;
-    
+        }
+
+        &__container {
+            margin-right: -20px;
+            margin-left: -20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            width: auto;
         }
 
         &__text{
@@ -719,9 +729,27 @@
     .brands {
         padding-inline: 20px;
         h2{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             padding-inline: 0;
             font-size: 1.5rem;
             font-weight: 500;   
+
+            &:after{
+                display: inline-block;
+                content: '';
+                mask-image: url("/icons/arrow/long-arrow-right.svg");
+                width: 24px;
+                height: 16px;
+                align-self: center;
+                background-color: $color-orange;
+                margin-left: 10px;
+            }
+
+            &:hover:after{
+                transform:translateX(20px);
+            }
         }
     }
 

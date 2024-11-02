@@ -911,7 +911,6 @@
 			
 			.swiper-pagination-bullet {
 				margin: 0 3px;
-				border-radius: 0;
 			}
 		}
 
@@ -921,20 +920,6 @@
 .swiper-slide {
 }
 .product-slide {
-}
-.swiper-pagination {
-	position: static;
-	display: flex;
-	justify-content: center;
-	column-gap: 5px;
-	.swiper-pagination-bullet {
-		width: 20px;
-		height: 2px;
-		background-color: $color-gray;
-	}
-	.swiper-pagination-bullet-active {
-		background-color: $color-orange;
-	}
 }
 
 .product-slide {
