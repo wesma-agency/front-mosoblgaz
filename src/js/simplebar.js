@@ -11,11 +11,16 @@ $simplebars.forEach(($simplebar) => {
   });
   const scrollContentEl = simplebar.getScrollElement();
 
-  updateScrollEndClass(scrollContentEl, $simplebar);
-  scrollContentEl.addEventListener("scroll", () => updateScrollEndClass(scrollContentEl, $simplebar));
+  $simplebar._simplebar = simplebar;
+  $simplebar._simplebar._updateScrollEndClass = () => updateScrollEndClass($simplebar);
+
+  updateScrollEndClass($simplebar);
+  scrollContentEl.addEventListener("scroll", () => updateScrollEndClass($simplebar));
+
 });
 
-function updateScrollEndClass(scrollContentEl, $simplebar) {
+function updateScrollEndClass($simplebar) {
+  const scrollContentEl = $simplebar._simplebar.getScrollElement();
   const maxScroll = scrollContentEl.scrollHeight - scrollContentEl.clientHeight;
   const currentScroll = scrollContentEl.scrollTop;
 

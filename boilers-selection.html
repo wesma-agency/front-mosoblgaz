@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Подбор котла | Компания Мособлгаз</title>
-		
-		<link rel="stylesheet" href="./pgs-panel/css/main.css">
-		<link rel="stylesheet" href="./pgs-panel/css/jquery.mCustomScrollbar.css">
-		
-		<script type="text/javascript" src="./pgs-panel/js/jquery.min.js"></script>
-		<script type="text/javascript" src="./pgs-panel/js/jquery.mCustomScrollbar.concat.min.js"></script>
-		<script type="text/javascript" src="./pgs-panel/js/main.js"></script>
-	</head>
-	<body>
-		<load src="pages.html" />
-		<div class="wrapper">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Подбор котла | Компания Мособлгаз</title>
 
-			<load src="./_header.html" />
+        <link rel="stylesheet" href="./pgs-panel/css/main.css" />
+        <link rel="stylesheet" href="./pgs-panel/css/jquery.mCustomScrollbar.css" />
+
+        <script type="text/javascript" src="./pgs-panel/js/jquery.min.js"></script>
+        <script type="text/javascript" src="./pgs-panel/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script type="text/javascript" src="./pgs-panel/js/main.js"></script>
+    </head>
+    <body>
+        <load src="pages.html" />
+        <div class="wrapper">
+            <load src="./_header.html" />
 
             <main class="main">
                 <section class="boilers-selection-top">
@@ -27,22 +26,15 @@
                                     <a href="#">Главная</a>
                                 </li>
                                 <li class="breadcrumbs__arrow">
-                                    <svg
-                                        width="15"
-                                        height="14"
-                                        viewBox="0 0 15 14"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
+                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M3 6.95181H1H14M14 6.95181L10.5323 4M14 6.95181L10.5323 10"
                                             stroke="#333333"
                                             stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
+                                            stroke-linejoin="round" />
                                     </svg>
                                 </li>
-    
+
                                 <li class="breadcrumbs__item breadcrumbs__item--current">
                                     <span>Подбор котла</span>
                                 </li>
@@ -52,86 +44,116 @@
                         <h1 class="boilers-selection__title section-title">Подбор котла</h1>
                     </div>
                 </section>
-                <section class="boilers-selection">
+                <section class="boilers-selection main__bottom">
                     <div class="container">
                         <div class="boilers-selection__inner">
                             <div class="boilers-selection__content">
                                 <div class="boilers-selection__main">
                                     <div class="boilers-selection__parameters">
-                                        <div class="boilers-parameter js-accordion open-accordion">
-                                            <div class="boilers-parameter__header js-accordion-head">
+                                        <div class="boilers-parameter accordion accordion--active">
+                                            <div class="boilers-parameter__header accordion__btn accordion__btn--active">
                                                 <span class="boilers-parameter__number">1</span>
                                                 <div class="boilers-parameter__title">Для каких целей вам нужен отопительный котел?</div>
-                                                <img src="./icons/all/arrow-down.svg" alt="">   
+                                                <img src="./icons/all/arrow-down.svg" alt="" />
                                             </div>
-                                            <div class="boilers-parameter__body js-accordion-body">
-                                                <form class="radio-buttons boilers-parameter__form boilers-parameter__target">  
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__target" class="mog-label__radio-button">
-                                                        <span>Не важно</span>
-                                                    </label>
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__target" class="mog-label__radio-button">
-                                                        <span>Только для отопления</span>
-                                                    </label>
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__target" class="mog-label__radio-button">
-                                                        <span>Для отопления и ГВС</span>
-                                                    </label>
-                                                </form>
+                                            <div class="accordion__content">
+                                                <div class="boilers-parameter__body accordion__main">
+                                                    <form class="radio-buttons boilers-parameter__form boilers-parameter__target">
+                                                        <label class="mog-label__radio-button">
+                                                            <input
+                                                                type="radio"
+                                                                name="boilers-parameter__target"
+                                                                class="mog-label__radio-button" />
+                                                            <span>Не важно</span>
+                                                        </label>
+                                                        <label class="mog-label__radio-button">
+                                                            <input
+                                                                type="radio"
+                                                                name="boilers-parameter__target"
+                                                                class="mog-label__radio-button" />
+                                                            <span>Только для отопления</span>
+                                                        </label>
+                                                        <label class="mog-label__radio-button">
+                                                            <input
+                                                                type="radio"
+                                                                name="boilers-parameter__target"
+                                                                class="mog-label__radio-button" />
+                                                            <span>Для отопления и ГВС</span>
+                                                        </label>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="boilers-parameter js-accordion open-accordion">
-                                            <div class="boilers-parameter__header js-accordion-head">
+                                        <div class="boilers-parameter accordion accordion--active">
+                                            <div class="boilers-parameter__header accordion__btn accordion__btn--active">
                                                 <span class="boilers-parameter__number">2</span>
                                                 <div class="boilers-parameter__title">Выберите вид топлива для котла</div>
-                                                <img src="./icons/all/arrow-down.svg" alt="">   
+                                                <img src="./icons/all/arrow-down.svg" alt="" />
                                             </div>
-                                            <div class="boilers-parameter__body js-accordion-body">
-                                                <form class="radio-buttons boilers-parameter__form boilers-parameter__fuel">  
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__fuel" class="mog-label__radio-button">
-                                                        <span>Не важно</span>
-                                                    </label>
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__fuel" class="mog-label__radio-button">
-                                                        <span>Природный / сжиженный газ</span>
-                                                    </label>
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__fuel" class="mog-label__radio-button">
-                                                        <span>Жидкое топливо</span>
-                                                    </label>
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__fuel" class="mog-label__radio-button">
-                                                        <span>Электричество</span>
-                                                    </label>
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__fuel" class="mog-label__radio-button">
-                                                        <span>Твердое топливо</span>
-                                                    </label>
-                                                </form>
+                                            <div class="accordion__content">
+                                                <div class="boilers-parameter__body accordion__main">
+                                                    <form class="radio-buttons boilers-parameter__form boilers-parameter__fuel">
+                                                        <label class="mog-label__radio-button">
+                                                            <input
+                                                                type="radio"
+                                                                name="boilers-parameter__fuel"
+                                                                class="mog-label__radio-button" />
+                                                            <span>Не важно</span>
+                                                        </label>
+                                                        <label class="mog-label__radio-button">
+                                                            <input
+                                                                type="radio"
+                                                                name="boilers-parameter__fuel"
+                                                                class="mog-label__radio-button" />
+                                                            <span>Природный / сжиженный газ</span>
+                                                        </label>
+                                                        <label class="mog-label__radio-button">
+                                                            <input
+                                                                type="radio"
+                                                                name="boilers-parameter__fuel"
+                                                                class="mog-label__radio-button" />
+                                                            <span>Жидкое топливо</span>
+                                                        </label>
+                                                        <label class="mog-label__radio-button">
+                                                            <input
+                                                                type="radio"
+                                                                name="boilers-parameter__fuel"
+                                                                class="mog-label__radio-button" />
+                                                            <span>Электричество</span>
+                                                        </label>
+                                                        <label class="mog-label__radio-button">
+                                                            <input
+                                                                type="radio"
+                                                                name="boilers-parameter__fuel"
+                                                                class="mog-label__radio-button" />
+                                                            <span>Твердое топливо</span>
+                                                        </label>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="boilers-parameter js-accordion open-accordion">
-                                            <div class="boilers-parameter__header js-accordion-head">
+                                        <div class="boilers-parameter accordion accordion--active">
+                                            <div class="boilers-parameter__header accordion__btn accordion__btn--active">
                                                 <span class="boilers-parameter__number">3</span>
                                                 <div class="boilers-parameter__title">Отапливаемая площадь, кв.м</div>
-                                                <img src="./icons/all/arrow-down.svg" alt="">   
+                                                <img src="./icons/all/arrow-down.svg" alt="" />
                                             </div>
-                                            <div class="boilers-parameter__body js-accordion-body">
-
-                                                
+                                            <div class="accordion__content">
+                                                <div class="boilers-parameter__body accordion__main">
                                                     <div class="boilers-parameter__range input-range">
                                                         <div class="input-range__item">
                                                             <span class="input-range__border-text">от</span>
                                                             <label class="input-range__label">
                                                                 <input
-                                                                    class="input-range__value"
+                                                                    class="input-range__value input-range__value--min js-imask"
                                                                     type="text"
-                                                                    placeholder="50"
-                                                                />
+                                                                    data-mask="price"
+                                                                    data-mask-min="1"
+                                                                    data-mask-max="10000"
+                                                                    data-mask-input-max="99999"
+                                                                    placeholder="50" />
                                                             </label>
                                                         </div>
                                                         <div class="input-range__devider"></div>
@@ -139,80 +161,148 @@
                                                             <span class="input-range__border-text">до</span>
                                                             <label class="input-range__label">
                                                                 <input
-                                                                    class="input-range__value"
+                                                                    class="input-range__value input-range__value--max js-imask"
+                                                                    data-mask="price"
+                                                                    data-mask-min="1"
+                                                                    data-mask-max="10000"
+                                                                    data-mask-input-max="99999"
                                                                     type="text"
-                                                                    placeholder="400"
-                                                                />
+                                                                    placeholder="400" />
                                                             </label>
                                                         </div>
                                                     </div>
-                                         
 
-                                                <form class="radio-buttons boilers-parameter__form boilers-parameter__square">  
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__square" class="mog-label__radio-button">
-                                                        <span>Не важно</span>
-                                                    </label>
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__square" class="mog-label__radio-button">
-                                                        <span>до 50</span>
-                                                    </label>
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__square" class="mog-label__radio-button">
-                                                        <span>51 - 70</span>
-                                                    </label>
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__square" class="mog-label__radio-button">
-                                                        <span>71 - 90</span>
-                                                    </label>
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__square" class="mog-label__radio-button">
-                                                        <span>91 - 110</span>
-                                                    </label>
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__square" class="mog-label__radio-button">
-                                                        <span>111 - 130</span>
-                                                    </label>
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__square" class="mog-label__radio-button">
-                                                        <span>131 - 150</span>
-                                                    </label>
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__square" class="mog-label__radio-button">
-                                                        <span>151 - 170</span>
-                                                    </label>
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__square" class="mog-label__radio-button">
-                                                        <span>171 - 190</span>
-                                                    </label>
-                                                    <label class="mog-label__radio-button">
-                                                        <input type="radio" name="boilers-parameter__square" class="mog-label__radio-button">
-                                                        <span>191 - 210</span>
-                                                    </label>
-
-                                                    <div class="boilers-parameter__all-button">Все производители</div>
-                                                </form>
+                                                    <div class="checkbox-filter filter-item__main accordion__main">
+                                                        <div class="checkbox-filter__list">
+                                                            <label class="mog-label__radio-button checkbox-filter__item">
+                                                                <input
+                                                                    type="radio"
+                                                                    name="boilers-parameter__square"
+                                                                    class="mog-label__radio-button" />
+                                                                <span>Не важно</span>
+                                                            </label>
+                                                            <label class="mog-label__radio-button checkbox-filter__item">
+                                                                <input
+                                                                    type="radio"
+                                                                    name="boilers-parameter__square"
+                                                                    class="mog-label__radio-button" />
+                                                                <span>до 50</span>
+                                                            </label>
+                                                            <label class="mog-label__radio-button checkbox-filter__item">
+                                                                <input
+                                                                    type="radio"
+                                                                    name="boilers-parameter__square"
+                                                                    class="mog-label__radio-button" />
+                                                                <span>51 - 70</span>
+                                                            </label>
+                                                            <label class="mog-label__radio-button checkbox-filter__item">
+                                                                <input
+                                                                    type="radio"
+                                                                    name="boilers-parameter__square"
+                                                                    class="mog-label__radio-button" />
+                                                                <span>71 - 90</span>
+                                                            </label>
+                                                            <label class="mog-label__radio-button checkbox-filter__item">
+                                                                <input
+                                                                    type="radio"
+                                                                    name="boilers-parameter__square"
+                                                                    class="mog-label__radio-button" />
+                                                                <span>91 - 110</span>
+                                                            </label>
+                                                            <label class="mog-label__radio-button checkbox-filter__item">
+                                                                <input
+                                                                    type="radio"
+                                                                    name="boilers-parameter__square"
+                                                                    class="mog-label__radio-button" />
+                                                                <span>111 - 130</span>
+                                                            </label>
+                                                            <label class="mog-label__radio-button checkbox-filter__item">
+                                                                <input
+                                                                    type="radio"
+                                                                    name="boilers-parameter__square"
+                                                                    class="mog-label__radio-button" />
+                                                                <span>131 - 150</span>
+                                                            </label>
+                                                            <label class="mog-label__radio-button checkbox-filter__item">
+                                                                <input
+                                                                    type="radio"
+                                                                    name="boilers-parameter__square"
+                                                                    class="mog-label__radio-button" />
+                                                                <span>151 - 170</span>
+                                                            </label>
+                                                            <label class="mog-label__radio-button checkbox-filter__item">
+                                                                <input
+                                                                    type="radio"
+                                                                    name="boilers-parameter__square"
+                                                                    class="mog-label__radio-button" />
+                                                                <span>171 - 190</span>
+                                                            </label>
+                                                            <label
+                                                                class="mog-label__radio-button checkbox-filter__item checkbox-filter__item--hidden">
+                                                                <input
+                                                                    type="radio"
+                                                                    name="boilers-parameter__square"
+                                                                    class="mog-label__radio-button" />
+                                                                <span>191 - 210</span>
+                                                            </label>
+                                                            <label
+                                                                class="mog-label__radio-button checkbox-filter__item checkbox-filter__item--hidden">
+                                                                <input
+                                                                    type="radio"
+                                                                    name="boilers-parameter__square"
+                                                                    class="mog-label__radio-button" />
+                                                                <span>211 - 230</span>
+                                                            </label>
+                                                            <label
+                                                                class="mog-label__radio-button checkbox-filter__item checkbox-filter__item--hidden">
+                                                                <input
+                                                                    type="radio"
+                                                                    name="boilers-parameter__square"
+                                                                    class="mog-label__radio-button" />
+                                                                <span>231 - 250</span>
+                                                            </label>
+                                                            <label
+                                                                class="mog-label__radio-button checkbox-filter__item checkbox-filter__item--hidden">
+                                                                <input
+                                                                    type="radio"
+                                                                    name="boilers-parameter__square"
+                                                                    class="mog-label__radio-button" />
+                                                                <span>251 - 270</span>
+                                                            </label>
+                                                        </div>
+                                                        <button class="checkbox-filter__showmore-btn" type="button">
+                                                            <span>Все производители</span>
+                                                        </button>
+                                                        <button
+                                                            class="link link--iflex link--orange link--medium checkbox-filter__hidemore-btn"
+                                                            type="button">
+                                                            <span>Скрыть</span>
+                                                            <img
+                                                                class="link__icon link__icon--rotate-180deg"
+                                                                src="/icons/all/arrow-down-orange.svg"
+                                                                alt="" />
+                                                        </button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
 
-
-                                        <button class="mog-button-normal mog-color__button-orange boilers-selection__button">Подобрать котел</button>
+                                        <button class="mog-button-normal mog-color__button-orange boilers-selection__button">
+                                            Подобрать котел
+                                        </button>
                                     </div>
                                     <div class="boilers-selection__img">
-                                        <img src="/img/boilers-selection/boilers-selection.png" alt="">
+                                        <img src="/img/boilers-selection/boilers-selection.png" alt="" />
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
             </main>
 
             <load src="./_footer.html" />
-                            
         </div>
-
     </body>
 
     <script type="module" src="/src/js/main.js"></script>

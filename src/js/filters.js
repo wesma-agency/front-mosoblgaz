@@ -10,9 +10,14 @@ checkboxFilters.forEach((checkboxFilter) => {
 });
 
 const priceRanges = document.querySelectorAll(".price-range");
-priceRanges.forEach((priceRange) => {
-    const inputMin = priceRange.querySelector(".price-range__value--min");
-    const inputMax = priceRange.querySelector(".price-range__value--max");
+priceRanges.forEach((priceRange) => rangeHandler(priceRange, 'price-range'));
+
+const inputRanges = document.querySelectorAll(".input-range");
+inputRanges.forEach((priceRange) => rangeHandler(priceRange, 'input-range'));
+
+function rangeHandler(range, name) {
+    const inputMin = range.querySelector(`.${name}__value--min`);
+    const inputMax = range.querySelector(`.${name}__value--max`);
 
     inputMin?.addEventListener("blur", () => {
         const minValue = parseMaskedValue(inputMin);
@@ -31,7 +36,7 @@ priceRanges.forEach((priceRange) => {
             inputMax._imask.value = inputMin._imask.value;
         }
     });
-});
+}
 
 const tabsFilterItems = document.querySelectorAll(".tabs-filter__item");
 tabsFilterItems.forEach((tabsFilterItem) => {

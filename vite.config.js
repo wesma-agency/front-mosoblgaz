@@ -34,7 +34,7 @@ export default defineConfig({
 				article: 'article.html',
 				brands: 'brands.html',
 				payment_refund: 'payment-refund.html',
-				refund: 'payment-refund.html',
+				refund: 'refund.html',
 				quality_assurance: 'quality-assurance.html',
 				delivery: 'delivery.html',
 				page404: '404.html',

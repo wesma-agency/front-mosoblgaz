@@ -11,8 +11,6 @@
 	// .breadcrumbs__list
 	&__list {
 		position: relative;
-
-		overflow: hidden;
 		width: 100%;
 	}
 	// .breadcrumbs__item
@@ -805,6 +803,10 @@
 		&--col-3 {
 			grid-template-columns: repeat(4, 1fr);
 		}
+
+		&.swiper {
+			display: flex;
+		}
 	}
 }
 
@@ -1088,6 +1090,10 @@
 	text-align: center;
 	color: $color-light-white;
 	background-color: $color-red;
+
+	&--active {
+		display: block;
+	}
 }
 .new-label {
 	display: none;
@@ -1101,6 +1107,10 @@
 	text-align: center;
 	color: $color-light-white;
 	background-color: $color-yellow;
+
+	&--active {
+		display: block;
+	}
 }
 .label-text {
 }
@@ -1515,43 +1525,4 @@
 		display: none;
 	}
 
-
-
-	.boilers-result-top{
-		.breadcrumbs {
-			font-size: 14px;
-			position: relative;
-			display: flex;
-			overflow: hidden;
-			// .breadcrumbs__list
-			&__list {
-				position: relative;
-				width: auto;
-				margin-left: -40px;
-				&::before{
-					position: absolute;
-					left: 40px;
-					top:0;
-					display: block;
-					content: "";
-					height: 14px;
-					width: 30px;
-					background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-				}
-			}
-
-			// .breadcrumbs__item
-			&__item {
-				text-wrap: nowrap;
-			}
-			// .breadcrumbs__arrow
-			&__arrow {
-				min-width: 13px;
-			}
-			// .breadcrumbs__item--current
-			&__item--current {
-			}
-		}
-	}
-	
 }

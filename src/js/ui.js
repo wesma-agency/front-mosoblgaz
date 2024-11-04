@@ -126,7 +126,7 @@ function changeTabList(tab, tabs, tab_list){
 
 }
 
-const TAB_CONTAINER = document.querySelectorAll(".js-tab-сontainer");
+const TAB_CONTAINER = document.querySelectorAll(".js-tab-container");
 
 TAB_CONTAINER?.forEach(item => {
     const TABS = item.querySelector('.js-tabs');
