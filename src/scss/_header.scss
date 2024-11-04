@@ -285,7 +285,6 @@
         position: relative;
         background-color: $color-light-white;
         display: flex;
-        justify-content: space-between;
         max-height: min(582px, calc(100dvh - 80px));
         max-height: min(582px, calc(100vh - 80px));
 
@@ -384,6 +383,7 @@
 
     &__main {
         flex: 1 1 auto;
+        max-width: calc(1280px - 412px);
         min-width: 0;
     }
 
@@ -407,7 +407,6 @@
 }
 
 .header-category-contents {
-    padding: 25px 40px;
     height: 100%;
     background: #fff;
 
@@ -417,6 +416,7 @@
     }
 
     &__body {
+        padding: 25px 40px;
         display: flex;
     }
 
@@ -480,11 +480,7 @@
         margin-left: 20px;
         padding: 5px 0;
         background-color: $color-light-white;
-        flex: 0 0 412px;
-    }
-
-    &__brands-content {
-        padding-right: calc(100% - 412px);
+        flex: 0 0 380px;
     }
 
     &__brands-head {
