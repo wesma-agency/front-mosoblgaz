@@ -1,0 +1,88 @@
+.page-404 {
+    display: flex;
+    justify-content: center;
+    gap: 12%;
+    padding-top: 45px;
+    overflow: hidden;
+    max-height: 400px;
+}
+
+.page-404__img {
+    position: relative;
+    z-index: -1;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.page-404__block {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    justify-content: center;
+}
+
+.page-404__text {
+    display: block;
+    width: 100%;
+    max-width: 470px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.page-404__button-back {
+    width: 100%;
+    max-width: 270px;
+    position: relative;
+    padding: 11px;
+}
+
+.page-404__button-back span {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+.page-404__button-back span::before {
+    display: inline-block;
+    content: "";
+    display: inline-block;
+    margin-left: 5px;
+    width: 24px;
+    height: 24px;
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    margin-left: 0;
+    margin-right: 12px;
+    mask-image: url("../../icons/all/arrow-left.svg");
+    mask-size: 90%;
+    mask-position: center;
+    background-color: var(--color-light-white);
+}
+
+.page-404__button-back:hover span::before {
+    background-color: var(--color-orange);
+}
+
+@media (max-width: 768px) {
+    .page-404 {
+        flex-direction: column;
+        max-height: 660px;
+        padding-top: 60px;
+        justify-content: left;
+    }
+
+    .page-404__img {
+        margin-top: 60px;
+        order: 2;
+    }
+
+    .page-404__block {
+        order: 1;
+    }
+
+    .page-404__button-back {
+        max-width: 100%;
+    }
+}

@@ -1,7 +1,6 @@
 import SimpleBar from "simplebar";
-import "simplebar/dist/simplebar.css";
-
 import ResizeObserver from "resize-observer-polyfill";
+
 window.ResizeObserver = ResizeObserver;
 
 const $simplebars = document.querySelectorAll(".js-simplebar");

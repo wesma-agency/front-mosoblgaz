@@ -1,7 +1,7 @@
 'use strict';
 
 import Swiper from 'swiper/bundle';
-import '../scss/style.scss';
+import '../css/style.css';
 import './simplebar';
 import './map';
 import './form';

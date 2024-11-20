@@ -1,0 +1,117 @@
+.brands-catalog__header {
+    margin-bottom: 40px;
+}
+
+.brands-catalog__list {
+    margin-top: -20px;
+    margin-left: -20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.brands-catalog__item {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: calc(25% - 20px);
+}
+
+.brands-catalog__footer {
+    margin-top: 40px;
+}
+
+.brands-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.brands-header__main {
+    flex: 1 1 auto;
+    max-width: 800px;
+}
+
+.brands-header__text {
+    margin-top: 20px;
+}
+
+.brands-header__right {
+    margin-top: 15px;
+    margin-left: 20px;
+    flex: 0 0 auto;
+}
+
+.brands-header__sort {
+    width: 220px;
+}
+
+.brand-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand-item__img-box {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    border: 1px solid var(--color-white);
+    border-radius: 10px;
+}
+
+.brand-item__title {
+    margin-top: 10px;
+    padding: 10px 20px;
+}
+
+.brand-item__img {
+    max-width: min(217px, 100%);
+    max-height: 92px;
+    object-fit: contain;
+}
+
+/* ========================================================================================================================================================== */
+/*  Адаптив */
+@media (max-width: 1200px) {
+    .brands-catalog__header {
+        margin-bottom: 30px;
+    }
+
+    .brands-catalog__item {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 991px) {
+    .brands-catalog__header {
+        margin-bottom: 30px;
+    }
+
+    .brands-catalog__item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 767px) {
+    .brands-header {
+        flex-direction: column;
+    }
+
+    .brands-header__right {
+        margin-left: 0;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .brands-header__sort {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .brands-catalog__item {
+        width: calc(100% - 20px);
+    }
+}

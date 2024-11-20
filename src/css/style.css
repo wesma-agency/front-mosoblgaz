@@ -1,0 +1,140 @@
+@import "./base/_fonts.css";
+@import "./base/_null-style.css";
+@import "./UI/ui-kit.css";
+@import "./UI/ymaps.css";
+@import "./UI/simplebar.css";
+@import "./libs/swiper-bundle.css";
+@import "./libs/simplebar.css";
+@import "./UI/swiper.css";
+
+/* Общие параметры*/
+@import "./common.css";
+
+/*==========================================================================================================================================================*/
+/* Блоки*/
+@import "./_header.css";
+/**/
+/* Здесь подключаем остальные страницы*/
+/**/
+@import "./pages/main.css";
+/**/
+@import "./pages/catalog";
+@import "./pages/catalog-category.css";
+@import "./pages/product-card.css";
+@import "./pages/stocks.css";
+@import "./pages/boilers-selection.css";
+@import "./pages/boilers-result.css";
+@import "./pages/cart.css";
+@import "./pages/montazh.css";
+@import "./pages/contacts.css";
+@import "./pages/order.css";
+@import "./pages/about.css";
+@import "./pages/materials.css";
+@import "./pages/article.css";
+@import "./pages/brands.css";
+@import "./pages/auto-gasification.css";
+@import "./pages/refund.css";
+@import "./pages/quality-assurance.css";
+@import "./pages/personal-data.css";
+@import "./pages/payment-refund.css";
+@import "./pages/delivery.css";
+@import "./pages/404.css";
+@import "./_footer.css";
+
+.adaptive-display-none-flex,
+.adaptive-display-none {
+    display: none;
+}
+
+.adaptive-display-1200,
+.adaptive-display-768 {
+    display: block;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 990px;
+    }
+
+    .adaptive-display-1200 {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 570px;
+    }
+
+    .adaptive-display-none {
+        display: block;
+    }
+
+    .adaptive-display-none-flex {
+        display: flex;
+    }
+
+    .adaptive-display-768 {
+        display: none;
+    }
+
+    .text-hidden-768 {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
+
+/*----- JS STYLE -----*/
+.js-accordion-body,
+.js-accordion-head {
+    /*transition: all 0.5s;*/
+}
+
+.open-accordion .js-accordion-head img {
+    transition: all 0.5s;
+    transform: rotate(-180deg);
+}
+
+.open-accordion .js-accordion-body {
+    height: 100%;
+    /*margin-top: 20px;*/
+    transition: all 0.5s;
+}
+
+.show-more-activate .js-show-more-container {
+    height: 100%;
+}
+
+.show-more-activate .js-show-more-button {
+    display: none;
+}
+
+.overflow-hidden-90 {
+    display: block;
+    width: 100%;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.overflow-hidden-90::after {
+    z-index: 1;
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    content: "";
+    background: linear-gradient(90deg, transparent, var(--color-white));
+    width: 20px;
+    height: 100%;
+}

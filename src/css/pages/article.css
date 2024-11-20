@@ -1,0 +1,176 @@
+.article-banner__content {
+    position: relative;
+    padding: 50px 60px;
+    min-height: 360px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.article-banner__content:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(3, 6, 15, 0.64) 0%, rgba(3, 6, 15, 0.24) 100%);
+}
+
+.article-banner__main {
+    position: relative;
+    z-index: 2;
+}
+
+.article-banner__main--sm {
+    max-width: 556px;
+}
+
+.article-banner__breadcrumbs {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.article-banner__date {
+    margin-top: 20px;
+}
+
+.article-banner__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article__body {
+    display: flex;
+}
+
+.article__main {
+    position: relative;
+    z-index: 2;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.article__sidebar {
+    margin-left: 20px;
+    flex: 0 0 413px;
+    min-width: 0;
+}
+
+.article__sidebar-slider-box {
+    margin-top: 50px;
+}
+
+.article-content {
+    padding: 20px 30px;
+    border: 1px solid var(--color-gray);
+    border-radius: 10px;
+}
+
+.article-content__title {
+    margin-bottom: 15px;
+}
+
+.article-content__item:not(:first-child) {
+    margin-top: 10px;
+}
+
+.benefit-slider__header {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.benefit-slider__controls {
+    position: relative;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.benefit-slider__prev.swiper-button-prev {
+    margin-top: 0;
+    position: relative;
+    left: unset;
+    top: unset;
+}
+
+.benefit-slider__prev.swiper-button-prev:hover {
+    position: relative;
+}
+
+.benefit-slider__next.swiper-button-next {
+    margin-top: 0;
+    position: relative;
+    right: unset;
+    top: unset;
+}
+
+.benefit-slider__next.swiper-button-next:hover {
+    position: relative;
+}
+
+.benefit-slider__main {
+    margin: -30px -25px;
+    padding: 30px 25px;
+}
+
+.benefit-slider__main.swiper {
+    width: auto;
+}
+
+.benefit-slider__slide {
+    height: auto;
+}
+
+.benefit-slider__pagination {
+    margin-top: 20px;
+    display: none;
+    position: relative;
+}
+
+/* ========================================================================================================================================================== */
+/*  Адаптив */
+@media (max-width: 1360px) {
+    .benefit-slider__main {
+        margin-right: -20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .article__sidebar {
+        flex-basis: 360px;
+    }
+}
+
+@media (max-width: 991px) {
+    .article-banner__content {
+        padding: 40px 30px;
+        min-height: 400px;
+    }
+
+    .article__body {
+        flex-direction: column;
+    }
+
+    .article__sidebar {
+        margin-left: 0;
+        margin-bottom: 60px;
+        order: -1;
+        flex: none;
+    }
+
+    .article__sidebar-slider-box {
+        display: none;
+    }
+
+    .benefit-slider__pagination {
+        display: block;
+    }
+}
