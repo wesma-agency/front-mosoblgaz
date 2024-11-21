@@ -71,12 +71,31 @@
     display: block;
 }
 
+.header__search {
+    position: relative;
+}
+
 .header__input-search {
     background-color: var(--color-gray);
 }
 
 .header__img-btn-search {
     top: 8px !important;
+}
+
+.header__search-popup {
+    position: absolute;
+    top: 100%;
+    z-index: 25;
+    max-height: calc(100vh - 90px);
+    margin-top: 2px;
+    left: 0;
+    width: 540px;
+    display: none;
+}
+
+.header__search-popup--active {
+    display: block;
 }
 
 .header__contact {

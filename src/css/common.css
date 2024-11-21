@@ -894,6 +894,146 @@ a.link__icon--mx-xl:not(:first-child) {
     width: 100%;
 }
 
+.search-popup {
+    padding: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 16px 0 rgba(16, 27, 48, 0.14);
+    border-radius: 4px;
+}
+
+.search-popup__section:not(:first-child) {
+    margin-top: 20px;
+}
+
+.search-popup__header {
+    margin-bottom: 4px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-popup__header--mb-lg {
+    margin-bottom: 8px;
+}
+
+.search-popup__section-clear {
+    margin-left: 10px;
+    transition: color 0.2s;
+}
+
+.search-popup__section-clear:hover {
+    color: var(--color-black);
+}
+
+.search-popup__btn {
+    padding: 7px 16px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: color 0.2s;
+}
+
+.search-popup__btn:hover {
+    color: var(--color-blue);
+}
+
+.search-popup__btn-icon {
+    margin-right: 8px;
+    margin-top: 2px;
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+}
+
+.search-popup__btn-text:not(:last-child) {
+    margin-right: 10px;
+}
+
+.search-popup__btn-clear {
+    margin-left: auto;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+    opacity: 0.5;
+    visibility: hidden;
+}
+
+.search-popup__btn-clear:hover {
+    opacity: 1;
+}
+
+.search-popup__btn:hover .search-popup__btn-clear {
+    visibility: visible;
+}
+
+.search-popup__btn-clear img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.search-popup__footer {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-popup__footer-btn {
+    width: auto;
+}
+
+.search-popup__footer-btn svg {
+    stroke: var(--color-orange);
+    transition: stroke 0.2s;
+}
+
+.search-popup__footer-btn:hover svg {
+    stroke: #fff;
+}
+
+.search-popup-product {
+    padding: 0 16px;
+}
+
+.search-popup-product:not(:first-child) {
+    margin-top: 12px;
+}
+
+.search-popup-product {
+    display: flex;
+    align-items: center;
+}
+
+.search-popup-product__img-box {
+    margin-right: 16px;
+    width: 65px;
+    height: 65px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-popup-product__img-box .search-popup-product__img,
+.search-popup-product__img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.search-popup-product__title a {
+    transition: color 0.2s;
+}
+
+.search-popup-product__title a:hover {
+    color: var(--color-blue);
+}
+
+.search-popup-product__price {
+    margin-top: 8px;
+}
+
 .accordion__btn {
     user-select: none;
     cursor: pointer;

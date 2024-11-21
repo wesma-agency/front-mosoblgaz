@@ -629,8 +629,129 @@
                         type="text"
                         class="mog-input mog-with-icon__right header__input-search"
                         placeholder="Поиск по сайту.."
+                        autocomplete="off"
                         id="search-header" />
                     <img class="mog-icon mog-icon__right header__img-btn-search" src="./icons/header/search.svg" alt="" />
+                </div>
+                <div class="search-popup header__search-popup js-simplebar">
+                    <div class="search-popup__section">
+                        <div class="search-popup__header">
+                            <span class="title title--5 search-popup__header-title">История</span>
+                            <button class="text text--dark-gray search-popup__section-clear">Очистить</button>
+                        </div>
+                        <ul class="search-popup__list">
+                            <li class="search-popup__item">
+                                <button class="search-popup__btn">
+                                    <img class="search-popup__btn-icon" src="./icons/all/clock-history-dark-gray.svg" alt="">
+                                    <span class="search-popup__btn-text">газовая колонка</span>
+                                    <span class="search-popup__btn-clear">
+                                        <img src="./icons/all/catalog-close.svg" alt="">
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="search-popup__item">
+                                <button class="search-popup__btn">
+                                    <img class="search-popup__btn-icon" src="./icons/all/clock-history-dark-gray.svg" alt="">
+                                    <span class="search-popup__btn-text">газовые плиты</span>
+                                    <span class="search-popup__btn-clear">
+                                        <img src="./icons/all/catalog-close.svg" alt="">
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-popup__section">
+                        <div class="search-popup__header">
+                            <span class="title title--5 search-popup__header-title">Найти в категории</span>
+                        </div>
+                        <ul class="search-popup__list">
+                            <li class="search-popup__item">
+                                <button class="search-popup__btn">
+                                    <img class="search-popup__btn-icon" src="./icons/all/category-dark-gray.svg" alt="">
+                                    <span class="search-popup__btn-text">газовая колонка</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-popup__section">
+                        <div class="search-popup__header">
+                            <span class="title title--5 search-popup__header-title">Часто ищут</span>
+                        </div>
+                        <ul class="search-popup__list">
+                            <li class="search-popup__item">
+                                <button class="search-popup__btn">
+                                    <img class="search-popup__btn-icon" src="./icons/all/search-dark-gray.svg" alt="">
+                                    <span class="search-popup__btn-text">газовая колонка</span>
+                                </button>
+                            </li>
+                            <li class="search-popup__item">
+                                <button class="search-popup__btn">
+                                    <img class="search-popup__btn-icon" src="./icons/all/search-dark-gray.svg" alt="">
+                                    <span class="search-popup__btn-text">газовые плиты</span>
+                                </button>
+                            </li>
+                            <li class="search-popup__item">
+                                <button class="search-popup__btn">
+                                    <img class="search-popup__btn-icon" src="./icons/all/search-dark-gray.svg" alt="">
+                                    <span class="search-popup__btn-text">газовый шланг</span>
+                                </button>
+                            </li>
+                            <li class="search-popup__item">
+                                <button class="search-popup__btn">
+                                    <img class="search-popup__btn-icon" src="./icons/all/search-dark-gray.svg" alt="">
+                                    <span class="search-popup__btn-text">дрп</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-popup__section">
+                        <div class="search-popup__header search-popup__header--mb-lg">
+                            <span class="title title--5 search-popup__header-title">Популярные товары</span>
+                        </div>
+                        <div class="search-popup__products">
+                            <div class="search-popup-product search-popup__product">
+                                <a class="search-popup-product__img-box" href="#">
+                                    <img class="search-popup-product__img" src="./img/catalog-category/category-item-1.png" alt="">
+                                </a>
+                                <div class="search-popup-product__info">
+                                    <div class="search-popup-product__title">
+                                        <a href="#">Газовый настенный котел Navien</a>
+                                    </div>
+                                    <div class="title title--5 search-popup-product__price">59 900 ₽</div>
+                                </div>
+                            </div>
+                            <div class="search-popup-product search-popup__product">
+                                <a class="search-popup-product__img-box" href="#">
+                                    <img class="search-popup-product__img" src="./img/catalog-category/category-item-2.png" alt="">
+                                </a>
+                                <div class="search-popup-product__info">
+                                    <div class="search-popup-product__title">
+                                        <a href="#">Газовый настенный котел BaltGas Turbo E 24</a>
+                                    </div>
+                                    <div class="title title--5 search-popup-product__price">59 900 ₽</div>
+                                </div>
+                            </div>
+                            <div class="search-popup-product search-popup__product">
+                                <a class="search-popup-product__img-box" href="#">
+                                    <img class="search-popup-product__img" src="./img/catalog-category/category-item-1.png" alt="">
+                                </a>
+                                <div class="search-popup-product__info">
+                                    <div class="search-popup-product__title">
+                                        <a href="#">Газовый настенный котел Navien</a>
+                                    </div>
+                                    <div class="title title--5 search-popup-product__price">59 900 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-popup__footer">
+                        <button class="mog-button-normal mog-color__button-transparent-br-orange search-popup__footer-btn">
+                            <span>Смотреть все результаты</span>
+                            <svg class="mog-button-normal__icon-right" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L1 11" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 

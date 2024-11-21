@@ -214,6 +214,10 @@ a {
     transition: all 0.2s;
 }
 
+.mog-button-normal__icon-right {
+    margin-left: 10px;
+}
+
 .mog-button-input {
     padding: 14.5px 35px;
     position: absolute;

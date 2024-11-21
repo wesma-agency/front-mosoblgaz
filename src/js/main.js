@@ -22,6 +22,7 @@ import './catalog-category';
 import './product-card';
 import './cart';
 import './header';
+import './search-popup';
 
 
 const productSliders = document.querySelectorAll(".product-slider");
