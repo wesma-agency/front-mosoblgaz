@@ -11,7 +11,7 @@
     margin-bottom: 20px;
 }
 
-.payment__banner {
+.payment__banner-content {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -166,7 +166,7 @@
         font-size: 34px;
     }
 
-    .payment__banner {
+    .payment__banner-content {
         padding: 40px 30px;
     }
 

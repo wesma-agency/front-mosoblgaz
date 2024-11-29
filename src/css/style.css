@@ -1,5 +1,6 @@
 @import "./base/_fonts.css";
 @import "./base/_null-style.css";
+@import "./libs/nouislider.css";
 @import "./UI/ui-kit.css";
 @import "./UI/ymaps.css";
 @import "./UI/simplebar.css";

@@ -18,6 +18,8 @@
             <load src="./_header.html" />
 
             <main class="main">
+                <div class="mobile-bg"></div>
+                
                 <section class="boilers-selection-top">
                     <div class="container">
                         <nav class="boilers-selection-breadcrumbs breadcrumbs">
@@ -142,33 +144,44 @@
                                             </div>
                                             <div class="accordion__content">
                                                 <div class="boilers-parameter__body accordion__main">
-                                                    <div class="boilers-parameter__range input-range">
-                                                        <div class="input-range__item">
-                                                            <span class="input-range__border-text">от</span>
-                                                            <label class="input-range__label">
-                                                                <input
-                                                                    class="input-range__value input-range__value--min js-imask"
-                                                                    type="text"
-                                                                    data-mask="price"
-                                                                    data-mask-min="1"
-                                                                    data-mask-max="10000"
-                                                                    data-mask-input-max="99999"
-                                                                    placeholder="50" />
-                                                            </label>
+                                                    <div class="boilers-parameter__range input-range input-range--column">
+                                                        <div class="input-range__main">
+                                                            <div class="input-range__item">
+                                                                <span class="input-range__border-text">от</span>
+                                                                <label class="input-range__label">
+                                                                    <input
+                                                                        class="input-range__value input-range__value--min js-imask"
+                                                                        type="text"
+                                                                        data-mask="price"
+                                                                        data-mask-min="50"
+                                                                        data-mask-max="400"
+                                                                        data-mask-input-max="999"
+                                                                        placeholder="50" />
+                                                                </label>
+                                                            </div>
+                                                            <div class="input-range__devider"></div>
+                                                            <div class="input-range__item">
+                                                                <span class="input-range__border-text">до</span>
+                                                                <label class="input-range__label">
+                                                                    <input
+                                                                        class="input-range__value input-range__value--max js-imask"
+                                                                        data-mask="price"
+                                                                        data-mask-min="50"
+                                                                        data-mask-max="400"
+                                                                        data-mask-input-max="999"
+                                                                        type="text"
+                                                                        placeholder="400" />
+                                                                </label>
+                                                            </div>
                                                         </div>
-                                                        <div class="input-range__devider"></div>
-                                                        <div class="input-range__item">
-                                                            <span class="input-range__border-text">до</span>
-                                                            <label class="input-range__label">
-                                                                <input
-                                                                    class="input-range__value input-range__value--max js-imask"
-                                                                    data-mask="price"
-                                                                    data-mask-min="1"
-                                                                    data-mask-max="10000"
-                                                                    data-mask-input-max="99999"
-                                                                    type="text"
-                                                                    placeholder="400" />
-                                                            </label>
+                                                        <div class="input-range__slider-box">
+                                                            <div
+                                                                class="input-range__slider"
+                                                                data-min="50"
+                                                                data-max="400"
+                                                                data-start-min="50"
+                                                                data-start-max="400"
+                                                                data-step="1"></div>
                                                         </div>
                                                     </div>
 

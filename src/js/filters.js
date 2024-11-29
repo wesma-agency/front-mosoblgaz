@@ -1,4 +1,5 @@
 import { parseMaskedValue } from "./imask";
+import noUiSlider from "nouislider";
 
 const checkboxFilters = document.querySelectorAll(".checkbox-filter");
 checkboxFilters.forEach((checkboxFilter) => {
@@ -18,6 +19,7 @@ inputRanges.forEach((priceRange) => rangeHandler(priceRange, 'input-range'));
 function rangeHandler(range, name) {
     const inputMin = range.querySelector(`.${name}__value--min`);
     const inputMax = range.querySelector(`.${name}__value--max`);
+    const slider = range.querySelector(`.${name}__slider`);
 
     inputMin?.addEventListener("blur", () => {
         const minValue = parseMaskedValue(inputMin);
@@ -25,6 +27,10 @@ function rangeHandler(range, name) {
 
         if (minValue && maxValue && minValue > maxValue) {
             inputMax._imask.value = inputMin._imask.value;
+        }
+
+        if (slider) {
+            slider.noUiSlider.set(extractNumber(inputMin.value));
         }
     });
 
@@ -35,7 +41,53 @@ function rangeHandler(range, name) {
         if (minValue > maxValue) {
             inputMax._imask.value = inputMin._imask.value;
         }
+
+        if (slider) {
+            slider.noUiSlider.set([null, extractNumber(inputMax.value)]);
+        }
     });
+
+    if (slider) {
+        const data = {
+            min: +slider.dataset.min,
+            max: +slider.dataset.max,
+            startMin: +slider.dataset.startMin,
+            startMax: +slider.dataset.startMax,
+            step: +slider.dataset.step,
+            maxPercent: +slider.dataset.maxPercent,
+        };
+    
+        const sliderStart = [];
+        if (data.startMin || data.startMin === 0) sliderStart.push(data.startMin);
+        if (data.startMax || data.startMax === 0) sliderStart.push(data.startMax);
+
+        noUiSlider.create(slider, {
+            start: sliderStart,
+            connect: sliderStart.length === 1 ? "lower" : true,
+            step: data.step,
+            range: {
+                min: data.min,
+                max: data.max,
+            },
+            format: {
+                from: (value) => parseFloat(value),
+                to: (value) => parseFloat(value),
+            },
+        });
+    
+        slider.noUiSlider.on("update", (values) => {
+            const minValue = `${values[0]}`;
+            const maxValue = `${values[1]}`;
+    
+            if (inputMin) {
+                inputMin._imask ? (inputMin._imask.value = minValue) : (inputMin.value = minValue);
+            }
+    
+            if (inputMax) {
+                inputMax._imask ? (inputMax._imask.value = maxValue) : (inputMax.value = maxValue);
+            }
+        });
+    }
 }
 
 const tabsFilterItems = document.querySelectorAll(".tabs-filter__item");
@@ -54,3 +106,10 @@ tabsFilterItems.forEach((tabsFilterItem) => {
         tabsFilterItem.classList.remove("tabs-filter__item--active");
     });
 });
+
+function extractNumber(str) {
+    str = str.replace(/\s+/g, "");
+    str = str.replace(",", ".");
+    const match = str.match(/^(\d+(\.\d+)?)$/);
+    return match ? parseFloat(match[0]) : null;
+}

@@ -16,8 +16,10 @@
 }
 
 .boilers-selection__main {
+    position: relative;
     width: 100%;
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 40px;
     /* .boilers-selection__parameters */
@@ -33,6 +35,12 @@
 .boilers-selection__button {
     max-width: 320px;
     /* .boilers-selection__img */
+}
+
+.boilers-selection__img {
+    position: sticky;
+    top: calc(20px + 90px);
+    left: 0;
 }
 
 .boilers-selection__img img {
@@ -133,6 +141,18 @@
     margin-bottom: 20px;
 }
 
+.input-range--column {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-range__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 .input-range__item {
     position: relative;
     max-width: 100px;
@@ -177,6 +197,12 @@
     background: url("/icons/ru-currency-icon.svg");
     width: 22px;
     height: 22px;
+}
+
+.input-range__slider-box {
+    margin-top: 5px;
+    padding: 10px 0;
+    width: 100%;
 }
 
 @media (max-width: 768px) {

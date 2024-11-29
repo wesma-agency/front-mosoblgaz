@@ -8,7 +8,7 @@ $inputs.forEach(($input) => {
     if (mask === "price") {
         const min = $input.dataset.maskMin ? parseFloat($input.dataset.maskMin) : 0;
         const max = $input.dataset.maskInputMax ? parseFloat($input.dataset.maskInputMax) : Infinity;
-
+        
         imask = IMask($input, {
             mask: Number,
             scale: $input.dataset.maskScale ?? 0,
