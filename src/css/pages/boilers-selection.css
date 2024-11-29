@@ -245,6 +245,7 @@
     }
 
     .boilers-selection__img {
+        position: static;
         order: 1;
     }
 
