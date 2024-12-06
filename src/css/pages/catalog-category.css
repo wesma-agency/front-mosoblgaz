@@ -1,21 +1,5 @@
 /*========================================================================================================================================================== */
 /* Section Top */
-.breadcrumbs {
-}
-
-.breadcrumbs__list {
-    position: relative;
-    width: 100%;
-}
-
-.breadcrumbs__item {
-    text-wrap: nowrap;
-}
-
-.breadcrumbs__arrow {
-    min-width: 13px;
-}
-
 .catalog {
 }
 

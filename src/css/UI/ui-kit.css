@@ -218,6 +218,36 @@ a {
     margin-left: 10px;
 }
 
+.mog-button-normal__icon:first-child:not(:last-child) {
+    margin-right: 10px;
+}
+
+.mog-button-normal__icon:last-child:not(:first-child) {
+    margin-left: 10px;
+}
+
+.mog-button-normal__icon:not(:first-child):not(:last-child) {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.mog-button-normal__icon--mx-xs:first-child:not(:last-child) {
+    margin-right: 4px;
+}
+
+.mog-button-normal__icon--mx-xs:not(:first-child):not(:last-child) {
+    margin-right: 0;
+    margin-left: 4px;
+}
+
+.mog-button-normal__icon--mx-xs:last-child:not(:first-child) {
+    margin-left: 4px;
+}
+
+.mog-button-normal__icon:not(:last-child) + .mog-button-normal__icon {
+    margin-left: 0;
+}
+
 .mog-button-input {
     padding: 14.5px 35px;
     position: absolute;

@@ -74,26 +74,30 @@ body {
     margin-top: 30px;
     /* Лучше сделать отступ от хедера*/
     margin-bottom: 10px;
-    /* .breadcrumbs__list*/
+    position: relative;
+    width: 100%;
 }
 
 .breadcrumbs__list {
     display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
     column-gap: 13px;
-    overflow-x: auto;
-    /* .breadcrumbs__item*/
+    min-width: 13px;
 }
 
-/* .breadcrumbs__arrow*/
 .breadcrumbs__arrow {
     display: flex;
     align-items: center;
-    /* .breadcrumbs__item--current*/
+    min-height: 19px;
+}
+
+.breadcrumbs__item {
+    max-width: calc(100% - 28px);
 }
 
 .breadcrumbs__item--current {
     opacity: 0.5;
-    /* .breadcrumbs__item--gray*/
 }
 
 .breadcrumbs__item--gray {
@@ -115,7 +119,6 @@ body {
 
 .showmore {
     display: block;
-    /* .catalog-showmore__btn*/
 }
 
 .showmore .showmore-btn {

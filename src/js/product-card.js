@@ -19,10 +19,20 @@ if (productCard) {
     const orderFooterBtnAdd = document.querySelector('.product-order__add-to-cart');
     const orderFooterBtnCart = document.querySelector('.product-order__footer-btn-cart');
 
+    const mobileCart = productCard.querySelector('.product-mobile-cart');
+    const mobileCartAdd = productCard.querySelector('.product-mobile-cart__add-btn');
+
     orderFooterBtnAdd.addEventListener('click', () => {
         orderFooterBtn.classList.add('product-order__footer-btn--hide');
         orderFooterBtnCart.classList.add('product-order__footer-btn-cart--active');
+        mobileCart?.classList.add('product-mobile-cart--active');
     });
+
+    mobileCartAdd?.addEventListener('click', () => {
+        orderFooterBtn.classList.add('product-order__footer-btn--hide');
+        orderFooterBtnCart.classList.add('product-order__footer-btn-cart--active');
+        mobileCart.classList.add('product-mobile-cart--active');
+    })
 }
 
 function updateCount(elem, increment) {

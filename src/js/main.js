@@ -65,7 +65,7 @@ function initProductSlider(productSlider) {
 
 const productCardThumbsSlider = new Swiper('.column-img__thumbs', {
 	spaceBetween: 20,
-	slidesPerView: 4,
+	slidesPerView: 'auto',
 	direction: 'vertical',
 	navigation: {
 		nextEl: '.product-card__thumbs-next',
