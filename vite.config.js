@@ -40,6 +40,7 @@ export default defineConfig({
 				page404: '404.html',
 				personal_data: "personal-data.html",
 				auto_gasification: "auto-gasification.html",
+				product_comparison: "product-comparison.html",
 			},
 		},
 		// Не обязательные опции
