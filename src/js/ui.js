@@ -13,7 +13,6 @@ function activationAccordion(ACCORDIONS){
 
 function activationShowMore(show_more){
     if(window.innerWidth <= 768){
-        console.log(window.innerWidth);
         show_more.forEach(item => {
             const CONTAINER = item.querySelector('.js-show-more-container');
             const BUTTON = item.querySelector('.js-show-more-button');
@@ -35,7 +34,6 @@ function activationShowMore(show_more){
     }
     window.addEventListener('resize', ()=>{
         if(window.innerWidth <= 768){
-            console.log(window.innerWidth);
             show_more.forEach(item => {
                 const CONTAINER = item.querySelector('.js-show-more-container');
                 const BUTTON = item.querySelector('.js-show-more-button');
@@ -116,7 +114,6 @@ function textContentBodyHandler(body, show) {
 }
 function changeTabList(tab, tabs, tab_list){
     tabs?.querySelector('.active').classList.remove('active');
-    console.log(tab_list);
     let tab_item = tab_list?.querySelectorAll('.js-tab-item');
     tab_item?.forEach( item => {  
         item.classList.remove('active');
@@ -129,7 +126,7 @@ function changeTabList(tab, tabs, tab_list){
 
 }
 
-const TAB_CONTAINER = document.querySelectorAll(".js-tab-сontainer");
+const TAB_CONTAINER = document.querySelectorAll(".js-tab-container");
 
 TAB_CONTAINER?.forEach(item => {
     const TABS = item.querySelector('.js-tabs');

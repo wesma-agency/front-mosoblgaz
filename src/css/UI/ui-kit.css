@@ -1,0 +1,1810 @@
+/*------ COLOR ------*/
+:root {
+    --color-dark-blue: #004669;
+    --color-gray: #cfcfcf;
+    --color-dark-gray: #6d6e71;
+    --color-black: #333333;
+    --color-blue: #006daa;
+    --color-orange: #f47920;
+    --color-red: #f04e23;
+    --color-red-default: #eb5757;
+    --color-yellow: #fcaf17;
+    --color-cyan: #00aee6;
+    --color-dark-orange: #de6b20;
+    --color-white: #f5f5f5;
+    --color-light-white: #fff;
+}
+
+/*------ BLOCKS ------*/
+/*------ FONTS ------*/
+.text-lg {
+    font-size: 16px;
+}
+
+.text-base {
+    font-size: 14px;
+}
+
+.text-sm {
+    font-size: 15px;
+}
+
+.text-xs {
+    font-size: 12px;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-semibold {
+    font-weight: 500;
+}
+
+a {
+    cursor: pointer;
+}
+
+/*------ UI ELEMENTS ------*/
+.flex-block-tmp {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.flex-block-tmp .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mog-wrapper {
+    transition: all 0.2s;
+    position: relative;
+    width: max-content;
+}
+
+.mog-wrapper .mog-label {
+    transition: all 0.2s;
+    background-color: var(--color-light-white);
+    position: absolute;
+    top: -8px;
+    left: 15px;
+    font-size: 0.8rem;
+    padding-inline: 2px;
+    z-index: 5;
+    display: none;
+}
+
+.mog-wrapper .mog-label.error {
+    display: block;
+    top: auto;
+    bottom: -7px;
+    color: var(--color-red);
+}
+
+.mog-wrapper .mog-label.visible {
+    display: block;
+}
+
+.mog-wrapper .mog-label.placeholder {
+    display: block;
+    top: 10px;
+    background-color: #00000000;
+    color: var(--color-gray);
+    font-size: 1rem;
+}
+
+.mog-wrapper .mog-input {
+    transition: all 0.2s;
+    position: relative;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-white);
+    border-radius: 5px;
+    color: var(--color-gray);
+    padding: 10px 15px;
+    transition: all 0.2s;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.mog-wrapper .mog-input::placeholder {
+    color: var(--color-gray);
+}
+
+.mog-wrapper .mog-input:focus {
+    color: var(--color-dark-gray);
+    border-color: var(--color-dark-gray);
+}
+
+.mog-wrapper .mog-input.error {
+    color: var(--color-red)-default;
+    border-color: var(--color-red)-default;
+}
+
+.mog-wrapper .mog-input.mog-input-dropdown {
+    padding-right: 30px;
+    width: calc(100% - 15px);
+}
+
+.mog-wrapper .mog-input.mog-with-icon__right {
+    width: calc(100%);
+    padding-right: 30px;
+}
+
+.mog-wrapper .mog-input.mog-with-icon__left {
+    width: calc(100%);
+    padding-left: 30px;
+}
+
+.mog-wrapper .mog-input.mog-ok {
+    border-color: var(--color-orange);
+    color: var(--color-orange);
+}
+
+.mog-wrapper .mog-icon {
+    cursor: pointer;
+    position: absolute;
+}
+
+.mog-wrapper .mog-icon__right {
+    right: 8px;
+}
+
+.mog-wrapper .mog-icon__left {
+    left: 8px;
+}
+
+.mog-tabs {
+    display: flex;
+}
+
+.mog-tabs .mog-tab {
+    transition: all 0.2s;
+    border: 1px solid var(--color-light-white);
+    transition: all 0.2s;
+    cursor: pointer;
+    border-radius: 25px;
+    color: #333333;
+    width: 100%;
+    max-height: 100%;
+    padding: 8px 20px;
+    text-wrap: nowrap;
+    text-align: center;
+}
+
+.mog-tabs .mog-tab:hover {
+    background-color: transparent;
+    color: var(--color-orange);
+    border: 1px solid var(--color-orange);
+}
+
+.mog-tabs .mog-tab.active {
+    border: 1px solid #333333;
+    background-color: #333333;
+    color: #fff;
+}
+
+.mog-tab-list .mog-tab-item {
+    display: none;
+}
+
+.mog-tab-list .mog-tab-item.active {
+    display: block;
+}
+
+.mog-button {
+    transition: all 0.2s;
+}
+
+.mog-button-dropdown {
+    position: absolute;
+    right: 18px;
+    top: 8px;
+}
+
+.mog-button-normal {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    border-radius: 25px;
+    border: 1px solid var(--color-black);
+    transition: all 0.2s;
+}
+
+.mog-button-normal__icon-right {
+    margin-left: 10px;
+}
+
+.mog-button-normal__icon:first-child:not(:last-child) {
+    margin-right: 10px;
+}
+
+.mog-button-normal__icon:last-child:not(:first-child) {
+    margin-left: 10px;
+}
+
+.mog-button-normal__icon:not(:first-child):not(:last-child) {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.mog-button-normal__icon--mx-xs:first-child:not(:last-child) {
+    margin-right: 4px;
+}
+
+.mog-button-normal__icon--mx-xs:not(:first-child):not(:last-child) {
+    margin-right: 0;
+    margin-left: 4px;
+}
+
+.mog-button-normal__icon--mx-xs:last-child:not(:first-child) {
+    margin-left: 4px;
+}
+
+.mog-button-normal__icon:not(:last-child) + .mog-button-normal__icon {
+    margin-left: 0;
+}
+
+.mog-button-input {
+    padding: 14.5px 35px;
+    position: absolute;
+}
+
+.mog-button-with-icon {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: 1px solid var(--color-black);
+    padding: 15px 35px;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.mog-btn__help {
+    position: relative;
+}
+
+.mog-btn__help::after {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-image: url("/icons/all/circle-help.svg");
+}
+
+.mog-btn__help-orange {
+    position: relative;
+}
+
+.mog-btn__help-orange::after {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-image: url("/icons/all/circle-help-orange.svg");
+}
+
+.mog-btn__minus {
+    position: relative;
+}
+
+.mog-btn__minus::after {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-image: url("/icons/all/minus.svg");
+}
+
+.mog-btn__delete {
+    position: relative;
+}
+
+.mog-btn__delete::after {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-image: url("/icons/all/delete.svg");
+}
+
+.mog-btn__plus {
+    position: relative;
+}
+
+.mog-btn__plus::after {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-image: url("/icons/all/plus.svg");
+}
+
+.mog-btn__download {
+    position: relative;
+}
+
+.mog-btn__download::after {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-image: url("/icons/all/download.svg");
+}
+
+a.mog-color,
+.mog-color {
+    transition: all 0.2s;
+}
+
+a.mog-color__button-orange,
+.mog-color__button-orange {
+    color: var(--color-light-white);
+    background-color: var(--color-orange);
+    border: 1px solid var(--color-orange);
+    transition: all 0.2s;
+}
+
+a.mog-color__button-orange:hover,
+.mog-color__button-orange:hover {
+    color: var(--color-orange);
+    background-color: transparent;
+}
+
+a.mog-color__button-orange::after,
+.mog-color__button-orange::after {
+    background-color: var(--color-light-white);
+}
+
+a.mog-color__button-orange:hover::after,
+.mog-color__button-orange:hover::after {
+    background-color: var(--color-orange);
+}
+
+a.mog-color__button-orange:disabled,
+.mog-color__button-orange:disabled {
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+a.mog-color__button-white-br-orange,
+.mog-color__button-white-br-orange {
+    color: var(--color-orange);
+    background-color: var(--color-light-white);
+    border: 1px solid var(--color-orange);
+    transition: all 0.2s;
+}
+
+a.mog-color__button-white-br-orange:hover,
+.mog-color__button-white-br-orange:hover {
+    color: var(--color-light-white);
+    background-color: var(--color-orange);
+}
+
+a.mog-color__button-white-br-orange::after,
+.mog-color__button-white-br-orange::after {
+    background-color: var(--color-orange);
+}
+
+a.mog-color__button-white-br-orange:hover::after,
+.mog-color__button-white-br-orange:hover::after {
+    background-color: var(--color-light-white);
+}
+
+a.mog-color__button-white-br-orange:disabled,
+.mog-color__button-white-br-orange:disabled {
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+a.mog-color__button-transparent-br-orange,
+.mog-color__button-transparent-br-orange {
+    color: var(--color-orange);
+    background-color: transparent;
+    border: 1px solid var(--color-orange);
+    transition: all 0.2s;
+}
+
+a.mog-color__button-transparent-br-orange:hover,
+.mog-color__button-transparent-br-orange:hover {
+    color: var(--color-light-white);
+    background-color: var(--color-orange);
+}
+
+a.mog-color__button-transparent-br-orange::after,
+.mog-color__button-transparent-br-orange::after {
+    background-color: var(--color-orange);
+}
+
+a.mog-color__button-transparent-br-orange:hover::after,
+.mog-color__button-transparent-br-orange:hover::after {
+    background-color: var(--color-light-white);
+}
+
+a.mog-color__button-transparent-br-orange:disabled,
+.mog-color__button-transparent-br-orange:disabled {
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+a.mog-color__button-transparent,
+.mog-color__button-transparent {
+    color: var(--color-light-white);
+    background-color: transparent;
+    border: 1px solid var(--color-light-white);
+    transition: all 0.2s;
+}
+
+a.mog-color__button-transparent:hover,
+.mog-color__button-transparent:hover {
+    color: var(--color-light-white);
+    background-color: var(--color-orange);
+    border: 1px solid var(--color-orange);
+}
+
+a.mog-color__button-transparent::after,
+.mog-color__button-transparent::after {
+    background-color: var(--color-light-white);
+}
+
+a.mog-color__button-transparent:hover::after,
+.mog-color__button-transparent:hover::after {
+    background-color: var(--color-light-white);
+}
+
+a.mog-color__button-transparent:disabled,
+.mog-color__button-transparent:disabled {
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+a.mog-color__button-blue-br,
+.mog-color__button-blue-br {
+    color: var(--color-blue);
+    background-color: transparent;
+    border: 1px solid var(--color-blue);
+    transition: all 0.2s;
+}
+
+a.mog-color__button-blue-br:hover,
+.mog-color__button-blue-br:hover {
+    color: var(--color-light-white);
+    background-color: var(--color-blue);
+}
+
+a.mog-color__button-blue-br::after,
+.mog-color__button-blue-br::after {
+    background-color: var(--color-blue);
+}
+
+a.mog-color__button-blue-br:hover::after,
+.mog-color__button-blue-br:hover::after {
+    background-color: var(--color-light-white);
+}
+
+a.mog-color__button-blue-br:disabled,
+.mog-color__button-blue-br:disabled {
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.mog-content {
+    padding: 80px 100px;
+}
+
+.mog-label {
+    transition: all 0.2s;
+    /* .mog-label__radio-button */
+}
+
+.mog-label__radio-button {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.mog-label__radio-button input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.mog-label__radio-button input:not(:disabled):not(:checked) + span:hover::before {
+    border-color: var(--color-gray);
+}
+
+.mog-label__radio-button input:not(:disabled):active + span::before {
+    background-color: #ffe1b3;
+    border-color: #ffe1b3;
+}
+
+.mog-label__radio-button input:focus + span::before {
+    box-shadow: 0 0 0 0.2rem rgba(255, 148, 9, 0.25);
+}
+
+.mog-label__radio-button input:focus:not(:checked) + span::before {
+    border-color: #fdce87;
+}
+
+.mog-label__radio-button input:checked + span::before {
+    border-color: var(--color-orange);
+    background-color: var(--color-orange);
+}
+
+.mog-label__radio-button input:checked + span::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background-color: var(--color-light-white);
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    left: 6.3px;
+    top: 6px;
+}
+
+.mog-label__radio-button input:disabled + span::after {
+    background-color: transparent;
+}
+
+.mog-label__radio-button span {
+    position: relative;
+    display: inline-flex;
+    /*align-items: center; */
+    user-select: none;
+}
+
+.mog-label__radio-button span::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid var(--color-gray);
+    border-radius: 50%;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.mog-label__checkbox {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.mog-label__checkbox input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.mog-label__checkbox input:not(:disabled):not(:checked) + span:hover::before {
+    border-color: var(--color-gray);
+}
+
+.mog-label__checkbox input:not(:disabled):active + span::before {
+    background-color: #ffe1b3;
+    border-color: #ffe1b3;
+}
+
+.mog-label__checkbox input:focus:not(:checked) + span::before {
+    border-color: #fdce87;
+}
+
+.mog-label__checkbox input:checked + span::before {
+    border-color: var(--color-orange);
+    background-color: var(--color-orange);
+}
+
+.mog-label__checkbox input:checked + span::after {
+    position: absolute;
+    display: block;
+    content: "";
+    mask-image: url("/icons/all/ok.svg");
+    mask-clip: no-clip;
+    mask-repeat: no-repeat;
+    /*mask-position: center; */
+    mask-size: 8%;
+    background-color: var(--color-light-white);
+    width: 100%;
+    height: 100%;
+    top: 1px;
+    left: 2px;
+}
+
+.mog-label__checkbox input:disabled + span::after {
+    background-color: transparent;
+}
+
+.mog-label__checkbox > span {
+    position: relative;
+    display: inline-flex;
+    /*align-items: center; */
+    user-select: none;
+}
+
+.mog-label__checkbox > span::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid var(--color-gray);
+    border-radius: 3px;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.mog-counter {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: 1px solid var(--color-orange);
+    width: 100%;
+    min-height: 41px;
+    max-width: max-content;
+    padding: 10px;
+}
+
+.mog-counter button {
+    width: 22px;
+    height: 22px;
+}
+
+.mog-counter button::after {
+    background-color: var(--color-orange);
+}
+
+.mog-counter button:hover::after {
+    background-color: var(--color-gray);
+}
+
+.mog-counter input {
+    display: flex;
+    width: max-content;
+    max-width: 20px;
+    text-align: center;
+    margin-inline: 5px;
+}
+
+.mog-counter input::-webkit-outer-spin-button,
+.mog-counter input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.icon__authorization {
+    position: relative;
+}
+
+.icon__authorization::after {
+    content: "";
+    mask-image: url("../../icons/all/profile.svg");
+    background-color: var(--color-light-white);
+    display: inline-block;
+    margin-left: 5px;
+    width: 24px;
+    height: 24px;
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+}
+
+.icon__plus {
+    position: relative;
+}
+
+.icon__plus::after {
+    content: "";
+    mask-image: url("../../icons/all/plus.svg");
+    display: inline-block;
+    margin-left: 5px;
+    width: 24px;
+    height: 24px;
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+}
+
+.icon__left-arrow {
+    position: relative;
+}
+
+.icon__left-arrow::after {
+    content: "";
+    mask-image: url("../../icons/arrow/long-arrow-right.svg");
+    display: inline-block;
+    margin-left: 5px;
+    width: 24px;
+    height: 24px;
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    width: 21px;
+    height: 11px;
+}
+
+.icon__rigth-arrow {
+    position: relative;
+}
+
+.icon__rigth-arrow::after {
+    content: "";
+    mask-image: url("../../icons/arrow/long-arrow-left.svg");
+    display: inline-block;
+    margin-left: 5px;
+    width: 24px;
+    height: 24px;
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    width: 21px;
+    height: 11px;
+}
+
+.icon__left-arrow-big {
+    position: relative;
+}
+
+.icon__left-arrow-big::after {
+    content: "";
+    mask-image: url("../../icons/all/arrow-right.svg");
+    display: inline-block;
+    margin-left: 5px;
+    width: 24px;
+    height: 24px;
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-size: 80%;
+    mask-position: center;
+}
+
+.icon__right-arrow-big {
+    position: relative;
+}
+
+.icon__right-arrow-big::after {
+    content: "";
+    mask-image: url("../../icons/all/arrow-left.svg");
+    display: inline-block;
+    margin-left: 5px;
+    width: 24px;
+    height: 24px;
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-size: 80%;
+    mask-position: center;
+}
+
+.icon__left-ok {
+    position: relative;
+}
+
+.icon__left-ok::after {
+    content: "";
+    mask-image: url("../../icons/all/ok.svg");
+    display: inline-block;
+    margin-left: 5px;
+    width: 24px;
+    height: 24px;
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-size: 80%;
+    mask-position: center;
+}
+
+.mog__container {
+    margin-top: 40px;
+}
+
+.point {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.point::before {
+    display: inline-block;
+    content: "";
+    height: 4px;
+    min-width: 4px;
+    border-radius: 10px;
+    background-color: var(--color-light-white);
+    margin-right: 8px;
+}
+
+.input__main {
+    position: relative;
+    width: 100%;
+}
+
+.input__field {
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--color-gray);
+    color: var(--color-gray);
+    line-height: 1.2;
+}
+
+.input__field::placeholder {
+    color: var(--color-gray);
+}
+
+.input__field:focus {
+    border-color: var(--color-dark-gray);
+    color: var(--color-black);
+}
+
+.input__field::-webkit-outer-spin-button,
+.input__field::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.input__field[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.input__field--white {
+    background-color: var(--color-white);
+    border-color: transparent;
+}
+
+.input__field--white:focus {
+    border-color: var(--color-dark-gray);
+}
+
+.input__field--light-white {
+    background-color: var(--color-light-white);
+}
+
+.input__field--light-white:focus {
+    border-color: var(--color-dark-gray);
+}
+
+.input__field--sm {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.input__field--area {
+    resize: none;
+    overflow: hidden;
+}
+
+.input__field--area-lg {
+    height: 80px;
+}
+
+.input--error .input__field {
+    border-color: var(--color-red)-default;
+    color: var(--color-red)-default;
+}
+
+.input__name,
+.input__error {
+    position: absolute;
+    left: 12px;
+    padding: 0 3px;
+    max-width: calc(100% - 24px);
+    background: var(--color-white);
+    display: none;
+    pointer-events: none;
+}
+
+.input__name--bg-light-white,
+.input__error--bg-light-white {
+    background-color: var(--color-light-white);
+}
+
+.input__name {
+    bottom: calc(100% - 9px);
+}
+
+.input__error {
+    top: calc(100% - 8px);
+}
+
+.input--error .input__error {
+    display: block;
+}
+
+.input__field:focus ~ .input__name {
+    display: block;
+}
+
+.input__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+}
+
+.filter-num {
+    max-width: 100%;
+}
+
+.filter-num__fields {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-num__fields--mb-xs {
+    margin-bottom: 10px;
+}
+
+.filter-num__field {
+    position: relative;
+    display: inline-flex;
+    flex: 0 0 calc(50% - 10px);
+    min-width: 0;
+}
+
+.filter-num__field:not(:first-child) {
+    margin-left: 20px;
+}
+
+.filter-num__field:not(:first-child):before {
+    content: '-';
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+.filter-num__field--justify-end {
+    justify-content: flex-end;
+}
+
+.filter-num__field-width {
+    position: absolute;
+    padding: 12px 20px;
+    max-width: 100%;
+    visibility: hidden;
+    white-space: pre-wrap;
+}
+
+.filter-num__header {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter-num__input {
+    padding: 7px 15px;
+    flex: 0 0 auto;
+    max-width: 100%;
+    background-color: transparent;
+    border-radius: 6px;
+    border: 1px solid #c3c3c3;
+    color: #c3c3c3;
+    outline: none;
+}
+
+.filter-num__input-text {
+    margin-left: 3px;
+}
+
+.filter-num__field:last-child:not(:first-child) .filter-num__input {
+    margin-left: auto;
+}
+
+.filter-num__slider-box {
+    padding: 11px 8px 11px 11px;
+}
+
+.filter-num__slider {
+    background-color: #c3c3c3;
+}
+
+.filter-num__values {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter-num__values-max {
+    margin-left: auto;
+    padding-left: 12px;
+}
+
+.noUi-horizontal {
+    height: 3px;
+}
+
+.noUi-horizontal .noUi-handle {
+    top: -7.5px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 5px solid var(--color-orange);
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.noUi-horizontal .noUi-handle:before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    display: none;
+}
+
+.noUi-horizontal .noUi-handle:after {
+    display: none;
+}
+
+.noUi-horizontal .noUi-handle-lower {
+    right: -16px;
+}
+
+.noUi-horizontal .noUi-handle-upper {
+    right: 0;
+}
+
+.noUi-connects {
+    cursor: pointer;
+    overflow: visible;
+}
+
+.noUi-connects:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 16px;
+}
+
+.noUi-connect {
+    position: relative;
+    background-color: var(--color-orange);
+}
+
+.noUi-target {
+    border: none;
+    background: #eee;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.select__main {
+    position: relative;
+    height: 100%;
+}
+
+.select__main:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    display: inline-block;
+    background: url("/icons/all/arrow-down-gray.svg") center / contain no-repeat;
+    width: 24px;
+    height: 24px;
+}
+
+.select__field {
+    padding: 9px 15px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--color-gray);
+    color: var(--color-gray);
+    line-height: 1.2;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.select__field--sm {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.select__field:focus {
+    border-color: var(--color-dark-gray);
+    color: var(--color-black);
+}
+
+.select--error .select__field {
+    border-color: var(--color-red)-default;
+    color: var(--color-red)-default;
+}
+
+.select--error .select__field option {
+    color: var(--color-black);
+}
+
+.select__name,
+.select__error {
+    position: absolute;
+    left: 12px;
+    padding: 0 3px;
+    max-width: calc(100% - 24px);
+    background: var(--color-white);
+    display: none;
+    pointer-events: none;
+}
+
+.select__name--bg-light-white,
+.select__error--bg-light-white {
+    background-color: var(--color-light-white);
+}
+
+.select__name {
+    bottom: calc(100% - 8px);
+}
+
+.select__field:focus ~ .select__name {
+    display: block;
+}
+
+.select__error {
+    top: calc(100% - 8px);
+}
+
+.select--error .select__error {
+    display: block;
+}
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    user-select: none;
+}
+
+.checkbox__main {
+    display: flex;
+    align-items: flex-start;
+}
+
+.checkbox__input {
+    display: none;
+}
+
+.checkbox__switch {
+    position: relative;
+    flex: 0 0 auto;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.checkbox__switch:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    background: url("/icons/all/ok-white.svg") center / contain no-repeat;
+    width: 12px;
+    height: 9px;
+}
+
+.checkbox__switch--circle {
+    border-radius: 50%;
+}
+
+.checkbox__input:checked ~ .checkbox__switch {
+    background: var(--color-orange);
+    border-color: var(--color-orange);
+}
+
+.checkbox__input:checked ~ .checkbox__switch:before {
+    visibility: visible;
+    opacity: 1;
+}
+
+.checkbox__input:checked ~ .checkbox__switch--circle {
+    border-width: 6px;
+    border-color: var(--color-orange);
+    background-color: #fff;
+}
+
+.checkbox__input:checked ~ .checkbox__switch--circle:before {
+    display: none;
+}
+
+.checkbox__text {
+    margin-left: 10px;
+}
+
+.checkbox__text--ml-sm {
+    margin-left: 8px;
+}
+
+.checkbox__text--desktop-nowrap {
+    white-space: nowrap;
+}
+
+.checkbox__text-item {
+    display: block;
+}
+
+.checkbox__text-item:not(:first-child) {
+    margin-top: 5px;
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+}
+
+.switch__main {
+    display: flex;
+    align-items: center;
+}
+
+.switch__field {
+    display: none;
+}
+
+.switch__label {
+    position: relative;
+    display: inline-block;
+    user-select: none;
+    height: 28px;
+    width: 48px;
+    border-radius: 40px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.switch__label:before {
+    content: "";
+    position: absolute;
+    display: block;
+    background: var(--color-gray);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: width 0.25s cubic-bezier(0, 0, 0, 0.1), background 0.25s;
+}
+
+.switch__label:after {
+    content: "";
+    position: absolute;
+    display: block;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    height: 24px;
+    width: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px -2px rgba(10, 9, 11, 0.06), 0px 2px 7px rgba(10, 9, 11, 0.05), 0px 0px 0px 1px rgba(10, 9, 11, 0.05);
+    transition: 0.25s ease-in-out;
+}
+
+.switch__field:checked + .switch__label:before {
+    background: var(--color-orange);
+}
+
+.switch__field:checked + .switch__label:after {
+    left: 22px;
+}
+
+.switch__text {
+    margin-left: 8px;
+}
+
+.form__main {
+    width: 100%;
+}
+
+.form__group {
+    width: 100%;
+}
+
+.form__group:not(:first-child) {
+    margin-top: 20px;
+}
+
+.form__group--mt-sm:not(:first-child) {
+    margin-top: 15px;
+}
+
+.form__group-list {
+    margin-left: -20px;
+    margin-top: -20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form__group-item {
+    margin-left: 20px;
+    margin-top: 20px;
+    flex: 1 1 0%;
+}
+
+.form__group-item--col-4 {
+    flex: 0 0 calc(33.33% - 20px);
+}
+
+.form__group-item.js-toggle-item {
+    display: none;
+}
+
+.form__group-item.js-toggle-item-active {
+    display: block;
+}
+
+.form__group--mt-sm .form__group-list {
+    margin-left: -15px;
+    margin-top: -15px;
+}
+
+.form__group--mt-sm .form__group-item {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.form__group--mt-sm .form__group-item--col-4 {
+    flex: 0 0 calc(33.33% - 15px);
+}
+
+.form__item {
+    width: 100%;
+    display: flex;
+}
+
+.form__item:not(:first-child) {
+    margin-top: 20px;
+}
+
+.form__item--mt-sm:not(:first-child) {
+    margin-top: 15px;
+}
+
+.form__checkboxes {
+    margin-top: -20px;
+    margin-left: -20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form__checkboxes-item {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.form__checkboxes-item--sm {
+    width: 192px;
+}
+
+.form__btn {
+    margin-top: 20px;
+}
+
+.form__btn--mt-lg {
+    margin-top: 25px;
+}
+
+.form__btn--mt-sm {
+    margin-top: 15px;
+}
+
+.form__btn--full {
+    width: 100%;
+}
+
+.form__actions {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.form__actions-forgot {
+    margin-left: 35px;
+}
+
+.form__option {
+    margin-top: 15px;
+}
+
+.form__label {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form__label:before,
+.form__label:after {
+    content: "";
+    display: inline-block;
+    flex: 0 1 110px;
+    height: 1px;
+    background-color: #d9d9d9;
+}
+
+.form__privacy {
+    margin-top: 25px;
+}
+
+.form__row-footer {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.form__row-privacy {
+    margin-right: 50px;
+}
+
+.form__row-btn {
+    flex: 0 0 220px;
+}
+
+.form.js-switch-item {
+    display: none;
+}
+
+.form.js-switch-item-active {
+    display: block;
+}
+
+.tag {
+    padding: 4px 15px;
+    border-radius: 25px;
+    display: inline-flex;
+    justify-content: center;
+    border: 1px solid var(--color-cyan);
+    color: var(--color-cyan);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.1;
+}
+
+.icon-btn {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn--sm {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-btn__img {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 991px) {
+    .form__group-item {
+        margin-left: 15px;
+        margin-top: 15px;
+        width: calc(100% - 15px);
+        flex: none;
+    }
+
+    .form__group-item--col-4 {
+        width: calc(100% - 15px);
+    }
+
+    .form__group--mt-sm .form__group-item--col-4 {
+        flex: none;
+        width: calc(100% - 15px);
+    }
+
+    .form__row-footer {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form__row-privacy {
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    .form__row-btn {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-overflow {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: pre;
+    }
+
+    .mog__container {
+        margin-top: 20px;
+    }
+
+    .mog-content {
+        padding: 20px 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    .mog-tabs {
+        overflow-x: auto;
+    }
+
+    .form__checkboxes-item {
+        width: calc(100% - 20px);
+    }
+
+    .checkbox__text--desktop-nowrap {
+        white-space: initial;
+    }
+}
+
+@media (max-width: 375px) {
+    .form__actions-forgot {
+        margin-left: auto;
+    }
+}
+
+.price-in-ruble {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.price-in-ruble::after {
+    position: relative;
+    display: inline-block;
+    content: "";
+    mask-image: url("/icons/all/rouble.svg");
+    margin-left: 3.5px;
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    height: 90%;
+    width: 12px;
+    min-width: 14px;
+    background-color: var(--color-black);
+}
+
+.price-in-ruble--xl {
+    height: 20px;
+}
+
+ol {
+    list-style-type: none;
+    counter-reset: num;
+    margin: 0 0 0 20px;
+}
+
+ol li {
+    position: relative;
+    margin: 0 0 0 18px;
+}
+
+ol li:before {
+    content: counter(num) ".";
+    counter-increment: num;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: -24px;
+    width: 20px;
+    color: var(--color-black);
+    text-align: right;
+}
+
+/*========= CUSTOM SELECT ========== */
+.mog-select {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.mog-select[data-state="active"] .mog-select__title::before {
+    transform: translate(-3px, -50%) rotate(-45deg);
+}
+
+.mog-select[data-state="active"] .mog-select__title::after {
+    transform: translate(3px, -50%) rotate(45deg);
+}
+
+.mog-select[data-state="active"] .mog-select__content {
+    opacity: 1;
+}
+
+.mog-select[data-state="active"] .mog-select__label + .mog-select__input + .mog-select__label {
+    max-height: 40px;
+}
+
+.mog-select[data-state="active"] .mog-select__label:nth-child(4) {
+    border-radius: 15px 15px 0 0;
+}
+
+.mog-select[data-state="active"] .mog-select__label:last-child {
+    border-radius: 0 0 15px 15px;
+}
+
+.mog-select__title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 8px 30px 8px 16px;
+    background-color: var(--color-white);
+    border-radius: 5px;
+    border: solid 1px var(--color-white);
+    text-wrap: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.mog-select__title::before,
+.mog-select__title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    display: block;
+    width: 10px;
+    height: 2px;
+    transition: all 0.3s ease-out;
+    background-color: #333333;
+    transform: translate(-3px, -50%) rotate(45deg);
+}
+
+.mog-select__title::after {
+    transform: translate(3px, -50%) rotate(-45deg);
+}
+
+.mog-select__title:hover {
+    border-color: var(--color-orange);
+}
+
+.mog-select__title:hover::before,
+.mog-select__title:hover::after {
+    background-color: var(--color-orange);
+}
+
+.reset {
+    display: flex;
+    width: 230px;
+    padding: 8px 16px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: var(--color-light-white);
+    border: solid 1px var(--color-gray);
+    border-radius: 5px;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--color-black);
+}
+
+.reset:hover {
+    background-color: var(--color-orange);
+    color: var(--color-light-white);
+}
+
+.mog-select__content {
+    position: absolute;
+    top: 50px;
+    left: 3px;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 6px);
+    background-color: var(--color-light-white);
+    border: 1px solid var(--color-gray);
+    /*border-top: none; */
+    /* border-bottom-left-radius: 10px; */
+    /* border-bottom-right-radius: 10px; */
+    border-radius: 15px;
+    transition: all 0.3s ease-out;
+    opacity: 0;
+    z-index: 8;
+}
+
+.mog-select__input {
+    display: none;
+}
+
+.mog-select__input:checked + label {
+    background-color: var(--color-gray);
+}
+
+.mog-select__input:disabled + label {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.mog-select__label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    max-height: 0;
+    padding: 0 16px;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.mog-select__label + input + .mog-select__label {
+    border-top: 0 solid var(--color-dark-gray);
+}
+
+.mog-select__label:hover {
+    background-color: var(--color-orange) !important;
+    color: var(--color-light-white);
+}

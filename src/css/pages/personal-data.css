@@ -1,0 +1,43 @@
+.personal-data {
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 100px;
+}
+.personal-data__block {
+    width: 100%;
+    max-width: 850px;
+}
+.personal-data__block:not(:last-child) {
+    margin-bottom: 40px;
+}
+.personal-data__title {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.personal-data__paragraph {
+    display: block;
+    margin-top: 20px;
+}
+.personal-data__tab {
+    display: block;
+    margin-left: 40px;
+}
+.personal-data__bold {
+    font-weight: 700;
+    font-size: 15px;
+}
+@media (max-width: 768px) {
+    .personal-data {
+        margin-bottom: 60px;
+    }
+
+    .personal-data__title {
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .personal-data__tab {
+        margin-left: 20px;
+    }
+}

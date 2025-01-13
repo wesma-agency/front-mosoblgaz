@@ -1,19 +1,25 @@
 import SimpleBar from "simplebar";
-import "simplebar/dist/simplebar.css";
-
 import ResizeObserver from "resize-observer-polyfill";
+
 window.ResizeObserver = ResizeObserver;
 
 const $simplebars = document.querySelectorAll(".js-simplebar");
 $simplebars.forEach(($simplebar) => {
-  const simplebar = new SimpleBar($simplebar);
+  const simplebar = new SimpleBar($simplebar, {
+    autoHide: false
+  });
   const scrollContentEl = simplebar.getScrollElement();
 
-  updateScrollEndClass(scrollContentEl, $simplebar);
-  scrollContentEl.addEventListener("scroll", () => updateScrollEndClass(scrollContentEl, $simplebar));
+  $simplebar._simplebar = simplebar;
+  $simplebar._simplebar._updateScrollEndClass = () => updateScrollEndClass($simplebar);
+
+  updateScrollEndClass($simplebar);
+  scrollContentEl.addEventListener("scroll", () => updateScrollEndClass($simplebar));
+
 });
 
-function updateScrollEndClass(scrollContentEl, $simplebar) {
+function updateScrollEndClass($simplebar) {
+  const scrollContentEl = $simplebar._simplebar.getScrollElement();
   const maxScroll = scrollContentEl.scrollHeight - scrollContentEl.clientHeight;
   const currentScroll = scrollContentEl.scrollTop;
 

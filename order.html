@@ -15,420 +15,422 @@
   <body>
     <load src="pages.html" />
     <div class="wrapper">
-      <div class="container-1440">
-        <load src="./_header.html" />
+      <load src="./_header.html" />
 
-        <main class="main">
-          <div class="mobile-bg"></div>
+      <main class="main">
+        <div class="mobile-bg"></div>
 
-          <section class="category-top">
-            <div class="container">
-              <nav class="category-breadcrumbs breadcrumbs">
-                <ul class="breadcrumbs__list">
-                  <li class="breadcrumbs__item">
-                    <a href="#">Главная</a>
-                  </li>
-                  <li class="breadcrumbs__arrow">
-                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M3 6.95181H1H14M14 6.95181L10.5323 4M14 6.95181L10.5323 10"
-                        stroke="#333333"
-                        stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </li>
-                  <li class="breadcrumbs__item breadcrumbs__item--current">
-                    <span>Оформление заказа</span>
-                  </li>
-                </ul>
-              </nav>
+        <section class="category-top">
+          <div class="container">
+            <nav class="category-breadcrumbs breadcrumbs">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a href="#">Главная</a>
+                </li>
+                <li class="breadcrumbs__arrow">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M3 6.95181H1H14M14 6.95181L10.5323 4M14 6.95181L10.5323 10"
+                      stroke="#333333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </li>
+                <li class="breadcrumbs__item breadcrumbs__item--current">
+                  <span>Оформление заказа</span>
+                </li>
+              </ul>
+            </nav>
 
-              <h1 class="section-title"> Оформление заказа </h1>
-            </div>
-          </section>
+            <h1 class="section-title"> Оформление заказа </h1>
+          </div>
+        </section>
 
-          <section class="order main__bottom">
-            <div class="container">
-              <form class="js-form js-form-order order__content">
-                <div class="order__main">
-                  <div class="order-box order__section">
-                    <div class="title title--4 title--medium order-box__title">Укажите данные получателя</div>
-                    <div class="form">
-                      <div class="form__main">
-                        <div class="form__item">
-                          <div class="checkbox">
+        <section class="order main__bottom">
+          <div class="container">
+            <form class="js-form js-form-order order__content">
+              <div class="order__main">
+                <div class="order-box order__section">
+                  <div class="title title--4 title--medium order-box__title">Укажите данные получателя</div>
+                  <div class="form">
+                    <div class="form__main">
+                      <div class="form__item">
+                        <div class="checkbox">
+                          <label class="checkbox__main">
+                            <input class="checkbox__input js-toggle-checkbox" data-toggle-name="person" type="checkbox" />
+                            <span class="checkbox__switch"></span>
+                          </label>
+                          <span class="text checkbox__text">Юридическое лицо</span>
+                        </div>
+                      </div>
+                      <div class="form__group form__group--mt-sm">
+                        <div class="form__group-list">
+                          <div class="input form__group-item form__group-item--col-4">
+                            <div class="input__main">
+                              <input
+                                class="input__field"
+                                type="text"
+                                data-validate="empty"
+                                data-error-text="Введите Ваше имя и фамилию"
+                                placeholder="Ваше имя и фамилия*" />
+                              <span class="text text--xs input__name">Ваше имя и фамилия*</span>
+                              <span class="text text--xs text--red-default input__error"></span>
+                            </div>
+                          </div>
+                          <div class="input form__group-item form__group-item--col-4">
+                            <div class="input__main">
+                              <input
+                                class="input__field"
+                                type="text"
+                                data-validate="email"
+                                data-error-text="Введите адрес электронной почты"
+                                placeholder="Адрес электронной почты*" />
+                              <span class="text text--xs input__name">Адрес электронной почты*</span>
+                              <span class="text text--xs text--red-default input__error"></span>
+                            </div>
+                          </div>
+                          <div class="input form__group-item form__group-item--col-4">
+                            <div class="input__main">
+                              <input
+                                class="input__field js-imask"
+                                type="text"
+                                data-validate="phone"
+                                data-error-text="Введите номер телефона"
+                                placeholder="+7 ( 999 ) 999 - 99 - 99*"
+                                data-mask="+{7} (000) 000-00-00" />
+                              <span class="text text--xs input__name">Номер телефона</span>
+                              <span class="text text--xs text--red-default input__error"></span>
+                            </div>
+                          </div>
+                          <div class="input form__group-item form__group-item--col-4 js-toggle-item" data-toggle-name="person">
+                            <div class="input__main">
+                              <input
+                                class="input__field"
+                                type="text"
+                                data-validate="empty"
+                                data-error-text="Введите название организации"
+                                placeholder="Название организации*" />
+                              <span class="text text--xs input__name">Название организации*</span>
+                              <span class="text text--xs text--red-default input__error"></span>
+                            </div>
+                          </div>
+                          <div class="input form__group-item form__group-item--col-4 js-toggle-item" data-toggle-name="person">
+                            <div class="input__main">
+                              <input
+                                class="input__field"
+                                type="number"
+                                data-validate="empty"
+                                data-error-text="Введите ИНН"
+                                placeholder="ИНН*" />
+                              <span class="text text--xs input__name">ИНН*</span>
+                              <span class="text text--xs text--red-default input__error"></span>
+                            </div>
+                          </div>
+                          <div class="input form__group-item form__group-item--col-4 js-toggle-item" data-toggle-name="person">
+                            <div class="input__main">
+                              <input
+                                class="input__field"
+                                type="number"
+                                data-validate="empty"
+                                data-error-text="Введите КПП"
+                                placeholder="КПП*" />
+                              <span class="text text--xs input__name">КПП*</span>
+                              <span class="text text--xs text--red-default input__error"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-box order__section">
+                  <div class="title title--4 title--medium order-box__title">Где и как вы хотите получить заказ</div>
+                  <div class="form order-box__form">
+                    <div class="form__main">
+                      <div class="form__item">
+                        <div class="form__checkboxes">
+                          <div class="checkbox form__checkboxes-item form__checkboxes-item--sm">
                             <label class="checkbox__main">
-                              <input class="checkbox__input js-toggle-checkbox" data-toggle-name="person" type="checkbox" />
-                              <span class="checkbox__switch"></span>
+                              <input
+                                class="checkbox__input js-switch-checkbox"
+                                type="radio"
+                                name="receipt"
+                                data-switch-name="delivery"
+                                checked />
+                              <span class="checkbox__switch checkbox__switch--circle"></span>
                             </label>
-                            <span class="text checkbox__text">Юридическое лицо</span>
+                            <span class="checkbox__text checkbox__text--ml-sm">
+                              <span class="text checkbox__text-item">Курьерская доставка</span>
+                              <span class="text text--dark-gray checkbox__text-item">От 2 дней</span>
+                            </span>
                           </div>
-                        </div>
-                        <div class="form__group form__group--mt-sm">
-                          <div class="form__group-list">
-                            <div class="input form__group-item form__group-item--col-4">
-                              <div class="input__main">
-                                <input
-                                  class="input__field"
-                                  type="text"
-                                  data-validate="empty"
-                                  data-error-text="Введите Ваше имя и фамилию"
-                                  placeholder="Ваше имя и фамилия*" />
-                                <span class="text text--xs input__name">Ваше имя и фамилия*</span>
-                                <span class="text text--xs text--red-default input__error"></span>
-                              </div>
-                            </div>
-                            <div class="input form__group-item form__group-item--col-4">
-                              <div class="input__main">
-                                <input
-                                  class="input__field"
-                                  type="text"
-                                  data-validate="email"
-                                  data-error-text="Введите адрес электронной почты"
-                                  placeholder="Адрес электронной почты*" />
-                                <span class="text text--xs input__name">Адрес электронной почты*</span>
-                                <span class="text text--xs text--red-default input__error"></span>
-                              </div>
-                            </div>
-                            <div class="input form__group-item form__group-item--col-4">
-                              <div class="input__main">
-                                <input
-                                  class="input__field js-imask"
-                                  type="text"
-                                  data-validate="phone"
-                                  data-error-text="Введите номер телефона"
-                                  placeholder="+7 ( 999 ) 999 - 99 - 99*"
-                                  data-mask="+{7} (000) 000-00-00" />
-                                <span class="text text--xs input__name">Номер телефона</span>
-                                <span class="text text--xs text--red-default input__error"></span>
-                              </div>
-                            </div>
-                            <div class="input form__group-item form__group-item--col-4 js-toggle-item" data-toggle-name="person">
-                              <div class="input__main">
-                                <input
-                                  class="input__field"
-                                  type="text"
-                                  data-validate="empty"
-                                  data-error-text="Введите название организации"
-                                  placeholder="Название организации*" />
-                                <span class="text text--xs input__name">Название организации*</span>
-                                <span class="text text--xs text--red-default input__error"></span>
-                              </div>
-                            </div>
-                            <div class="input form__group-item form__group-item--col-4 js-toggle-item" data-toggle-name="person">
-                              <div class="input__main">
-                                <input
-                                  class="input__field"
-                                  type="number"
-                                  data-validate="empty"
-                                  data-error-text="Введите ИНН"
-                                  placeholder="ИНН*" />
-                                <span class="text text--xs input__name">ИНН*</span>
-                                <span class="text text--xs text--red-default input__error"></span>
-                              </div>
-                            </div>
-                            <div class="input form__group-item form__group-item--col-4 js-toggle-item" data-toggle-name="person">
-                              <div class="input__main">
-                                <input
-                                  class="input__field"
-                                  type="number"
-                                  data-validate="empty"
-                                  data-error-text="Введите КПП"
-                                  placeholder="КПП*" />
-                                <span class="text text--xs input__name">КПП*</span>
-                                <span class="text text--xs text--red-default input__error"></span>
-                              </div>
-                            </div>
+                          <div class="checkbox form__checkboxes-item form__checkboxes-item--sm">
+                            <label class="checkbox__main">
+                              <input class="checkbox__input js-switch-checkbox" type="radio" data-switch-name="delivery" name="receipt" />
+                              <span class="checkbox__switch checkbox__switch--circle"></span>
+                            </label>
+                            <span class="checkbox__text checkbox__text--ml-sm">
+                              <span class="text checkbox__text-item">Самовывоз</span>
+                              <span class="text text--dark-gray checkbox__text-item">Со склада</span>
+                            </span>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="order-box order__section">
-                    <div class="title title--4 title--medium order-box__title">Где и как вы хотите получить заказ</div>
-                    <div class="form order-box__form">
-                      <div class="form__main">
-                        <div class="form__item">
-                          <div class="form__checkboxes">
-                            <div class="checkbox form__checkboxes-item form__checkboxes-item--sm">
-                              <label class="checkbox__main">
-                                <input
-                                  class="checkbox__input js-switch-checkbox"
-                                  type="radio"
-                                  name="receipt"
-                                  data-switch-name="delivery"
-                                  checked />
-                                <span class="checkbox__switch checkbox__switch--circle"></span>
-                              </label>
-                              <span class="checkbox__text checkbox__text--ml-sm">
-                                <span class="text checkbox__text-item">Курьерская доставка</span>
-                                <span class="text text--dark-gray checkbox__text-item">От 2 дней</span>
-                              </span>
+                  <div class="form order-box__form js-switch-item js-switch-item-active" data-switch-name="delivery">
+                    <div class="form__main">
+                      <div class="form__group">
+                        <div class="form__group-list">
+                          <div class="select form__group-item">
+                            <div class="select__main">
+                              <select class="select__field" data-validate="empty" data-error-text="Выберите город">
+                                <option value="" disabled selected hidden>Город</option>
+                                <option value="1">Москва</option>
+                                <option value="2">Долгопрудный</option>
+                              </select>
+                              <span class="text text--xs select__name">Город</span>
+                              <span class="text text--xs text--red-default select__error"></span>
                             </div>
-                            <div class="checkbox form__checkboxes-item form__checkboxes-item--sm">
-                              <label class="checkbox__main">
-                                <input class="checkbox__input js-switch-checkbox" type="radio" data-switch-name="delivery" name="receipt" />
-                                <span class="checkbox__switch checkbox__switch--circle"></span>
-                              </label>
-                              <span class="checkbox__text checkbox__text--ml-sm">
-                                <span class="text checkbox__text-item">Самовывоз</span>
-                                <span class="text text--dark-gray checkbox__text-item">Со склада</span>
-                              </span>
+                          </div>
+                          <div class="select form__group-item">
+                            <div class="select__main">
+                              <select class="select__field" data-validate="empty" data-error-text="Выберите улицу">
+                                <option value="" disabled selected hidden>Улица</option>
+                                <option value="1">Жуковского</option>
+                                <option value="2">Мира</option>
+                              </select>
+                              <span class="text text--xs select__name">Улица</span>
+                              <span class="text text--xs text--red-default select__error"></span>
+                            </div>
+                          </div>
+                          <div class="input form__group-item">
+                            <div class="input__main">
+                              <input
+                                class="input__field"
+                                type="text"
+                                data-validate="empty"
+                                data-error-text="Введите номер дома"
+                                placeholder="Дом*" />
+                              <span class="text text--xs input__name">Дом</span>
+                              <span class="text text--xs text--red-default input__error"></span>
+                            </div>
+                          </div>
+                          <div class="input form__group-item">
+                            <div class="input__main">
+                              <input
+                                class="input__field"
+                                type="text"
+                                data-validate="empty"
+                                data-error-text="Введите номер квартиры"
+                                placeholder="Квартира" />
+                              <span class="text text--xs input__name">Квартира</span>
+                              <span class="text text--xs text--red-default input__error"></span>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="form order-box__form js-switch-item js-switch-item-active" data-switch-name="delivery">
-                      <div class="form__main">
-                        <div class="form__group">
-                          <div class="form__group-list">
-                            <div class="select form__group-item">
-                              <div class="select__main">
-                                <select class="select__field" data-validate="empty" data-error-text="Выберите город">
-                                  <option value="" disabled selected hidden>Город</option>
-                                  <option value="1">Москва</option>
-                                  <option value="2">Долгопрудный</option>
-                                </select>
-                                <span class="text text--xs select__name">Город</span>
-                                <span class="text text--xs text--red-default select__error"></span>
-                              </div>
-                            </div>
-                            <div class="select form__group-item">
-                              <div class="select__main">
-                                <select class="select__field" data-validate="empty" data-error-text="Выберите улицу">
-                                  <option value="" disabled selected hidden>Улица</option>
-                                  <option value="1">Жуковского</option>
-                                  <option value="2">Мира</option>
-                                </select>
-                                <span class="text text--xs select__name">Улица</span>
-                                <span class="text text--xs text--red-default select__error"></span>
-                              </div>
-                            </div>
-                            <div class="input form__group-item">
-                              <div class="input__main">
-                                <input
-                                  class="input__field"
-                                  type="text"
-                                  data-validate="empty"
-                                  data-error-text="Введите номер дома"
-                                  placeholder="Дом*" />
-                                <span class="text text--xs input__name">Дом</span>
-                                <span class="text text--xs text--red-default input__error"></span>
-                              </div>
-                            </div>
-                            <div class="input form__group-item">
-                              <div class="input__main">
-                                <input
-                                  class="input__field"
-                                  type="text"
-                                  data-validate="empty"
-                                  data-error-text="Введите номер квартиры"
-                                  placeholder="Квартира" />
-                                <span class="text text--xs input__name">Квартира</span>
-                                <span class="text text--xs text--red-default input__error"></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="input form__item js-switch-item">
-                          <div class="input__main">
-                            <textarea class="input__field input__field--area input__field--area-lg" placeholder="Комментарий"></textarea>
-                            <span class="text text--xs input__name">Комментарий</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="delivery order-box__delivery js-switch-item" data-switch-name="delivery">
-                      <div class="delivery__map-box">
-                        <div class="delivery__map js-map-delivery"></div>
-                      </div>
-                      <div class="delivery__main">
-                        <div class="delivery__list">
-                          <div class="delivery-item delivery__item">
-                            <div class="delivery-item__info">
-                              <div class="delivery-item__address">
-                                <div class="text text--dark-gray delivery-item__label">Город</div>
-                                <div class="text delivery-item__text">г. Долгопрудный, ул. Жуковского, д.7</div>
-                              </div>
-                              <div class="delivery-item__date">
-                                <div class="text text--dark-gray delivery-item__label">Дата доставки</div>
-                                <div class="tag">Сегодня</div>
-                              </div>
-                            </div>
-                            <button
-                              class="mog-button-normal mog-color__button-transparent-br-orange delivery-item__btn js-location-btn js-location-btn-active"
-                              data-map="delivery"
-                              data-location-id="1"
-                              data-select-text="Выбрано"
-                              type="button">
-                              Выбрать
-                            </button>
-                          </div>
-                          <div class="delivery-item delivery__item">
-                            <div class="delivery-item__info">
-                              <div class="delivery-item__address">
-                                <div class="text text--dark-gray delivery-item__label">Город</div>
-                                <div class="text delivery-item__text">г. Москва, ул. Мира, д.256</div>
-                              </div>
-                              <div class="delivery-item__date">
-                                <div class="text text--dark-gray delivery-item__label">Дата доставки</div>
-                                <div class="tag">19 сентября</div>
-                              </div>
-                            </div>
-                            <button
-                              class="mog-button-normal mog-color__button-transparent-br-orange delivery-item__btn js-location-btn"
-                              data-map="delivery"
-                              data-location-id="2"
-                              data-select-text="Выбрано"
-                              type="button">
-                              Выбрать
-                            </button>
-                          </div>
+                      <div class="input form__item js-switch-item">
+                        <div class="input__main">
+                          <textarea class="input__field input__field--area input__field--area-lg" placeholder="Комментарий"></textarea>
+                          <span class="text text--xs input__name">Комментарий</span>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="order-box order__section">
-                    <div class="title title--4 title--medium order-box__title">Как вам будет удобнее оплатить заказ</div>
-                    <div class="form">
-                      <div class="form__main">
-                        <div class="checkbox form__item form__item--mt-sm">
-                          <label class="checkbox__main">
-                            <input class="checkbox__input" type="radio" name="pay-type" checked />
-                            <span class="checkbox__switch checkbox__switch--circle"></span>
-                          </label>
-                          <span class="text checkbox__text">Онлайн оплата</span>
-                        </div>
-                        <div class="checkbox form__item form__item--mt-sm">
-                          <label class="checkbox__main">
-                            <input class="checkbox__input" type="radio" name="pay-type" />
-                            <span class="checkbox__switch checkbox__switch--circle"></span>
-                          </label>
-                          <span class="text checkbox__text">Рассрочка</span>
-                        </div>
-                        <div class="checkbox form__item form__item--mt-sm">
-                          <label class="checkbox__main">
-                            <input class="checkbox__input" type="radio" name="pay-type" />
-                            <span class="checkbox__switch checkbox__switch--circle"></span>
-                          </label>
-                          <span class="text checkbox__text">Онлайн-оплата Сбербанк</span>
-                        </div>
-                      </div>
+                  <div class="delivery order-box__delivery js-switch-item" data-switch-name="delivery">
+                    <div class="delivery__map-box">
+                      <div class="delivery__map js-map-delivery"></div>
                     </div>
-                  </div>
-                  <div class="cart order__cart">
-                    <div class="title title--4 title--medium">Ваш заказ</div>
-                    <div class="cart__list-products cart__list-products--order">
-                      <div class="cart-product cart-product--order">
-                        <div class="cart-product__img">
-                          <img src="/img/catalog-category/category-item-1.png" alt="" />
+                    <div class="delivery__main">
+                      <div class="delivery__list">
+                        <div class="delivery-item delivery__item">
+                          <div class="delivery-item__info">
+                            <div class="delivery-item__address">
+                              <div class="text text--dark-gray delivery-item__label">Город</div>
+                              <div class="text delivery-item__text">г. Долгопрудный, ул. Жуковского, д.7</div>
+                            </div>
+                            <div class="delivery-item__date">
+                              <div class="text text--dark-gray delivery-item__label">Дата доставки</div>
+                              <div class="tag">Сегодня</div>
+                            </div>
+                          </div>
+                          <button
+                            class="mog-button-normal mog-color__button-transparent-br-orange delivery-item__btn js-location-btn js-location-btn-active"
+                            data-map="delivery"
+                            data-location-id="1"
+                            data-select-text="Выбрано"
+                            type="button">
+                            Выбрать
+                          </button>
                         </div>
-                        <div class="cart-product__info">
-                          <div class="cart-product__article cart-product__name-column"> Арт. 67845 </div>
-                          <div class="cart-product__name"> Газовый настенный котел Warm AUROS (Универсальный) </div>
-                        </div>
-
-                        <div class="cart-product__counter">
-                          <div class="cart-product__name-column">Количество</div>
-                          <div class="text text--dark-gray cart-product__name-mobile">Количество:</div>
-                          <div class="title title--4 title--medium cart-product__counter-value">1</div>
-                        </div>
-
-                        <div class="cart-product__price">
-                          <div class="cart-product__name-column">Стоимость</div>
-                          <div class="cart-product__with-discount"><span class="price-in-ruble">59 900</span></div>
-                          <div class="cart-product__without-discount"><span class="price-in-ruble">89 900</span></div>
-                        </div>
-
-                        <div class="cart-product__addition">
-                          <span class="price-in-ruble cart-product__addition-price">Плюс монтаж от 20 000</span>
-                          <button class="cart-product__help mog-btn__help" type="button"> </button>
-                        </div>
-                      </div>
-                      <div class="cart-product cart-product--order">
-                        <div class="cart-product__img">
-                          <img src="/img/catalog-category/category-item-2.png" alt="" />
-                        </div>
-                        <div class="cart-product__info">
-                          <div class="cart-product__article cart-product__name-column"> Арт. 67845 </div>
-                          <div class="cart-product__name"> Газовый настенный котел Warm AUROS (Универсальный) </div>
-                        </div>
-
-                        <div class="cart-product__counter">
-                          <div class="cart-product__name-column">Количество</div>
-                          <div class="text text--dark-gray cart-product__name-mobile">Количество:</div>
-                          <div class="title title--4 title--medium cart-product__counter-value">1</div>
-                        </div>
-
-                        <div class="cart-product__price">
-                          <div class="cart-product__name-column">Стоимость</div>
-                          <div class="cart-product__with-discount"><span class="price-in-ruble">68 300</span></div>
-                          <div class="cart-product__without-discount"><span class="price-in-ruble">89 900</span></div>
-                        </div>
-                      </div>
-                      <div class="cart-product cart-product--order">
-                        <div class="cart-product__img">
-                          <img src="/img/catalog-page/catalog-item-1.png" alt="" />
-                        </div>
-                        <div class="cart-product__info">
-                          <div class="cart-product__article cart-product__name-column"> Арт. 67845 </div>
-                          <div class="cart-product__name"> Газовый настенный котел Warm AUROS (Универсальный) </div>
-                        </div>
-
-                        <div class="cart-product__counter">
-                          <div class="cart-product__name-column">Количество</div>
-                          <div class="text text--dark-gray cart-product__name-mobile">Количество:</div>
-                          <div class="title title--4 title--medium cart-product__counter-value">1</div>
-                        </div>
-
-                        <div class="cart-product__price">
-                          <div class="cart-product__name-column">Стоимость</div>
-                          <div class="cart-product__with-discount"><span class="price-in-ruble">45 400</span></div>
-                          <div class="cart-product__without-discount"><span class="price-in-ruble">89 900</span></div>
+                        <div class="delivery-item delivery__item">
+                          <div class="delivery-item__info">
+                            <div class="delivery-item__address">
+                              <div class="text text--dark-gray delivery-item__label">Город</div>
+                              <div class="text delivery-item__text">г. Москва, ул. Мира, д.256</div>
+                            </div>
+                            <div class="delivery-item__date">
+                              <div class="text text--dark-gray delivery-item__label">Дата доставки</div>
+                              <div class="tag">19 сентября</div>
+                            </div>
+                          </div>
+                          <button
+                            class="mog-button-normal mog-color__button-transparent-br-orange delivery-item__btn js-location-btn"
+                            data-map="delivery"
+                            data-location-id="2"
+                            data-select-text="Выбрано"
+                            type="button">
+                            Выбрать
+                          </button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="order__sidebar">
-                  <div class="cart-total order__sidebar-total">
-                    <div class="cart-total__all">
-                      <span class="cart-total__title">Сумма заказа</span>
-                      <div class="cart-total__product">
-                        <span class="cart-total__row">3 товара</span>
-                        <span class="cart-total__price price-in-ruble">152 900</span>
+                <div class="order-box order__section">
+                  <div class="title title--4 title--medium order-box__title">Как вам будет удобнее оплатить заказ</div>
+                  <div class="form">
+                    <div class="form__main">
+                      <div class="checkbox form__item form__item--mt-sm">
+                        <label class="checkbox__main">
+                          <input class="checkbox__input" type="radio" name="pay-type" checked />
+                          <span class="checkbox__switch checkbox__switch--circle"></span>
+                        </label>
+                        <span class="text checkbox__text">Онлайн оплата</span>
                       </div>
-                      <div class="cart-total__discount">
-                        <span class="cart-total__row">Скидка</span>
-                        <span class="cart-total__price price-in-ruble">-12 000</span>
+                      <div class="checkbox form__item form__item--mt-sm">
+                        <label class="checkbox__main">
+                          <input class="checkbox__input" type="radio" name="pay-type" />
+                          <span class="checkbox__switch checkbox__switch--circle"></span>
+                        </label>
+                        <span class="text checkbox__text">Рассрочка</span>
+                      </div>
+                      <div class="checkbox form__item form__item--mt-sm">
+                        <label class="checkbox__main">
+                          <input class="checkbox__input" type="radio" name="pay-type" />
+                          <span class="checkbox__switch checkbox__switch--circle"></span>
+                        </label>
+                        <span class="text checkbox__text">Онлайн-оплата Сбербанк</span>
                       </div>
                     </div>
-                    <div class="cart-total__result">
-                      <span class="cart-total__row">Итого</span>
-                      <span class="cart-total__price price-in-ruble">140 000</span>
-                    </div>
-                    <button class="cart-total__button mog-button-with-icon mog-color__button-orange" type="submit">
-                      <span class="icon__left-ok">Оформить заказ</span>
-                    </button>
-                    <p class="text text--dark-gray text--center text--link-line cart-total__privacy">
-                      Нажимая на кнопку “Оформить заказ”, <br />
-                      вы принимаете условия <a href="#">публичной&nbsp;оферты</a>
-                    </p>
                   </div>
                 </div>
-              </form>
-            </div>
-          </section>
-        </main>
+                <div class="cart order__cart">
+                  <div class="title title--4 title--medium">Ваш заказ</div>
+                  <div class="cart__list-products cart__list-products--order">
+                    <div class="cart-product cart-product--order">
+                      <div class="cart-product__img">
+                        <img src="/img/catalog-category/category-item-1.png" alt="" />
+                      </div>
+                      <div class="cart-product__info">
+                        <div class="cart-product__article cart-product__name-column"> Арт. 67845 </div>
+                        <div class="cart-product__name"> Газовый настенный котел Warm AUROS (Универсальный) </div>
+                      </div>
 
-        <load src="./_footer.html" />
-      </div>
+                      <div class="cart-product__counter">
+                        <div class="cart-product__name-column">Количество</div>
+                        <div class="text text--dark-gray cart-product__name-mobile">Количество:</div>
+                        <div class="title title--4 title--medium cart-product__counter-value">1</div>
+                      </div>
+
+                      <div class="cart-product__price">
+                        <div class="cart-product__name-column">Стоимость</div>
+                        <div class="cart-product__with-discount"><span class="price-in-ruble">59 900</span></div>
+                        <div class="cart-product__without-discount"><span class="price-in-ruble">89 900</span></div>
+                      </div>
+
+                      <div class="cart-product__addition">
+                        <span class="price-in-ruble cart-product__addition-price">Плюс монтаж от 20 000</span>
+                        <div class="dropdown cart-product__help">
+                          <button class="cart-product__help-btn mog-btn__help-orange dropdown__btn" type="button"></button>
+                          <div class="dropdown__main">
+                              <div class="tooltip">Lorem ipsum dolor sit amet.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart-product cart-product--order">
+                      <div class="cart-product__img">
+                        <img src="/img/catalog-category/category-item-2.png" alt="" />
+                      </div>
+                      <div class="cart-product__info">
+                        <div class="cart-product__article cart-product__name-column"> Арт. 67845 </div>
+                        <div class="cart-product__name"> Газовый настенный котел Warm AUROS (Универсальный) </div>
+                      </div>
+
+                      <div class="cart-product__counter">
+                        <div class="cart-product__name-column">Количество</div>
+                        <div class="text text--dark-gray cart-product__name-mobile">Количество:</div>
+                        <div class="title title--4 title--medium cart-product__counter-value">1</div>
+                      </div>
+
+                      <div class="cart-product__price">
+                        <div class="cart-product__name-column">Стоимость</div>
+                        <div class="cart-product__with-discount"><span class="price-in-ruble">68 300</span></div>
+                        <div class="cart-product__without-discount"><span class="price-in-ruble">89 900</span></div>
+                      </div>
+                    </div>
+                    <div class="cart-product cart-product--order">
+                      <div class="cart-product__img">
+                        <img src="/img/catalog-page/catalog-item-1.png" alt="" />
+                      </div>
+                      <div class="cart-product__info">
+                        <div class="cart-product__article cart-product__name-column"> Арт. 67845 </div>
+                        <div class="cart-product__name"> Газовый настенный котел Warm AUROS (Универсальный) </div>
+                      </div>
+
+                      <div class="cart-product__counter">
+                        <div class="cart-product__name-column">Количество</div>
+                        <div class="text text--dark-gray cart-product__name-mobile">Количество:</div>
+                        <div class="title title--4 title--medium cart-product__counter-value">1</div>
+                      </div>
+
+                      <div class="cart-product__price">
+                        <div class="cart-product__name-column">Стоимость</div>
+                        <div class="cart-product__with-discount"><span class="price-in-ruble">45 400</span></div>
+                        <div class="cart-product__without-discount"><span class="price-in-ruble">89 900</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order__sidebar">
+                <div class="cart-total order__sidebar-total">
+                  <div class="cart-total__all">
+                    <span class="cart-total__title">Сумма заказа</span>
+                    <div class="cart-total__product">
+                      <span class="cart-total__row">3 товара</span>
+                      <span class="cart-total__price price-in-ruble">152 900</span>
+                    </div>
+                    <div class="cart-total__discount">
+                      <span class="cart-total__row">Скидка</span>
+                      <span class="cart-total__price price-in-ruble">-12 000</span>
+                    </div>
+                  </div>
+                  <div class="cart-total__result">
+                    <span class="cart-total__row">Итого</span>
+                    <span class="cart-total__price price-in-ruble">140 000</span>
+                  </div>
+                  <button class="cart-total__button mog-button-with-icon mog-color__button-orange" type="submit">
+                    <span class="icon__left-ok">Оформить заказ</span>
+                  </button>
+                  <p class="text text--dark-gray text--center text--link-line cart-total__privacy">
+                    Нажимая на кнопку “Оформить заказ”, <br />
+                    вы принимаете условия <a href="#">публичной&nbsp;оферты</a>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+      
+      <load src="./_footer.html" />
     </div>
 
     <script type="module" src="/src/js/main.js"></script>
     <script type="module" src="/src/js/ui.js"></script>
-    <script type="module" src="/src/js/catalog-category.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=e67065f5-3eb0-4320-8771-cd213242ea64&lang=ru_RU" type="text/javascript"></script>
   </body>
 </html>

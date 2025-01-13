@@ -2,13 +2,19 @@ import { defineConfig } from 'vite';
 
 import path from "path";
 import injectHTML from 'vite-plugin-html-inject';
-
+import postcssImport from 'postcss-import';
 
 export default defineConfig({
 	base: './',
 
 	plugins: [injectHTML()],
-
+	css: {
+		postcss: {
+		  plugins: [
+			postcssImport(),
+		  ],
+		},
+	},
 	server: {
 		// open: true,
 	},
@@ -34,7 +40,7 @@ export default defineConfig({
 				article: 'article.html',
 				brands: 'brands.html',
 				payment_refund: 'payment-refund.html',
-				refund: 'payment-refund.html',
+				refund: 'refund.html',
 				quality_assurance: 'quality-assurance.html',
 				delivery: 'delivery.html',
 				page404: '404.html',

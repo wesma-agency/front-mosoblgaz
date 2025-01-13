@@ -1,7 +1,7 @@
 'use strict';
 
 import Swiper from 'swiper/bundle';
-import '../scss/style.scss';
+import '../css/style.css';
 import './simplebar';
 import './map';
 import './form';
@@ -16,26 +16,60 @@ import './popup';
 import './auth';
 import './contacts';
 import './accordion';
+import './filters';
+import './select-menu';
+import './catalog-category';
+import './product-card';
+import './cart';
+import './header';
+import './search-popup';
 
-const categoryProductSlider = new Swiper('.product-slider', {
-	loop: true,
-	pagination: {
-		el: '.product-slider__pagination',
-		clickable: true,
-		// renderBullet: function (index, className) {
-		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-		// },
-	},
-    
+
+const productSliders = document.querySelectorAll(".product-slider");
+const productObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const productSlider = entry.target;
+        if (entry.isIntersecting && !productSlider.swiper) {
+            initProductSlider(productSlider);
+        }
+    });
 });
+productSliders.forEach(productSlider => {
+    productObserver.observe(productSlider);
+});
+
+function initProductSlider(productSlider) {
+    const swiper = new Swiper(productSlider, {
+        loop: true,
+        pagination: {
+            el: ".product-slider__pagination",
+            clickable: true,
+        },
+    });
+
+    let paginationHasEvent = false;
+    swiper.on("paginationRender", () => {
+        if (paginationHasEvent) {
+            return;
+        }
+
+        paginationHasEvent = true;
+        const pagination = productSlider.querySelector(".product-slider__pagination");
+        const bullets = pagination.querySelectorAll(".swiper-pagination-bullet");
+        
+        bullets.forEach((bullet, index) => {
+            bullet.addEventListener("mouseenter", () => swiper.slideTo(index));
+        });
+    });
+}
 
 const productCardThumbsSlider = new Swiper('.column-img__thumbs', {
 	spaceBetween: 20,
-	slidesPerView: 4,
+	slidesPerView: 'auto',
 	direction: 'vertical',
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+		nextEl: '.product-card__thumbs-next',
+		prevEl: '.product-card__thumbs-prev',
 	},
 });
 const productcardMainSlider = new Swiper('.column-img__slider', {
@@ -59,8 +93,8 @@ const productCardSimilarSlider = new Swiper('.product-card-similar-slider', {
 		pauseOnMouseEnter: true,
 	},
 	navigation: {
-		nextEl: '.product-card-similar-slider .swiper-button-next',
-		prevEl: '.product-card-similar-slider .swiper-button-prev',
+		nextEl: '.product-card-similar-products .swiper-button-next',
+		prevEl: '.product-card-similar-products .swiper-button-prev',
 	},
 });
 
@@ -76,7 +110,6 @@ let swiperPopular = new Swiper('.swiper_category', {
 		nextEl: '.popular-button-next',
 		prevEl: '.popular-button-prev',
 	},
-	mousewheel: true,
 	keyboard: true,
 
 	enabled: false,
@@ -99,89 +132,128 @@ let swiperPopular = new Swiper('.swiper_category', {
 	},
 });
 
-
-let swiperCatalog = new Swiper(".swiper_main-catalog", {
-    spaceBetween: 30,
-    slidesPerView: 1,
-    loop: true,
-
-    // autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false
-    // },
-    pagination: {
-		el: '.main-catalog__pagination',
-        type: 'bullets',
-		clickable: true,
-    },
-    navigation: {
-      nextEl: ".main-catalog-button-next",
-      prevEl: ".main-catalog-button-prev",
-    },
-    
-    //mousewheel: true,
-    mousewheelControl: false,
-    keyboard: true,
-    breakpoints: {
-        576:{
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        768:{
-            spaceBetween: 20,
-            slidesPerView: 2,
-        },
-        1200:{
-
-            spaceBetween: 20,
-            slidesPerView: 4,
-        },
-    }
+const mainCatalogSliders = document.querySelectorAll('.main-catalog__slider');
+const mainCatalogObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const mainCatalogSlider = entry.target;
+        const swiperElem = mainCatalogSlider.querySelector('.swiper_main-catalog');
+        
+        if (entry.isIntersecting && !swiperElem.swiper) {
+            initMainCatalogSlider(mainCatalogSlider);
+        }
+    });
+});
+mainCatalogSliders.forEach(mainCatalogSlider => {
+    mainCatalogObserver.observe(mainCatalogSlider);
 });
 
+function initMainCatalogSlider(mainCatalogSlider) {
+    const swiperElem = mainCatalogSlider.querySelector('.swiper_main-catalog');
+    const buttonNext = mainCatalogSlider.querySelector('.main-catalog-button-next');
+    const buttonPrev = mainCatalogSlider.querySelector('.main-catalog-button-prev');
+    const pagination = mainCatalogSlider.querySelector('.main-catalog__pagination');
 
-
-let swiperMaterial = new Swiper(".swiper_material", {
-    loop: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: ".material-button-next",
-      prevEl: ".material-button-prev",
-    },
-    //mousewheel: true,
-    mousewheelControl: false,
-    keyboard: true,
-    spaceBetween: 20,
-    slidesPerView: 1.125,
-    pagination: {
-		el: '.material-pagination',
-        type: 'bullets',
-		clickable: true,
-    },
-    breakpoints: {
-        576:{
-      
-            slidesPerView: 1.5,
-            spaceBetween: 20,
+    new Swiper(swiperElem, {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
         },
-        768:{
-            pagination: false,
-
-            spaceBetween: 20,
-            slidesPerView: 2,
+        navigation: {
+            nextEl: buttonNext,
+            prevEl: buttonPrev,
         },
-        1200:{
-            pagination: false,
-
-            spaceBetween: 30,
-            slidesPerView: 3,
+        mousewheelControl: false,
+        keyboard: true,
+        spaceBetween: 20,
+        slidesPerView: 1.125,
+        pagination: {
+            el: pagination,
+            type: 'bullets',
+            clickable: true,
         },
-    }
+        breakpoints: {
+            576: {
+                slidesPerView: 1.5,
+                spaceBetween: 20,
+            },
+            768: {
+                pagination: false,
+                spaceBetween: 20,
+                slidesPerView: 2,
+            },
+            992: {
+                pagination: false,
+                spaceBetween: 20,
+                slidesPerView: 3,
+            },
+            1200: {
+                pagination: false,
+                spaceBetween: 20,
+                slidesPerView: 4,
+            },
+        }
+    });
+}
+
+const materialSliders = document.querySelectorAll('.material__slider');
+const materialsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const materialSlider = entry.target;
+        const swiperElem = materialSlider.querySelector('.swiper_material');
+
+        if (entry.isIntersecting && !swiperElem.swiper) {
+            initMaterialSlider(materialSlider);
+        }
+    });
+});
+materialSliders.forEach(materialSlider => {
+    materialsObserver.observe(materialSlider);
 });
 
+function initMaterialSlider(materialSlider) {
+    const swiperElem = materialSlider.querySelector('.swiper_material');
+    const buttonNext = materialSlider.querySelector('.material-button-next');
+    const buttonPrev = materialSlider.querySelector('.material-button-prev');
+    const pagination = materialSlider.querySelector('.material-pagination');
+
+    new Swiper(swiperElem, {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
+        },
+        navigation: {
+            nextEl: buttonNext,
+            prevEl: buttonPrev,
+        },
+        mousewheelControl: false,
+        keyboard: true,
+        spaceBetween: 20,
+        slidesPerView: 1.125,
+        pagination: {
+            el: pagination,
+            type: 'bullets',
+            clickable: true,
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 1.5,
+                spaceBetween: 20,
+            },
+            768: {
+                pagination: false,
+                spaceBetween: 20,
+                slidesPerView: 2,
+            },
+            1200: {
+                pagination: false,
+                spaceBetween: 30,
+                slidesPerView: 3,
+            },
+        }
+    });
+}
 
 let swiperBrand1 = new Swiper(".swiper_brand_one", {
     loop: true,
