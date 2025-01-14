@@ -356,10 +356,12 @@
     max-width: 100%;
 }
 
+.product-comparison-button-prev,
 .main-catalog-button-prev {
     left: -64px;
 }
 
+.product-comparison-button-next,
 .main-catalog-button-next {
     right: -64px;
 }
@@ -662,6 +664,13 @@
 
     .material-button-prev {
         left: -15px;
+    }
+    .product-comparison-button-prev{
+        left: -15px;
+    }
+    
+    .product-comparison-button-next{
+        right: -15px;
     }
 
     .material-button-next {
