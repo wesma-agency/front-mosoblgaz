@@ -1,3 +1,5 @@
+/*СРАВНЕНИЕ ТОВАРОВ*/
+
 .product-comparison {
     position: relative;
     padding: 40px 0px ;
@@ -10,17 +12,11 @@
     align-content: center;
 }
 
-.product-comparison__filter-checkbox{
-
-}
 
 .product-comparison__filter-description{
     font-size: 15px;
     margin-left: 10px;
     margin-top: 2px;
-}
-
-.product-comparison__list{
 }
 
 .product-comparison__row{
@@ -64,31 +60,11 @@
 }
 
 
-
-
-
-.product-comparison {}
-
-.product-comparison__slider{
-}
-
-.product-comparison__slider-container{
-}
-
-.product-comparison__list-swiper{
-
-}
-
-.product-comparison__swiper-wrapper{
-}
-
 .product-comparison__slider .product-comparison__item{
     display: flex;
     flex-direction: column;
     min-height: 400px;
     height: auto;
-    
-
 }
 
 .product-comparison__slider .product-comparison__content{
@@ -96,107 +72,10 @@
     display: flex;
     flex-direction: column;
 }
-.container {
-}
-
-.swiper-container {
-}
-
-.category-products {
-}
-
-.category-products__list{
-}
-
-.swiper__product-comparison{
-}
-
-.discount-product {
-}
-
-.new-product {
-}
-
-.discount-first {
-}
-
-.product-slider {}
-
-.product-slider__pagination{
-}
-
-.product-slide {
-}
-.swiper-pagination {
-}
-.product {}
-
-.product__article{
-}
-
-.product__article-text{
-}
-
-.product__title{
-}
-
-.product__title-text{
-}
-
-.product__rating{
-}
-
-.product__rating-score{
-}
-
-.product__rating-comment{
-}
-
-.product__rating-link{
-}
-
-.product__price{
-}
-
-.product__old-price{
-}
-
-.product__new-price{
-}
-
-.product__cart-add{
-}
-
-.product__labels{
-}
-
-.product__meta {
-}
 
 .product-comparison__slider .product-footer {
     margin-top: auto;
     margin-bottom: 0;
-}
-.cart-icon {
-}
-.cart-icon-add {
-}
-.cart-icon-added {
-}
-.cart-icon-basket {
-}
-.discount-label {
-}
-.label-text {
-}
-.new-label {
-}
-.meta-btn {
-}
-.favour-btn {
-}
-.delete-btn {
-
 }
 
 .product-comparison__slider .delete-btn:hover>svg>path {
@@ -204,79 +83,15 @@
     stroke: var(--color-red);
 }
 
-.new-first {
-}
-
 
 @media (max-width: 768px) {
-    .product-comparison {
-    }
-
-    .product-comparison__list-swiper{
-        
-    }
-
-    .product-comparison__list-swiper>{
-
-    }
-    .product-comparison__slider{
-    }
-
-    .product-comparison__slider-container{
-    }
-
-    .product-comparison__list{
-    }
-
-    .product-comparison__swiper-wrapper{
-    }
 
     .product-comparison__slider .product-comparison__item{
         min-height: 300px;
     }
 
-    .container {
-    }
-
-    .swiper-container {
-    }
-
-
-
-    .swiper__product-comparison{
-    }
-
-    .discount-product {
-    }
-
-    .new-product {
-    }
-
-    .discount-first {
-    }
-
-    .category-product {
-    }
-
-    .category-product__img-link{
-    }
-
-    .category-product__content{
-    }
-
-    .product-slider {}
-
     .product-comparison__slider .product-slider__pagination{
         display: none;
-    }
-
-    .product-slide {
-    }
-    .swiper-pagination {
-    }
-    .product {}
-
-    .product__article{
     }
 
     .product-comparison__slider .product__article-text{
@@ -293,18 +108,6 @@
 
     .product-comparison__slider .product__rating{
         display: none;
-    }
-
-    .product__rating-score{
-    }
-
-    .product__rating-comment{
-    }
-
-    .product__rating-link{
-    }
-
-    .product__price{
     }
 
     .product-comparison__slider .product__old-price{
@@ -341,34 +144,5 @@
         margin-top: auto;
 
     }
-
-    .cart-icon {
-    }
-    .cart-icon-add {
-    }
-    .cart-icon-added {
-    }
-    .cart-icon-basket {
-    }
-    .discount-label {
-    }
-    .label-text {
-    }
-    .new-label {
-    }
-    .meta-btn {
-    }
-    .product-comparison__slider  .favour-btn {
-        display: none;
-    }
-    .delete-btn {
-
-    }
-    .new-first {
-    }
 }
-
-*{
-    /* border: 1px solid red; */
-
-}
+/*КОНЕЦ СРАВНЕНИЕ ТОВАРОВ*/

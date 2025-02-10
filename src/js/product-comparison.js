@@ -1,4 +1,4 @@
-
+// JS для  страницы сравнения товаров
 function initComparisonSlider(containerSwiper, containerTable) {
     const swiperElem = containerSwiper.querySelector('.swiper__product-comparison');
     const buttonNext = containerSwiper.querySelector('.product-comparison-button-next');
@@ -79,13 +79,7 @@ function initComparisonSlider(containerSwiper, containerTable) {
 
         swiper.on('slideChange', () => swipeAllSliders(swiper.activeIndex));
         swiperRow.on('slideChange', () => swipeAllSliders(swiperRow.activeIndex));
-    })   
-    
-    
-
-   
-
-      
+    })    
 }
 
 
@@ -97,3 +91,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
         
     })
 })
+
+// КОНЕЦ JS для  страницы сравнения товаров
