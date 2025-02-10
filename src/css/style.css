@@ -40,6 +40,7 @@
 @import "./pages/payment-refund.css";
 @import "./pages/delivery.css";
 @import "./pages/404.css";
+@import "./pages/product-comparison.css";
 @import "./_footer.css";
 
 .adaptive-display-none-flex,

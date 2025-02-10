@@ -23,6 +23,7 @@ import './product-card';
 import './cart';
 import './header';
 import './search-popup';
+import './product-comparison';
 
 
 const productSliders = document.querySelectorAll(".product-slider");
@@ -395,3 +396,4 @@ document.addEventListener('DOMContentLoaded', ()=>{
         openMenu(UI.MENU, UI.MENU_CLOSE, UI.BODY);
     })
 })
+
